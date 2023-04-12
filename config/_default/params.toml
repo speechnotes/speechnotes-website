@@ -1,0 +1,129 @@
+# Meta Data for SEO
+
+## Homepage
+title = "🎤 Speechnotes"
+titleSeparator = "-"
+titleAddition = "#1 Speech to Text"
+description = "Speechnotes - #1 speech to text online for dictation & transcription. Dictate your notes in real time, or upload recordings and get them transcribed automatically."
+
+## Documentation
+# docsVersion = "0.3"
+
+## Open Graph
+images = ["tile_1024x512.png"]
+ogLocale = "en_US"
+domainTLD = "speechnotes.co"
+titleHome = "Speechnotes - #1 Speech to Text"
+
+## Twitter Cards
+twitterSite = "@speechlogger"
+twitterCreator = "@speechlogger"
+
+## JSON-LD
+# schemaType = "Person"
+schemaType = "Organization"
+schemaName = "Speechnotes"
+schemaAuthor = "Ronen Rabinovici"
+schemaAuthorTwitter = "https://twitter.com/speechlogger"
+schemaAuthorLinkedIn = "https://www.linkedin.com/in/ronen-r/"
+schemaAuthorGitHub = "https://github.com/RonenR"
+schemaLocale = "en-US"
+schemaLogo = "android-chrome-512x512.png"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "tile_1024x512.png"
+schemaImageWidth = 1024
+schemaImageHeight = 512
+schemaTwitter = "https://twitter.com/speechlogger"
+schemaLinkedIn = ""
+schemaGitHub = "https://github.com/ttsreader/speechninja"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = true
+
+## Chrome Browser
+themeColor = "#f80"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+smallLimit = "300"
+
+# Images
+imageResponsive = true
+imageConvertTo = "webp"
+imageImageSizes = ["480","720","1080","1280","1600","2048"]
+singleSize = false
+imageAddClass = "img-fluid lazyload blur-up"
+
+### Image template
+defaultImage = "default-image.png" # put in `./assets/images/`
+fillImage = "1270x740 Center" # normalize image size
+
+# Footer
+footer = "Powered by <a class=\"text-muted\" href=\"https://ttsreader.com/\">TTSReader</a>"
+
+# Feed
+copyRight = "Copyright (c) 2015-2023 Ronen Rabinovici @ WellSource"
+
+# Alert
+alert = false
+alertDismissible = true
+# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
+
+# Edit Page
+# repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
+repoHost = "GitHub"
+#repoHost = "Gitea"
+docsRepo = "https://github.com/ttsreader/speechninja"
+docsRepoBranch = "main"
+docsRepoSubPath = ""
+editPage = false
+lastMod = false
+
+[sections]
+  sectionNav = ["docs", "guides"]
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  searchSectionsShow = []
+  searchSectionsIndex = []
+  darkMode = true
+  bootStrapJs = true
+  breadCrumb = false
+  highLight = true
+  kaTex = false
+  multilingualMode = true
+  docsVersioning = false
+  fullWidth = false
+  navbarSticky = true
+  toTopButton = true
+  scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
+
+[menu]
+  [menu.section]
+    auto = true
+    collapsibleSidebar = true
+
+[links]
+  notepad = "/notepad/"
+  transcription = "/transcribe/"
+  shop = "/shop/"
+  premium = "/upgrade/"
+  api = "/transcribe/api/"
+  zapier = "/transcribe/zapier/"
+  converters = "/converters/"
+  affiliates = "/affiliates/"
+  chromeExtension = "https://chrome.google.com/webstore/detail/speechnotes-speech-to-tex/nncconplehmbkbhkgkodmnkfaflopkji"
+  ttsreader = "https://ttsreader.com/"
+  speechlogger = "https://speechlogger.com/"
+  androidApp = "https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes"
+  iosApp = "https://apps.apple.com/il/app/texthear/id1246677907?mt=8"
+

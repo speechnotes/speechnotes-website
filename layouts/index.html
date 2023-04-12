@@ -1,0 +1,333 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1 class="mt-0">{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <h2 class="lead" style="font-size: 1.3em;">{{ .Params.lead | safeHTML }}</h2>
+      <br/>
+    </div>
+    <div class="row justify-content-center text-center">
+      <p>I need to</p>
+      <div class="col-md-7 col-lg-6 card">
+        <div class="text-center" style="margin-top: 30px;margin-bottom: -20px;"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MicIcon"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"></path></svg></div>
+        <h2 class="h4">Dictate Notes</h2>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.notepad }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+        <p class="meta">Start taking notes, on our online voice-enabled notepad right away, for free. <a href="#about_speechnotes_notepad">Learn more.</a></p>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-7 col-lg-6 card">
+        <div class="text-center" style="margin-top: 30px;margin-bottom: -20px;"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="AudioFileOutlinedIcon"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm10-9h-4v3.88c-.36-.24-.79-.38-1.25-.38-1.24 0-2.25 1.01-2.25 2.25S9.51 19 10.75 19 13 17.99 13 16.75V13h3v-2z"></path></svg></div>
+        <h2 class="h4">Transcribe Recordings</h2>
+        <a class="btn btn-secondary btn-lg px-4 mb-2" href="{{ .Site.Params.links.transcription }}" role="button">start-transcribing{{ i18n "start-transcribing" }}</a>
+        <p class="meta">Automatically transcribe recordings, audio and video files, youtubes and more, in no time. <a href="#about_speechnotes_transcription">Learn more.</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+  {{ if eq $.Site.Language.LanguageName "English" }}
+  <section id="portfolio" class="section section-sm bg-light">
+    <br/>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <!--<p class="h2">Additional Speechnotes Apps, APIs, & Services</p>-->
+        <p>In addition to the main dictation notes-taking & automatic transcription service, we've got a full portfolio, including voice-typing Chrome extension, transcription API, Zapier integrations for automating processes, mobile apps, premium plans & more. Scroll down to learn more.</p>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-sm card" style="display: flex;flex-direction: column">
+          <h3 class="h4">Voice typing - Chrome extension</h3>
+          <p>Dictate instead of typing on any form & text-box across the web. Including on Gmail, and more.</p>
+          <div style="flex: 1;min-height: 10px;"></div>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.chromeExtension }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+          <br/>
+        </div>&nbsp;&nbsp;
+        <div class="col-sm card" style="display: flex;flex-direction: column">
+          <h3 class="h4">Transcription API & webhooks</h3>
+          <p>Speechnotes' API enables you to send us files via standard POST requests, and get the transcription results sent directly to your server.</p>
+          <div style="flex: 1;min-height: 10px;"></div>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.api }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+          <br/>
+        </div>&nbsp;&nbsp;
+        <div class="col-sm card" style="display: flex;flex-direction: column">
+          <h3 class="h4">Zapier integration</h3>
+          <p>Combine the power of automatic transcriptions with Zapier's automatic processes. Serverless & codeless automation! Save time & work.</p>
+          <div style="flex: 1;min-height: 10px;"></div>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.zapier }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+          <br/>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-sm card" style="display: flex;flex-direction: column">
+          <h3 class="h4">Android Speechnotes app</h3>
+          <p>Speechnotes' notepad for Android, for notes taking on your mobile, battle tested with more than 5Million downloads. Rated 4.3+ ⭐</p>
+          <div style="flex: 1;min-height: 10px;"></div>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.androidApp }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+          <br/>
+        </div>&nbsp;&nbsp;
+        <div class="col-sm card" style="display: flex;flex-direction: column">
+          <h3 class="h4">iOS TextHear app</h3>
+          <p>TextHear for iOS, works great on iPhones, iPads & Macs. Designed specifically to help people with hearing impairment participate in conversations.</p>
+          <div style="flex: 1;min-height: 10px;"></div>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.iosApp }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+          <br/>
+        </div>&nbsp;&nbsp;
+        <div class="col-sm card" style="display: flex;flex-direction: column">
+          <h3 class="h4">Audio & video converting tools</h3>
+          <p>Tools developed for fast - batch conversions of audio files from one type to another and extracting audio only from videos for minimizing uploads.</p>
+          <div style="flex: 1;min-height: 10px;"></div>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.converters }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sister-apps" class="section section-sm bg-light" >
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <p class="h3">Our Sister Apps for Text-To-Speech & Live Captioning</p>
+        <br/>
+        <p class="lead">Complementary to Speechnotes</p>
+        <br/><br/>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-7 col-lg-6 card" style="display: flex;flex-direction: column">
+            <div class="text-center" style="margin-top: 30px;margin-bottom: -20px;">
+              <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VolumeUpOutlinedIcon"><path d="M3 9v6h4l5 5V4L7 9H3zm7-.17v6.34L7.83 13H5v-2h2.83L10 8.83zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77 0-4.28-2.99-7.86-7-8.77z"></path></svg>
+            </div>
+            <p class="h3">TTSReader</p>
+            <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.ttsreader }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+            <p class="h5">Reads out loud texts, files & web pages</p>
+            <p class="meta">Start taking notes, on our online voice-enabled notepad right away, for free</p>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-7 col-lg-6 card" style="display: flex;flex-direction: column">
+            <div class="text-center" style="margin-top: 30px;margin-bottom: -20px;">
+              <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ClosedCaptionOutlinedIcon"><path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V6h14v12zM7 15h3c.55 0 1-.45 1-1v-1H9.5v.5h-2v-3h2v.5H11v-1c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm7 0h3c.55 0 1-.45 1-1v-1h-1.5v.5h-2v-3h2v.5H18v-1c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1z"></path></svg>
+            </div>
+            <p class="h3">Speechlogger</p>
+            <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.speechlogger }}" role="button">start-transcribing{{ i18n "start-transcribing" }}</a>
+            <p class="h5">Live Captioning & Translation</p>
+            <p class="meta">Automatically transcribe recordings, audio and video files, youtubes and more, in no time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about_speechnotes_notepad" class="section section-sm">
+  <br/><br/>
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <h2 class="text-center">Dictation Notepad</h2>
+      <p><a href="/player/" role="button">start-dictating{{ i18n "start-dictating" }}</a></p>
+      <div style="max-width: 700px;padding: 20px;text-align: justify">
+        <p>Speech to Text Online Notepad
+          Professional, Accurate & Free Speech Recognition Text Editor
+          Distraction-Free, Fast, Easy to Use Web App for Dictation & Typing</p>
+        <p>Speechnotes is a powerful speech-enabled online notepad, designed to empower your ideas by implementing a clean & efficient design, so you can focus on your thoughts.
+          We strive to provide the best online dictation tool by engaging cutting-edge speech-recognition technology for the most accurate results technology can achieve today, together with incorporating built-in tools (automatic or manual) to increase users' efficiency, productivity and comfort.
+
+          Works entirely online in your Chrome browser. No download, no install and even no registration needed, so you can start working right away.</p>
+        <p>Speechnotes is especially designed to provide you a distraction-free environment.
+          Every note, starts with a new clear white paper, so to stimulate your mind with a clean fresh start. All other elements but the text itself are out of sight by fading out, so you can concentrate on the most important part - your own creativity.
+          In addition to that, speaking instead of typing, enables you to think and speak it out fluently, uninterrupted, which again encourages creative, clear thinking. Fonts and colors all over the app were designed to be sharp and have excellent legibility characteristics.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="about_speechnotes_transcription" class="section section-sm bg-light">
+  <br/><br/>
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <h2 class="text-center">Transcription Service</h2>
+      <p><a href="/player/" role="button">start-dictating{{ i18n "start-dictating" }}</a></p>
+      <div style="max-width: 700px;padding: 20px;text-align: justify">
+        <p>Fast turnaround - results within minutes. Includes timestamps, auto punctuation and subtitles at unbeatable price of only $0.1 a minute.
+
+          Protects your privacy: no human in the loop, and (unlike many other vendors) we do NOT keep your audio. Pay per use, no recurring payments
+
+
+          Upload your files or transcribe directly from Google Drive, YouTube or any other online source
+          Simple. No download or install. Just send us the file and get the results in minutes.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  <section id="about_speechnotes_transcription" class="section section-sm">
+  <br/><br/>
+  <div class="container">
+  <div class="row justify-content-center text-center">
+      <h2>Key Advantages</h2>
+      <br/>
+      <div class="col-lg-5">
+        <p class="h4">Accurate</p>
+        <p>SpeechNinja is designed bottom up for real time conversations. This is what it's built for, and it's the best at it. It's all the small things that together make it the most suitable for the job: as clearing the text once spoken, having a log of recent sentences, single tap to speak a pre-typed sentence, quick edits, and more.</p>
+      </div>
+      <div class="col-lg-5">
+        <p class="h4">Lightweight & fast</p>
+        <p>Thanks to helpful feedback from our friend JC that has ALS, SpeechNinja is built to work just as well with eye-tracking technology as well as with regular mouse & keyboard.</p>
+      </div>
+      <div class="col-lg-5">
+        <p class="h4">Secure!</p>
+        <p>Thanks to helpful feedback from our friend JC that has ALS, SpeechNinja is built to work just as well with eye-tracking technology as well as with regular mouse & keyboard.</p>
+      </div>
+    </div>
+    <br/>
+    <div class="row justify-content-center text-center">
+      <br/>
+      <div class="col-lg-5">
+        <p class="h4">Health advantages</p>
+        <p>SpeechNinja has a feature that lets you organize your own board of pre typed words & sentences, and also label them however you choose. This lets you build a very powerful tool. In the future, we plan to enable sharing, uploading and installing boards prepared by and for the community.</p>
+      </div>
+      <div class="col-lg-5">
+        <p class="h4">Saves you time</p>
+        <p>There are a few companies now that offer the possibility to generate a synthesized voice built by AI from your own voice so to mimic your own voice when speaking. If you have your own voice installed on your device - it can be selected to be used by SpeechNinja. Currently supported on Firefox browser only.</p>
+      </div>
+      <div class="col-lg-5">
+        <p class="h4">Saves you money</p>
+        <p>SpeechNinja is light weight and works out of the box directly from your browser. No need to install, download, no latency, and even works in low-connectivity areas or completely offline after loaded.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="pricing" class="section section-sm bg-light">
+  <br/><br/>
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <h2>Pricing</h2>
+      <br/>
+    </div>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Dictation - Free</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>10 users included</li>
+                <li>2 GB of storage</li>
+                <li>Email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Dictation - Premium</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>20 users included</li>
+                <li>10 GB of storage</li>
+                <li>Priority email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Transcription</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>30 users included</li>
+                <li>15 GB of storage</li>
+                <li>Phone and email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+      <div class="table-responsive">
+        <table class="table text-center">
+          <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Dictation Free</th>
+            <th style="width: 22%;">Dictation Premium</th>
+            <th style="width: 22%;">Transcription</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          </tbody>
+
+          <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td>✅</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  <br/><br/>
+  </section>
+
+  <br/><br/><br/><br/>
+  {{ end }}
+{{ end }}
+
+{{ define "sidebar-footer" }}
+<section class="section section-sm container-fluid">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-9">
+      {{- .Content -}}
+    </div>
+  </div>
+</section>
+{{ end }}

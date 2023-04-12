@@ -1,0 +1,70 @@
+[[main]]
+  name = "Start"
+  url = "/player/"
+  weight = 10
+
+[[main]]
+  name = "Docs & Help"
+  weight = 20
+  identifier = "docs"
+
+[[main]]
+  name = "- User manual"
+  weight = 21
+  url = "/docs/guides/quick-start/"
+  parent = "docs"
+
+[[main]]
+  name = "- Support, faqs, contact & community"
+  weight = 22
+  url = "/docs/support/"
+  parent = "docs"
+
+[[main]]
+  name = "- Tech - behind the scenes"
+  weight = 23
+  url = "/docs/tech/stack/"
+  parent = "docs"
+
+[[main]]
+  name = "- Privacy"
+  weight = 24
+  url = "/docs/guides/privacy/"
+  parent = "docs"
+
+
+
+[[main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 30
+
+[[main]]
+  name = "Tools"
+  weight = 40
+  identifier = "tools"
+
+  [[main]]
+    name = "- SpeechNinja - Say What I Type"
+    weight = 41
+    identifier = "tools-speechninja"
+    url = "/player/"
+    parent = "tools"
+  [[main]]
+    name = "- TTSReader - read out loud texts, files & websites"
+    weight = 42
+    identifier = "tools-ttsreader"
+    url = "https://ttsreader.com/"
+    parent = "tools"
+  [[main]]
+    name = "- Speechnotes dictation notepad"
+    weight = 43
+    identifier = "tools-speechnotes"
+    url = "https://speechnotes.co/"
+    parent = "tools"
+  [[main]]
+    name = "- Speechnotes automatic transcription"
+    weight = 44
+    identifier = "tools-speechnotes-files"
+    url = "https://speechnotes.co/files/"
+    parent = "tools"
