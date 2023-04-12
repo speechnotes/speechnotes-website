@@ -1,16 +1,16 @@
 <h1 align="center">
-  SpeechNinja
+  Speechnotes
 </h1>
 
 <h3 align="center">
-  Type to Speak
+  Speech to Text - Dictation & Transcription
 </h3>
 
 <p align="center">
-  A fast light weight online text-to-speech tool for live conversations using synthesized voice.
+  Fast, light weight, online set of tools for typing notes with your voice and for automatically transcribing recordings.
   <br/>
-  <b>Published on <a href="https://speechninja.co">speechninja.co</a></b>
+  <b>Published on <a href="https://speechnotes.co">https://speechnotes.co</a></b>
 </p>
 
 
-Website built on [doks.netlify.app](https://doks.netlify.app/)
+Website built on a fork of the amazing [doks.netlify.app](https://doks.netlify.app/) Hugo - NPM template
