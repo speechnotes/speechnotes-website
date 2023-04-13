@@ -7,13 +7,14 @@
     <div class="col-lg-9 col-xl-8 text-center">
       <h2 class="lead" style="font-size: 1.3em;">{{ .Params.lead | safeHTML }}</h2>
       <br/>
+      <p class="caption-top"><i>~ Proudly serving millions of users since 2015 ~</i></p>
     </div>
-    <div class="row justify-content-center text-center">
-      <p>I need to</p>
+    <div class="row justify-content-center text-center" style="margin-top: 20px;">
+      <p class="quote">I need to ></p>
       <div class="col-md-7 col-lg-6 card">
         <div class="text-center" style="margin-top: 30px;margin-bottom: -20px;"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MicIcon"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"></path></svg></div>
         <h2 class="h4">Dictate Notes</h2>
-        <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.notepad }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.dictation }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
         <p class="meta">Start taking notes, on our online voice-enabled notepad right away, for free. <a href="#about_speechnotes_notepad">Learn more.</a></p>
       </div>
       <div class="col-md-1"></div>
@@ -54,7 +55,7 @@
         </div>&nbsp;&nbsp;
         <div class="col-sm card" style="display: flex;flex-direction: column">
           <h3 class="h4">Zapier integration</h3>
-          <p>Combine the power of automatic transcriptions with Zapier's automatic processes. Serverless & codeless automation! Save time & work.</p>
+          <p>Combine the power of automatic transcriptions with Zapier's automatic processes. Serverless & codeless automation! Connect with your CRM, phone calls, Docs, email & more.</p>
           <div style="flex: 1;min-height: 10px;"></div>
           <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.zapier }}" role="button">start-dictating{{ i18n "start-dictating" }}</a>
           <br/>
@@ -123,19 +124,25 @@
   <div class="container">
     <div class="row justify-content-center text-center">
       <h2 class="text-center">Dictation Notepad</h2>
-      <p><a href="/player/" role="button">start-dictating{{ i18n "start-dictating" }}</a></p>
+      <p><a href="{{ .Site.Params.links.dictation }}">start-dictating-for-free{{ i18n "start-dictating" }}</a></p>
       <div style="max-width: 700px;padding: 20px;text-align: justify">
-        <p>Speech to Text Online Notepad
-          Professional, Accurate & Free Speech Recognition Text Editor
-          Distraction-Free, Fast, Easy to Use Web App for Dictation & Typing</p>
+        <p>Speech to Text online notepad. Professional, accurate & free speech recognizing text editor. Distraction-free, fast, easy to use web app for dictation & typing.</p>
         <p>Speechnotes is a powerful speech-enabled online notepad, designed to empower your ideas by implementing a clean & efficient design, so you can focus on your thoughts.
           We strive to provide the best online dictation tool by engaging cutting-edge speech-recognition technology for the most accurate results technology can achieve today, together with incorporating built-in tools (automatic or manual) to increase users' efficiency, productivity and comfort.
-
           Works entirely online in your Chrome browser. No download, no install and even no registration needed, so you can start working right away.</p>
         <p>Speechnotes is especially designed to provide you a distraction-free environment.
           Every note, starts with a new clear white paper, so to stimulate your mind with a clean fresh start. All other elements but the text itself are out of sight by fading out, so you can concentrate on the most important part - your own creativity.
           In addition to that, speaking instead of typing, enables you to think and speak it out fluently, uninterrupted, which again encourages creative, clear thinking. Fonts and colors all over the app were designed to be sharp and have excellent legibility characteristics.</p>
       </div>
+      <h3 class="h4">Example use cases</h3>
+      <ul style="float: left;">
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.chromeExtension }}">Voice typing</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.dictation }}">Writing notes, thoughts</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.chromeExtension }}">Medical forms - dictate</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.dictation }}">Authors</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.dictation }}">Students</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.dictation }}">Transcribers (listen and dictate)</a></li>
+      </ul>
     </div>
   </div>
   </section>
@@ -145,16 +152,21 @@
   <div class="container">
     <div class="row justify-content-center text-center">
       <h2 class="text-center">Transcription Service</h2>
-      <p><a href="/player/" role="button">start-dictating{{ i18n "start-dictating" }}</a></p>
+      <p><a href="{{ .Site.Params.links.transcription }}">start-transcribing{{ i18n "start-transcribing" }}</a></p>
       <div style="max-width: 700px;padding: 20px;text-align: justify">
-        <p>Fast turnaround - results within minutes. Includes timestamps, auto punctuation and subtitles at unbeatable price of only $0.1 a minute.
-
-          Protects your privacy: no human in the loop, and (unlike many other vendors) we do NOT keep your audio. Pay per use, no recurring payments
-
-
-          Upload your files or transcribe directly from Google Drive, YouTube or any other online source
+        <p>Fast turnaround - results within minutes. Includes timestamps, auto punctuation and subtitles at unbeatable price. Protects your privacy: no human in the loop, and (unlike many other vendors) we do NOT keep your audio. Pay per use, no recurring payments.
+          Upload your files or transcribe directly from Google Drive, YouTube or any other online source.
           Simple. No download or install. Just send us the file and get the results in minutes.</p>
       </div>
+      <h3 class="h4">Example use cases</h3>
+      <ul style="float: left;">
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.transcription }}">Transcribe interviews</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.transcription }}">Captions for Youtubes & movies</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.zapier }}">Auto-transcribe phone calls or voice messages</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.transcription }}">Students - transcribe lectures</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.transcription }}">Podcasters - enlarge your audience by turning your podcasts into textual content</a></li>
+        <li style="display: inline-block; margin: 10px 50px;"><a href="{{ .Site.Params.links.transcription }}">Text-index entire audio archives</a></li>
+      </ul>
     </div>
   </div>
   </section>
@@ -168,15 +180,15 @@
       <br/>
       <div class="col-lg-5">
         <p class="h4">Accurate</p>
-        <p>SpeechNinja is designed bottom up for real time conversations. This is what it's built for, and it's the best at it. It's all the small things that together make it the most suitable for the job: as clearing the text once spoken, having a log of recent sentences, single tap to speak a pre-typed sentence, quick edits, and more.</p>
+        <p>Speechnotes is powered by the leading most accurate speech recognition AI engines by Google & Microsoft. We always check - and make sure we still use the best. Accuracy in English is very good and can easily reach 95% accuracy for good quality dictation or recording.</p>
       </div>
       <div class="col-lg-5">
         <p class="h4">Lightweight & fast</p>
-        <p>Thanks to helpful feedback from our friend JC that has ALS, SpeechNinja is built to work just as well with eye-tracking technology as well as with regular mouse & keyboard.</p>
+        <p>Both Speechnotes dictation & transcription are lightweight-online no install, work out of the box anywhere you are. Dictation works in real time. Transcription will get you results in a matter of minutes.</p>
       </div>
       <div class="col-lg-5">
-        <p class="h4">Secure!</p>
-        <p>Thanks to helpful feedback from our friend JC that has ALS, SpeechNinja is built to work just as well with eye-tracking technology as well as with regular mouse & keyboard.</p>
+        <p class="h4">Super Private & Secure!</p>
+        <p>Super private - no human handles, sees or listens to your recordings! In addition, we take great measures to protect your privacy. For example, for transcribing your recordings - we pay Google's speech to text engines extra - just so they do not keep your audio for their own research purposes.</p>
       </div>
     </div>
     <br/>
@@ -184,15 +196,15 @@
       <br/>
       <div class="col-lg-5">
         <p class="h4">Health advantages</p>
-        <p>SpeechNinja has a feature that lets you organize your own board of pre typed words & sentences, and also label them however you choose. This lets you build a very powerful tool. In the future, we plan to enable sharing, uploading and installing boards prepared by and for the community.</p>
+        <p>Typing may result in different types of Computer Related Repetitive Strain Injuries (RSI). Voice typing is one of the main recommended ways to minimize these risks, as it enables you to sit back comfortably, freeing your arms, hands, shoulders and back altogether.</p>
       </div>
       <div class="col-lg-5">
         <p class="h4">Saves you time</p>
-        <p>There are a few companies now that offer the possibility to generate a synthesized voice built by AI from your own voice so to mimic your own voice when speaking. If you have your own voice installed on your device - it can be selected to be used by SpeechNinja. Currently supported on Firefox browser only.</p>
+        <p>Need to transcribe a recording? If it's an hour long, transcribing it yourself will take you about 6! hours of work. If you send it to a transcriber - you will get it back in days! Upload it to Speechnotes - it will take you less than a minute, and you will get the results in about 20 minutes to your email.</p>
       </div>
       <div class="col-lg-5">
         <p class="h4">Saves you money</p>
-        <p>SpeechNinja is light weight and works out of the box directly from your browser. No need to install, download, no latency, and even works in low-connectivity areas or completely offline after loaded.</p>
+        <p>Speechnotes dictation notepad is completely free - with ads - or a small fee to get it ad-free. Speechnotes transcription is only $0.1/minute, which is X10 times cheaper than a human transcriber! We offer the best deal on the market - whether it's the free dictation notepad ot the pay-as-you-go transcription service.</p>
       </div>
     </div>
   </div>
@@ -214,12 +226,10 @@
             <div class="card-body">
               <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>10 users included</li>
-                <li>2 GB of storage</li>
-                <li>Email support</li>
-                <li>Help center access</li>
+                <li>Online dictation notepad</li>
+                <li>Voice typing Chrome extension</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+              <a href="{{ .Site.Params.links.dictation }}" type="button" class="w-100 btn btn-lg btn-outline-primary">Get started for free</a>
             </div>
           </div>
         </div>
@@ -229,14 +239,13 @@
               <h4 class="my-0 fw-normal">Dictation - Premium</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+              <h1 class="card-title pricing-card-title">$1.9<small class="text-muted fw-light">/mo</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>20 users included</li>
-                <li>10 GB of storage</li>
-                <li>Priority email support</li>
-                <li>Help center access</li>
+                <li>Premium online dictation notepad</li>
+                <li>Premium voice typing Chrome extension</li>
+                <li>No ads</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+              <a href="{{ .Site.Params.links.premium }}" type="button" class="w-100 btn btn-lg btn-primary">Purchase now</a>
             </div>
           </div>
         </div>
@@ -246,12 +255,14 @@
               <h4 class="my-0 fw-normal">Transcription</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+              <h1 class="card-title pricing-card-title">$0.1<small class="text-muted fw-light">/minute</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>30 users included</li>
-                <li>15 GB of storage</li>
-                <li>Phone and email support</li>
-                <li>Help center access</li>
+                <li>Pay as you go - no subscription</li>
+                <li>Audio & video recordings</li>
+                <li>Speaker diarization in English</li>
+                <li>Timestamps</li>
+                <li>Generate captions .srt files</li>
+                <li>REST API, webhooks & Zapier integration</li>
               </ul>
               <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
             </div>
@@ -273,13 +284,31 @@
           </thead>
           <tbody>
           <tr>
-            <th scope="row" class="text-start">Public</th>
+            <th scope="row" class="text-start">Unlimited dictation</th>
+            <td>✅</td>
+            <td>✅</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Online notepad</th>
+            <td>✅</td>
+            <td>✅</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Voice typing extension</th>
+            <td>✅</td>
+            <td>✅</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Editing</th>
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
           </tr>
           <tr>
-            <th scope="row" class="text-start">Private</th>
+            <th scope="row" class="text-start">Ads free</th>
             <td></td>
             <td>✅</td>
             <td>✅</td>
@@ -288,27 +317,39 @@
 
           <tbody>
           <tr>
-            <th scope="row" class="text-start">Permissions</th>
-            <td>✅</td>
-            <td>✅</td>
+            <th scope="row" class="text-start">Transcribe recordings</th>
+            <td></td>
+            <td></td>
             <td>✅</td>
           </tr>
           <tr>
-            <th scope="row" class="text-start">Sharing</th>
+            <th scope="row" class="text-start">Transcribe Youtubes</th>
             <td></td>
-            <td>✅</td>
+            <td></td>
             <td>✅</td>
           </tr>
           <tr>
-            <th scope="row" class="text-start">Unlimited members</th>
+            <th scope="row" class="text-start">API & webhooks</th>
+            <td></td>
             <td></td>
             <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Zapier</th>
+            <td></td>
+            <td></td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Export to captions</th>
+            <td></td>
+            <td></td>
             <td>✅</td>
           </tr>
           <tr>
             <th scope="row" class="text-start">Extra security</th>
             <td></td>
-            <td></td>
+            <td>✅</td>
             <td>✅</td>
           </tr>
           </tbody>
@@ -317,6 +358,51 @@
   </div>
   <br/><br/>
   </section>
+
+  <section id="privacy" class="section section-sm">
+  <br/><br/>
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <h3 class="text-center">Privacy Policy</h3>
+      <div style="max-width: 700px;padding: 20px;text-align: justify">
+        <h4>General</h4>
+        <p>We at Speechnotes, Speechlogger, TextHear, Speechkeys value your privacy, and that's why we do not store anything you say or type or in fact any other data about you - unless it is solely needed for the purpose of your operation. We don't share it with 3rd parties, other than Google / Microsoft for the speech-to-text engine.
+        </p>
+        <br/>
+        <h4>Privacy - how are the recordings and results handled?</h4>
+        <h5>- Transcription service</h5>
+        <p>Our transcription service is probably the most private and secure transcription service available.</p>
+        <ul>
+          <li>HIPAA compliant.</li>
+          <li>No human in the loop. No passing your recording between PCs, emails, employees, etc.</li>
+          <li>Secure encrypted communications (https) with and between our servers.</li>
+          <li>Recordings are automatically deleted from our servers as soon as the transcription is done.</li>
+          <li>Our contract with Google / Microsoft (our speech engines providers) prohibits them from keeping any audio or results.</li>
+          <li>Transcription results are securely kept on our secure database. Only you have access to them - only if you sign in (or provide your secret credentials through the API)</li>
+          <li>You may choose to delete the transcription results - once you do - no copy remains on our servers.</li>
+        </ul>
+        <h5>- Dictation notepad & extension</h5>
+        <p>For dictation, the recording & recognition - is delegated to and done by the browser (Chrome / Edge) or operating system (Android). So, we never even have access to the recorded audio, and Edge's / Chrome's / Android's (depending the one you use) privacy policy apply here.
+        </p>
+        <p>The results of the dictation are saved locally on your machine - via the browser's / app's local storage. It never gets to our servers. So, as long as your device is private - your notes are private.</p>
+        <br/>
+        <h4>Payments method privacy</h4>
+        <p>The whole payments process is delegated to PayPal / Stripe / Google Pay / Play Store / App Store and secured by these providers. We never receive any of your credit card information.</p>
+        <br/>
+        <h4>More generic notes regarding our site, cookies, analytics, ads, etc.</h4>
+        <ul>
+          <li>We may use Google Analytics on our site - which is a generic tool to track usage statistics.</li>
+          <li>We use cookies - which means we save data on your browser to send to our servers when needed. This is used for instance to sign you in, and then keep you signed in.</li>
+          <li>For the dictation tool - we use your browser's local storage to store your notes, so you can access them later.</li>
+          <li>Non premium dictation tool serves ads by Google. Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="nofollow">Ads Settings</a>. Alternatively, users can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://youradchoices.com/" target="_blank" rel="nofollow">https://youradchoices.com/</a></li>
+          <li>In case you would like to upload files to Google Drive directly from Speechnotes - we'll ask for your permission to do so. We will use that permission for that purpose only - syncing your speech-notes to your Google Drive, per your request.</li>
+        </ul>
+        <br/>
+
+      </div>
+    </div>
+  </div>
+</section>
 
   <br/><br/><br/><br/>
   {{ end }}
