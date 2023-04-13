@@ -1,0 +1,420 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" type="text/css" href="common.css" />
+    <link rel="stylesheet" type="text/css" href="sn_plugin.css" />
+
+    <style>
+
+
+
+        .hidden {
+            display: none;
+        }
+
+        #center_screen {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 150%;
+        }
+
+        ul, ol {
+            overflow-x: scroll;
+        }
+
+        #logo {
+            display: inline-block;
+            width: 40px;
+            height: 102px;
+            background-image: url('https://speechnotes.co/images/logo.png');
+        }
+
+        #footer {
+            width: 100%;
+            padding: 10px 0;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        #footer_menu {
+            text-align: center;
+            margin: auto;
+        }
+
+        #footer_menu a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #footer_menu a:hover, a:visited, a:link, a:active {
+            text-decoration: none;
+        }
+
+        #languageLinks a {
+            display: inline-block;
+            padding: 10px 10px;
+            margin: 0 2px;
+            border-radius: 20px;
+            font-weight: normal;
+            color: green;
+        }
+
+        #footer_menu a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        code {
+            white-space: pre; overflow-x: scroll; margin: auto; display: block;padding: 20px;
+        }
+
+        .share {
+            height: 50px;
+            cursor: pointer;
+            display: inline-block;
+            box-shadow: none;
+        }
+
+        .share:hover {
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        .facebook {
+            border-radius: 5px;
+        }
+
+        .gplus {
+            border-radius: 25px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 5px 5px 2px #888888;
+        }
+
+        .buy_button {
+            font-size: large;
+            color: black;
+            background: lightgreen;
+            border-radius: 10px;
+            padding: 8px;
+        }
+
+        .buy_button:hover {
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        #notification_ask_for_permission {
+            display: block;
+        }
+
+        #invoke_permission {
+            display: block;
+            cursor: pointer;
+            background-color: whitesmoke;
+            color: green;
+            width: 400px;
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .screenshot_class {
+            max-width: 90%;
+            display: block;
+            margin: 30px auto;
+        }
+
+        h3::before {
+            content: "- ";
+        }
+
+        h2 {
+            background-color: whitesmoke;
+            padding: 20px;
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+        h3 {
+            margin-bottom: 30px;
+            background-color: #ffefe8;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .toc-leve3 {
+            margin-left: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+<h1>API & Webhooks for Automating Your Transcriptions Work Flows</h1>
+<br><br>
+
+<div id="center_screen">
+
+    <!-- The following #toc is auto populated by toc.js -->
+    <div id="toc" style="font-size: larger;line-height: 1.5em;"></div>
+
+    <br><br><br>
+
+    <h2 id="example">Example: Calls Transcriber</h2>
+    <h3 id="example_subtitle1">Set Up in 5 Minutes</h3>
+    <p>The following video shows how to set up a complete system that records and transcribes phone calls. Start to finish setup in just 5 minutes.</p>
+    <p>Using <a href="https://speechnotes.co/files/" target="_blank">Speechnotes</a>, <a href="http://justcall.io?fp_ref=speechlogger" target="_blank">JustCall</a>, & <a target="_blank" href="https://zapier.com/developer/public-invite/162507/635ab95f24068b6b47b46e28d07d1dd4/">Zapier</a>.</p>
+    <div style="margin: 30px auto; text-align: center; overflow-x: scroll">
+        <iframe style="display: inline-block" width="560" height="315" src="https://www.youtube.com/embed/DxQt-y5WDNg" title="YouTube video player - Speechnotes with Zapier" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/><br/>
+
+    <h2 id="start">Get Started</h2>
+    <p>Get started by opening your account on <a target="_blank" href="https://speechnotes.co/files/">Speechnotes Files Transcription Service</a>.
+        <br/>Purchase credits if necessary. No subscription, simple pay as you go. You decide when and how much transcription minutes to buy.
+        <br/>Then - tap on the 'API & WEBHOOKS' button, to get everything you need for starting your 100% hands free automatic work flows.
+    </p>
+    <br/><br/>
+
+    <div>
+        <h2 id="why">When to Use?</h2>
+
+        <h3 id="whyWebhooks">When webhooks</h3>
+        <p>Use Speechnotes' Transcription Webhooks when you want to automatically handle transcription results, by your own server, CMS, or web automation tools such as Zapier, Make, and more.</p>
+        <p>For instance, you may want to automatically save transcriptions in your Google Drive. Or, perhaps add this as a record in your CMS / CRM database, etc.</p>
+
+        <h3 id="whyApi">When transcription API?</h3>
+        <p>Use the transcription API when you want to delegate the process of sending files for transcription to your bots instead of manually doing it yourself. For instance - you can write a script that uploads all files in a specific folder on your computer. Or, you can automate transcriptions of any voice mail message you receive. Automatically transcribe any phone conversation recorded, etc.</p>
+
+        <h3 id="useCases">Example use cases</h3>
+        <p>There are many use cases. API & Webhooks are simply the tools - so you can build whatever automation you want around it. Here are some main use cases:</p>
+        <ul>
+            <li>Zapier integrations - easy - no coding - unlimited automations
+                <p>Invite link to Speechnotes' on Zapier:</p>
+                <p><a target="_blank" href="https://zapier.com/developer/public-invite/162507/635ab95f24068b6b47b46e28d07d1dd4/">&nbsp;- Speechnotes' on Zapier&nbsp;&rarr;</a></p>
+            </li>
+            <li>
+                Automatically transcribe all phone conversations done on services that record them such as <a href="http://justcall.io?fp_ref=speechlogger" target="_blank">JustCall</a> or its likes. Here's a flow:
+                <br/><br/>
+                <ol>
+                    <li>Upon end of conversation, <a href="http://justcall.io?fp_ref=speechlogger" target="_blank">JustCall</a> sends a webhook to Zapier with the recording's url</li>
+                    <li>Zapier sends an API call to Speechnotes' Transcribe API with the recording's url as received from <a href="http://justcall.io?fp_ref=speechlogger" target="_blank">JustCall</a></li>
+                    <li>Speechnotes transcribes the call</li>
+                    <li>Speechnotes sends a webhook with the transcription results to Zapier</li>
+                    <li>Zapier receives the transcripts and sends it to your CRM or Google Drive for archiving</li>
+                </ol>
+            </li>
+            <li>Automatically upload all transcription results to your own cloud storage such as Google Drive, Dropbox, etc.</li>
+            <li>Automatically upload transcripts to CRM</li>
+        </ul>
+    </div>
+
+    <br/><br/>
+
+    <h2 id="zapier">Zapier Integration</h2>
+    <p>Zapier integrations offer easy drop-in - no coding required - infinite possibilities for automations. <br/>Invite link to Speechnotes' on Zapier:</p>
+    <p><a target="_blank" href="https://zapier.com/developer/public-invite/162507/635ab95f24068b6b47b46e28d07d1dd4/">&nbsp;- Speechnotes' Zapier integration&nbsp;&rarr;</a></p>
+    <p>Whether it is to automatically transcribe recordings, or to automatically store all Speechnotes transcripts on Google Drive, Dropbox, or in your CRM connected to client profiles. It's all possible. No code required (but yes technical understanding). </p>
+    <br/>
+    <p>The following video shows how to set up a complete system that records and transcribes phone calls. Start to finish setup in just 5 minutes.</p>
+    <p>Using <a href="https://speechnotes.co/files/" target="_blank">Speechnotes</a>, <a href="http://justcall.io?fp_ref=speechlogger" target="_blank">JustCall</a>, & <a target="_blank" href="https://zapier.com/developer/public-invite/162507/635ab95f24068b6b47b46e28d07d1dd4/">Zapier</a>.</p>
+    <div style="margin: 30px auto; text-align: center; overflow-x: scroll">
+        <iframe style="display: inline-block" width="560" height="315" src="https://www.youtube.com/embed/DxQt-y5WDNg" title="YouTube video player - Speechnotes with Zapier" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br/><br/>
+
+
+
+    <h2 id="webhooks">Webhooks - Hands On Guide</h2>
+    <p>Speechnotes will send transcription results to the url defined in your account.</p>
+    <p>Tip: In order to verify it was indeed sent by us - the message from Speechnotes will include the API SIGNATURE - so you can compare it to the signature you have. The signature is unique to your account - so no one else knows it.</p>
+    <p>Here's the definition of the POST that will be sent to your url:</p>
+    <ul>
+        <li>method: <code>POST</code></li>
+        <li>url: as defined by you in your account <code>https://as.defined.by.you.in.your.account</code>
+        <li>Body: the body of the message is a long string that represents a JSON, with the following fields:<br/><br/>
+            <ul>
+                <li>key: <code>success</code> value: <code>true</code>or<code>false</code> Tells you if something went wrong</li>
+                <li>key: (optional key, exists only if success was true)<code>fullText</code>, value: <code>The whole transcript</code> This is the whole point of this payload</li>
+                <li>key: (optional key, exists only if job failed)<code>errorCode</code>, value: <code>The stage that failed</code></li>
+                <li>key: (optional key, exists only if job failed)<code>errorMessage</code>, value: <code>Human readable message</code></li>
+                <li>key: <code>fileUrl</code>, value: <code>https://some_url.com/file.mp3</code>The url of the submitted file. If it was uploaded from device - then it will be <code>"device_uploaded"</code></li>
+                <li>key: <code>jobId</code>, value: <code>SOME_ID</code>The id of the job on Speechnotes' server, set for each job by Speechnotes</li>
+                <li>key: <code>fileName</code>, value: <code>file_name</code>The name of the file as received or derived from url</li>
+                <li>key: <code>apiKey</code>, value: <code>YOUR_API_KEY</code>unique per user</li>
+                <li>key: <code>apiSignature</code>, value: <code>YOUR_API_SIGNATURE</code>Unique per user and secret, so you can verify this POST was indeed by Speechnotes' servers by comparing the received value to the API SIGNATURE as you can view in your dashboard.</code></li>
+                <li>key: <code>api_custom</code>, value: <code>some-user-sent-string</code>Simply passing on the value that was sent when uploading the job via API. You can use this to pass more data on that job, such as recording id, client id, etc.</li>
+                <li>key: <code>remainingDollarBalance</code>, value: <code>4.3</code>Dollar balance remaining after the job. As all values this is also represented as a string</li>
+            </ul>
+
+            <br/><br/>
+            Here's a body example:<br/>
+            <code>
+                {
+                "api_custom":"callIdOnJustCall=jhgsd876dfkjhdoiu",
+                "jobId":"c8ZNJjiR7j5cCuzax2zT",
+                "fileName":"calljhgsd8.mp3",
+                "apiSignature":"diuyd987d",
+                "remainingDollarBalance":"49.3",
+                "transcript":"Hi, how are you?",
+                "apiKey":"kjhsd987sdkjhsdkjhsdkjhdsk",
+                "success":"true",
+                "fileUrl":"https://example.com/calljhgsd8.mp3"
+                }
+            </code>
+        </li>
+    </ul>
+
+    <br/><br/>
+
+    <div id="api">
+        <br><br>
+        <h2 id="apiCommands">API Documentation - Hands On Guide</h2>
+        <h3 id="apiTranscribe">Transcribe Command API</h3>
+        <p>Here's the definition of the POST HTTP request:</p>
+        <ul>
+            <li>method: <code>POST</code></li>
+            <li>url: This is our server's endpoint to receive your POST request:
+                <div><code>https://speechlogger.com/api/transcribe</code></div>
+            </li>
+            <li>headers:<br/><br/>
+                <ul>
+                    <li>key: <code>Content-Type</code>, value: <code>application/json</code></li>
+                    <li>key: <code>Origin</code>, value: <code>https://speechnotes.co/files/</code>Or a different origin, as long as there's one</li>
+                </ul>
+            </li>
+            <li>body: body is a string of json with the following fields:<br/><br/>
+                <ul>
+                    <li>key: <code>apiKey</code>, value: <code>CHANGE_WITH_YOUR_API_KEY</code></li>
+                    <li>key: <code>apiSecret</code>, value: <code>CHANGE_WITH_YOUR_API_SECRET</code></li>
+                    <li>key: <code>type</code>, value: <code>upload</code></li>
+                    <li>key: <code>fileUrl</code>, value: <code>https://link.to.the.file.mp3</code></li>
+                    <li>key: <code>fileName</code>, value: <code>CHANGE_WITH_YOUR_FILE_NAME</code></li>
+                    <li>key: <code>language</code>, value: <code>en-US</code>Change with the actual language of the recording. Format is BCP-47.<br/></li>
+                    <li>key: <code>api_custom</code>, value: <code>CHANGE_WITH_YOUR_DATA_STRING</code>Use this field to pass to the webhook data.<br/></li>
+                </ul>
+                <br/>
+                Here's a body example:<br/>
+                <code>
+                    {
+                    "apiKey": "CHANGE_WITH_YOUR_API_KEY",
+                    "apiSecret": "CHANGE_WITH_YOUR_API_SECRET",
+                    "type": "upload",
+                    "fileUrl": "https://ttsreader.com/actors/1005/sample2.mp3",
+                    "fileName": "File_d987cckjhd8_api",
+                    "language":"en-US",
+                    "api_custom": "CRM_clientId=kjhsd87ds987"
+                    }
+                </code>
+            </li>
+        </ul>
+
+        <br/>
+        <h3 id="apiTranscribeExampleCurl">Transcribe API - Complete CURL Code</h3>
+        <p>Here's an example of such a POST made to Speechnotes' API:</p>
+        <p>Bash code:
+            <br/>
+            <code>curl -H "Content-Type: application/json"  -H "Origin: https://speechnotes.co/files/" --data @upload.txt https://speechlogger.com/api/transcribe</code>
+        </p>
+        <p>Where as the file 'upload.txt' is in the folder where the command is executed and contains the following text:
+            <br/>
+            <code style="white-space: pre; overflow-x: scroll; display: block; margin: auto">
+                {
+                "apiKey": "CHANGE_WITH_YOUR_API_KEY",
+                "apiSecret": "CHANGE_WITH_YOUR_API_SECRET",
+                "type": "upload",
+                "fileUrl": "https://ttsreader.com/actors/1005/sample2.mp3",
+                "fileName": "File_d987cckjhd8_api",
+                "language":"en-US",
+                "api_custom": "CRM_clientId=kjhsd87ds987"
+                }
+            </code>
+        </p>
+
+        <h3 id="apiTranscribeExamplePhp">Transcribe API - Complete PHP Code</h3>
+        <div>
+            <div style="color:rgb(212,212,212);padding: 20px;background-color:rgb(38,39,57);font-family:&quot;IBM Plex Mono&quot;,Menlo,Monaco,&quot;Courier New&quot;,monospace;font-size:15px;line-height:23px;white-space:pre-wrap"><span class="im"><div><span style="color:rgb(221,106,111);font-weight:bold">&lt;?php</span> </div><div><span style="color:rgb(116,176,223)">$url</span> <span style="color:rgb(220,220,220)">=</span> <span style="color:rgb(206,145,120)">'<a href="https://speechlogger.com/api/transcribe" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://speechlogger.com/api/transcribe&amp;source=gmail&amp;ust=1661460239078000&amp;usg=AOvVaw1nIGHkHxv--ROKialFiu4p">https://speechlogger.com/api/<wbr>transcribe</a>'</span><span style="color:rgb(220,220,220)">;</span></div></span><div><span style="color:rgb(116,176,223)">$data</span> <span style="color:rgb(220,220,220)">=</span> <span style="color:rgb(86,156,214)">array</span><span style="color:rgb(220,220,220)">(</span></div><span class="im"><div>    <span style="color:rgb(206,145,120)">'apiKey'</span> <span style="color:rgb(220,220,220)">=&gt;</span> <span style="color:rgb(206,145,120)">'CHANGE_WITH_YOUR_API_KEY'</span><span style="color:rgb(220,220,220)"><wbr>,</span></div><div>    <span style="color:rgb(206,145,120)">'apiSecret'</span> <span style="color:rgb(220,220,220)">=&gt;</span> <span style="color:rgb(206,145,120)">'CHANGE_WITH_YOUR_API_SECRET'</span><span style="color:rgb(220,220,220)">,</span></div><div>    <span style="color:rgb(206,145,120)">'type'</span> <span style="color:rgb(220,220,220)">=&gt;</span> <span style="color:rgb(206,145,120)">'upload'</span><span style="color:rgb(220,220,220)">,</span></div><div>    <span style="color:rgb(206,145,120)">'fileUrl'</span> <span style="color:rgb(220,220,220)">=&gt;</span> <span style="color:rgb(206,145,120)">'<a href="https://ttsreader.com/actors/1005/sample2.mp3" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://ttsreader.com/actors/1005/sample2.mp3&amp;source=gmail&amp;ust=1661460239078000&amp;usg=AOvVaw0CMs-2y4brIH6BW-mMJcC7">https://ttsreader.com/actors/<wbr>1005/sample2.mp3</a>'</span><span style="color:rgb(220,220,220)">,</span></div><div>    <span style="color:rgb(206,145,120)">'fileName'</span> <span style="color:rgb(220,220,220)">=&gt;</span> <span style="color:rgb(206,145,120)">'File_d987cckjhd8_api'</span><span style="color:rgb(220,220,220)">,</span></div><div>    <span style="color:rgb(206,145,120)">'language'</span> <span style="color:rgb(220,220,220)">=&gt;</span> <span style="color:rgb(206,145,120)">'en-US'</span><span style="color:rgb(220,220,220)">,</span></div><div>    <span style="color:rgb(206,145,120)">'api_custom'</span> <span style="color:rgb(220,220,220)">=&gt;</span> <span style="color:rgb(206,145,120)">'CRM_clientId=kjhsd87ds987'</span></div><div><span style="color:rgb(220,220,220)">);</span></div><br></span><div><span style="color:rgb(116,176,223)">$postdata</span> <span style="color:rgb(220,220,220)">=</span> json_encode<span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$data</span><span style="color:rgb(220,220,220)">);</span></div><br><div><span style="color:rgb(116,176,223)">$ch</span> <span style="color:rgb(220,220,220)">=</span> curl_init<span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$url</span><span style="color:rgb(220,220,220)">);</span> </div><div>curl_setopt<span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$ch</span><span style="color:rgb(220,220,220)">,</span> CURLOPT_POST<span style="color:rgb(220,220,220)">,</span> <span style="color:rgb(181,206,168)">1</span><span style="color:rgb(220,220,220)">);</span></div><div>curl_setopt<span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$ch</span><span style="color:rgb(220,220,220)">,</span> CURLOPT_POSTFIELDS<span style="color:rgb(220,220,220)">,</span> <span style="color:rgb(116,176,223)">$postdata</span><span style="color:rgb(220,220,220)">);</span></div><div>curl_setopt<span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$ch</span><span style="color:rgb(220,220,220)">,</span> CURLOPT_RETURNTRANSFER<span style="color:rgb(220,220,220)">,</span> <span style="color:rgb(181,206,168)">1</span><span style="color:rgb(220,220,220)">);</span> </div><div>curl_setopt<span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$ch</span><span style="color:rgb(220,220,220)">,</span> CURLOPT_HTTPHEADER<span style="color:rgb(220,220,220)">,</span> <span style="color:rgb(86,156,214)">array</span><span style="color:rgb(220,220,220)">(</span><span style="color:rgb(206,145,120)">'Content-Type: application/json'</span><span style="color:rgb(220,220,220)">,</span><span style="color:rgb(206,145,120)">'Origin: <a href="https://speechnotes.co" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://speechnotes.co&amp;source=gmail&amp;ust=1661460239078000&amp;usg=AOvVaw3SQyiD4Iwso4YWslzTzxtj">https://speechnotes.co</a>'</span><span style="color:rgb(220,220,220)">));</span></div><br><div><span style="color:rgb(116,176,223)">$result</span> <span style="color:rgb(220,220,220)">=</span> curl_exec<span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$ch</span><span style="color:rgb(220,220,220)">);</span></div><div>curl_close<span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$ch</span><span style="color:rgb(220,220,220)">);</span></div><div>print_r <span style="color:rgb(220,220,220)">(</span><span style="color:rgb(116,176,223)">$result</span><span style="color:rgb(220,220,220)">);</span></div><div><span style="color:rgb(221,106,111);font-weight:bold">?&gt;</span></div></div>
+        </div>
+
+        <!--<img class="screenshot_class" src="images/screenshots/tutorial_open_popup_button.png">-->
+    </div>
+
+    <br/><br/>
+
+    <h2 id="ready">Ready to Start?</h2>
+    <p>Get started on <a target="_blank" href="https://speechnotes.co/files/">Speechnotes Files Transcription Service</a>.
+    </p>
+    <br/><br/><br/>
+
+
+
+    <h2 id="contact">Need Help? Customization? Talk to Us</h2>
+    <p>Shoot us an email to <code>admin@speechlogger.com</code></p>
+
+
+</div>
+
+
+</div>
+<br><br>
+<!-- TODO: ... -->
+<div id="footer">
+    <div id="footer_menu">
+        <a id="contact_us" href="mailto:admin@speechlogger.com" target="_blank">Contact Us</a>
+        <a href="https://speechnotes.co" target="_blank" title="Online dictation notepad">Dictation Notepad</a>
+        <a href="https://speechnotes.co/files/" target="_blank" title="Transcribe recordings - audio / video files">Transcribe Files</a>
+        <a href="http://ttsreader.com" target="_blank" title="Unlimited Online Text Reader (TTSReader)">Text-To-Speech Reader</a>
+        <a href="http://Speechninja.co" target="_blank" title="Speech Aid (SpeechNinja - AAC)">Speech Aid (AAC)</a>
+        <a href="https://speechlogger.appspot.com/en/" target="_blank" title="Speech captions & Instant Translation">Captionist & Instant Translator</a>
+        <a href="https://speechnotes.co/#privacy" title="Privacy"><b>Privacy</b></a>
+        <br>
+        <!--<div id="languageLinks">
+            <a href="https://speechnotes.co/">English</a>
+            <a href="https://speechnotes.co/de/">Deutsch</a>
+            <a href="https://speechnotes.co/es/">español</a>
+            <a href="https://speechnotes.co/fr/">français</a>
+            <a href="https://speechnotes.co/it/">italiano</a>
+            <a href="https://speechnotes.co/pt/">Português</a>
+            <a href="https://speechnotes.co/ru/">России</a>
+            <a href="https://speechnotes.co/ja/">日本語</a>
+            <a href="https://speechnotes.co/zh/">中國</a>
+            <a href="https://speechnotes.co/yue/">廣東話</a>
+            <a href="https://speechnotes.co/ar/">العربية</a>
+        </div>-->
+    </div>
+    <p>All rights reserved worldwide to owner. No permission to copy or use code, style, names, and any content without explicit written permission from owner (admin@speechlogger.com). You may demonstrate usage of Speechnotes, reviews, etc. Thank you.
+    </p>
+
+</div>
+
+<style>
+    .upgradeNotification {
+        opacity: 0.8;
+    }
+    .upgradeNotification:hover {
+        opacity: 1;
+    }
+</style>
+<!--<div class="upgradeNotification" style="z-index:99999999;position:fixed;bottom:50px;left:0;right:0;text-align: center;font-size:larger;margin:0;" href="https://speechnotes.co/upgrade/" >
+    <a class="upgradeNotificationLabel" target="_blank" style="margin: auto;text-align: center;font-size:larger;background-color: orangered;color: white;padding:20px 100px;border-radius: 60px;margin:0;display: inline-block;" href="https://speechnotes.co/upgrade/" >Click to upgrade or sync license with a Speechnotes premium account</a>
+</div>-->
+
+<script src="js/toc.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>

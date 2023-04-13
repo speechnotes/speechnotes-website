@@ -1,0 +1,445 @@
+
+<!doctype html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47292499-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-47292499-4');
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+  <title>Batch Convert Audio Files Flac to mp3</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0 auto;
+      padding: 1em;
+      font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 1.1em;
+      color: #333;
+    }
+    @media screen and (min-width: 40em) {
+      body {
+        width: 40em;
+      }
+    }
+    h1, h2, h3 {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+    }
+    h1 {
+      margin: 1em 0;
+      padding: 0 0 0.7em 0;
+      border-bottom: 1px dotted #ccc;
+      text-align: center;
+      font-size: 3em;
+      line-height: 1.1em;
+    }
+    h2 {
+      margin: 1.5em 0 1.5em 0;
+      padding: 0;
+      font-size: 1.8em;
+    }
+    p {
+      margin: 0 0 0.5em 0;
+      line-height: 1.8em;
+    }
+    ol {
+
+    }
+    ol li {
+      margin: 0 0 0.5em 0;
+      font-size: 0.9em;
+      line-height: 1.8em;
+    }
+    a {
+      color: #50B1FF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    figure {
+      text-align: center;
+      font-weight: bold;
+      font-size: small;
+      margin-bottom: 40px;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0.1em;
+      background-color: #F8F8F8;
+      border: 1px solid #DDD;
+      border-radius: 3px;
+      font-family: Consolas,"Liberation Mono",Courier,monospace;
+      font-size: 0.9em;
+      line-height: 1;
+    }
+    .logo {
+      display: block;
+      margin: 3em 0;
+      text-align: center;
+    }
+    .centered-img {
+      display: block;
+      max-width: 80%;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+<style>
+  #top_pane {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+</style>
+<div id="top_pane">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://speechnotes.co/">Speechnotes</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More Products by Us
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://speechnotes.co/x/" target="_blank"><i style="color: darkorange" class="fas fa-microphone" aria-hidden="true"></i>&nbsp;&nbsp;Premium Chrome Extension</a>
+          <a class="dropdown-item" href="https://speechnotes.co/" target="_blank"><i style="color: darkorange" class="fas fa-fa-microphone" aria-hidden="true"></i>&nbsp;&nbsp;Speechnotes Online Notepad (Speech to Text)</a>
+          <a class="dropdown-item" href="https://ttsreader.com" target="_blank"><i style="color: darkorange" class="fas fa-volume-up" aria-hidden="true"></i>&nbsp;&nbsp;TTSReader - Online Text Reader (Text to Speech)</a>
+          <a class="dropdown-item" href="https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes" target="_blank"><i style="color: darkorange" class="fab fa-android" aria-hidden="true"></i>&nbsp;&nbsp;Speechnotes for Android</a>
+          <a class="dropdown-item" href="https://apps.apple.com/il/app/texthear/id1246677907?mt=8" target="_blank"><i style="color: darkorange" class="fab fa-apple" aria-hidden="true"></i>&nbsp;&nbsp;TextHear for iOS</a>
+          <!--<a class="dropdown-item" href="https://chrome.google.com/webstore/detail/speechnotesx-voice-typing/oibmlbjklbogiccfokpgddgoleeiilid?hl=en" target="_blank"><i style="color: darkorange" class="fab fa-chrome" aria-hidden="true"></i>&nbsp;&nbsp;Speechnotes extension - for ANY website</a>-->
+          <!--
+                                  <a class="dropdown-item" href="https://pairing.co" target="_blank"><i style="color: darkorange" class="fas fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Pairing Matchmaking & Meaningful Dating</a>
+          -->
+          <a class="dropdown-item" href="https://speechnotes.co/files/" target="_blank"><i style="color: darkorange" class="fas fa-microphone-alt" aria-hidden="true"></i>&nbsp;&nbsp;<b>New</b>&nbspAutomatic Transcription of Audio & Video Files</a>
+        </div>
+      </li>
+      <li class="nav-item ad">
+        <a class="nav-link" href="https://speechnotes.co/x/" target="_blank">
+          Dictate Anywhere
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:black" href="https://speechnotes.co/files/" target="_blank">Upload Audio Files & Videos</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="howToDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          How to...
+        </a>
+        <div class="dropdown-menu" aria-labelledby="howToDropdown">
+          <a class="dropdown-item" href="https://speechnotes.co/files/guide/" target="_blank">Quickly Transcribe Audio and Video Files</a>
+          <a class="dropdown-item" href="https://speechnotes.co/transcribe_youtubes/" target="_blank">Transcribe YouTube Videos</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/affiliates/" target="_blank">Earn Money From Our Affiliates Program</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/extract_audio/" target="_blank">Extract Audio From Videos</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/wav_to_flac/" target="_blank">Convert wav Audio Files to Lossless flac</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/wav_to_mp3/" target="_blank">Convert wav Audio Files to mp3</a>
+          <!--<a class="dropdown-item" href="know/youtube-downloader/" target="_blank">Download YouTube Videos</a>
+          <a class="dropdown-item" href="know/youtube-to-mp3/" target="_blank">Turn YouTube to Audio (Mp3 or other)</a>
+          <a class="dropdown-item" href="know/transcribe-youtube/" target="_blank">Transcribe & Translate YouTubes</a>
+          <a class="dropdown-item" href="know/translate-audio/" target="_blank">Translate Audio and Video Files</a>
+          <a class="dropdown-item" href="know/web-voice-typing/" target="_blank">Enable Speech Recognition Anywhere</a>
+          <a class="dropdown-item" href="know/generate-captions/" target="_blank">Easily Generate Video Captions (Subtitles)</a>
+          <a class="dropdown-item" href="know/transcribe-recordings/" target="_blank">Quickly Transcribe Recordings</a>-->
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tools
+        </a>
+        <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+          <a class="dropdown-item" href="https://speechnotes.co/files/extract_audio/" target="_blank">Automatic Transcription for Audio/Video Files</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/extract_audio/" target="_blank">Audio From Videos Extractor</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/wav_to_flac/" target="_blank">Wav to Flac Converter</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/wav_to_mp3/" target="_blank">Wav to Mp3 Converter</a>
+          <!--<a class="dropdown-item" href="know/youtube-downloader/" target="_blank">Download YouTube Videos</a>
+          <a class="dropdown-item" href="know/youtube-to-mp3/" target="_blank">Turn YouTube to Audio (Mp3 or other)</a>
+          <a class="dropdown-item" href="know/transcribe-youtube/" target="_blank">Transcribe & Translate YouTubes</a>
+          <a class="dropdown-item" href="know/translate-audio/" target="_blank">Translate Audio and Video Files</a>
+          <a class="dropdown-item" href="know/web-voice-typing/" target="_blank">Enable Speech Recognition Anywhere</a>
+          <a class="dropdown-item" href="know/generate-captions/" target="_blank">Easily Generate Video Captions (Subtitles)</a>
+          <a class="dropdown-item" href="know/transcribe-recordings/" target="_blank">Quickly Transcribe Recordings</a>-->
+        </div>
+      </li>
+    </ul>
+
+
+    <style>
+      #go_premium_nav_button {
+        padding: 0 20px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+    <button id="go_premium_nav_button" onclick="window.open('https://speechnotes.co/files/','_blank')">
+      START TRANSCRIBING
+    </button>
+
+    <!--<form class="form-inline my-2 my-lg-0" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom:0;">
+
+        <div id="shareButtons" style="top:28px;right:120px;">
+            <div class="addthis_sharing_toolbox" ></div>
+        </div>
+
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="ATE9M96JNAYY8">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>-->
+  </div>
+</nav>
+</div>
+<br><br>
+
+<h1>Batch Convert All Flac Audio Files In Folder to mp3</h1>
+<h2>Use if you have one or a few flac type files</h2>
+
+<p>Select your operating system:</p>
+<br/>
+
+<style>
+  .tab-selector {
+    display: inline-block;
+    width:30%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    color: grey;
+    text-transform: uppercase;
+    border-bottom: 4px solid lightgray;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    text-underline: none;
+  }
+
+  .tab-selector:hover {
+    text-underline: none;
+  }
+
+  .tab-selector.selected {
+    color: #2f3c86;
+    border-color: #2f3c86;
+  }
+
+  .download-button {
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: auto;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: #2f3c86;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  section {
+    box-sizing: border-box;
+    max-width: 95%;
+    overflow-x: scroll;
+    margin: auto;
+  }
+
+</style>
+<p style="text-align: center">
+  <span class="tab-selector selected" id="tab_selector_win64" data-tab="section_win64">Win 64 bit</span>
+  <span class="tab-selector" id="tab_selector_win32" data-tab="section_win32">Win 32 bit</span>
+  <span class="tab-selector" id="tab_selector_mac" data-tab="section_mac">Mac</span>
+</p>
+
+<section data-tab="section_win64" class="tab-section">
+  <h3>Follow these steps if you are on Windows 64 bit:</h3>
+  <ol>
+    <li>Click the following button to download a <code>.zip</code> file, named <code>speechnotes_ffmpeg.zip</code>
+      <div style="text-align: center;margin: 20px;">
+        <a download class="download-button" target="_blank" href="https://drive.google.com/uc?export=download&id=1xtNTl5aLg6YxyXQfilQ8bht6QzT7YJND">speechnotes_ffmpeg.zip</a>
+      </div>
+    </li>
+    <li>Copy <code>speechnotes_ffmpeg.zip</code> to your <code>C hard drive</code></li>
+    <li>Extract the zip file. </li>
+    <li>Verify that you now have a <i>folder</i> named <code>speechnotes_ffmpeg</code> directly within your <code>C hard drive</code>. If you do - continue.</li>
+    <li>Click the following button to download a <code>.bat</code> file, named <code>speechnotes_flac_to_mp3.bat</code>
+      <div style="text-align: center;margin: 20px;">
+        <a download class="download-button" target="_blank" href="bash_files/speechnotes_flac_to_mp3.bat">speechnotes_flac_to_mp3.bat</a>
+      </div>
+    </li>
+    <li id="win64_copy_instructions">Copy <code>speechnotes_flac_to_mp3.bat</code> to any directory that has the *.flac audio files you want to extract the audio from.</li>
+    <li>Double click the copied <code>speechnotes_flac_to_mp3.bat</code> file in order to run it. It should automatically open a command line window and run there.</li>
+    <li>Once finished, it creates a folder named <code>speechnotes-output-mp3</code> where in it are all the new mp3 files</li>
+    <li>Have more *.flac audio files in a different directory? Simply repeat <a href="#win64_copy_instructions"><i>'Copy <code>speechnotes_flac_to_mp3.bat</code> to any directory...'</i></a>&nbsp; and on with the other directory.</li>
+  </ol>
+
+  <br/>
+
+  <h4>Don't have a C hard drive?</h4>
+  <p>You may use a different drive, but, you will have to edit the .bat file, and replace every 'C://' with your drive of choice.</p>
+</section>
+
+<section data-tab="section_win32" class="tab-section hidden">
+  <h3>Follow these steps if you are on Windows 32 bit:</h3>
+  <ol>
+    <li>Click the following button to download a <code>.zip</code> file, named <code>speechnotes_ffmpeg.zip</code>
+      <div style="text-align: center;margin: 20px;">
+        <a download class="download-button" target="_blank" href="https://drive.google.com/uc?export=download&id=1kixsebXslv3jkL4z-f-1387ZDO2hYSAD">speechnotes_ffmpeg.zip</a>
+      </div>
+    </li>
+    <li>Copy <code>speechnotes_ffmpeg.zip</code> to your <code>C hard drive</code></li>
+    <li>Extract the zip file. </li>
+    <li>Verify that you now have a <i>folder</i> named <code>speechnotes_ffmpeg</code> directly within your <code>C hard drive</code>. If you do - continue.</li>
+    <li>Click the following button to download a <code>.bat</code> file, named <code>speechnotes_flac_to_mp3.bat</code>
+      <div style="text-align: center;margin: 20px;">
+        <a download class="download-button" target="_blank" href="bash_files/speechnotes_flac_to_mp3.bat">speechnotes_flac_to_mp3.bat</a>
+      </div>
+    </li>
+    <li id="win32_copy_instructions">Copy <code>speechnotes_flac_to_mp3.bat</code> to any directory that has the *.flac audio files you want to extract the audio from.</li>
+    <li>Double click the copied <code>speechnotes_flac_to_mp3.bat</code> file in order to run it. It should automatically open a command line window and run there.</li>
+    <li>Once finished, it creates a folder named <code>speechnotes-output-mp3</code> where in it are all the new mp3 files</li>
+    <li>Have more *.flac audio files in a different directory? Simply repeat <a href="#win32_copy_instructions"><i>'Copy <code>speechnotes_flac_to_mp3.bat</code> to any directory...'</i></a>&nbsp; and on with the other directory.</li>
+  </ol>
+
+  <br/>
+
+  <h4>Don't have a C hard drive?</h4>
+  <p>You may use a different drive, but, you will have to edit the .bat file, and replace every 'C://' with your drive of choice.</p>
+</section>
+
+<section data-tab="section_mac" class="tab-section hidden">
+  <h3>Follow these steps if you are on Mac</h3>
+
+  <p>* Please note, these instructions will require you to work with the command-line terminal. It's very simple - we'll walk you through each step - so please bare with us. *</p>
+  <br>
+
+  <h4>Open Terminal</h4>
+  <p>On your Mac, do one of the following:</p>
+  <ul>
+    <li>Click the Launchpad icon in the Dock / or launch 'Spotlight Search', type 'Terminal' in the search field, then click Terminal.</li>
+    <li>In the Finder, open the /Applications/Utilities folder, then double-click Terminal.</li>
+  </ul>
+
+  <hr>
+
+  <h4>Install ffmpeg. If you have it already - continue straight to <a href="#post_prep_steps_mac">Got ffmpeg - lets convert some audio</a> section</h4>
+  <p>Check if you have <a href="https://ffmpeg.org/" target="_blank">ffmpeg</a> installed on your mac:<br>
+    In the opened Terminal type <br><code>ffmpeg -version</code><br> and click 'Enter'.<br>
+    If you received a response of: <code>-bash: ffmpeg: command not found</code> it means you do NOT have it. Otherwise - you have it. If you have it already - continue straight to <a href="#post_prep_steps_mac">Got ffmpeg - lets convert some audio</a> section.
+  </p>
+
+  <p>- I do not have ffmpeg. Let's install it.</p>
+  <p>One more check first - let's check if you have <a href="https://brew.sh/" target="_blank">Homebrew</a> installed on your mac:<br>
+    In the opened Terminal type <br><code>brew -v</code><br> and click 'Enter'.<br>
+    If you received a response of: <code>-bash: brew: command not found</code> it means you do NOT have it. Otherwise - you have it.<br>
+
+    In case you do not have it, simply install it by copying the following into your Terminal (click 'Enter' after pasting to terminal):
+    <br><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"</code><br>
+  </p>
+
+  <p>Once 'brew' is installed - type enter the following in your Terminal:
+    <br><code>brew install ffmpeg</code><br>
+    Once installed - continue:
+  </p>
+
+  <hr>
+
+  <h4 id="post_prep_steps_mac">Got ffmpeg - lets convert some audio</h4>
+  <ol>
+    <li>Open the terminal in the specific folder where your wav files are located. One simple way to do that is:
+      <ol>
+        <li>Type (without Enter) <code>cd&nbsp</code> (note the 'space' after 'cd') and then</li>
+        <li>Drag from Finder the folder which contains the wav files into the Terminal</li>
+        <li>Click 'Enter'</li>
+        <li>You should now see the name of that directory in the new line that the Terminal's caret is on.</li>
+      </ol>
+    </li>
+    <li>In the terminal, copy the following and click 'Enter':
+      <code>
+        echo "Making speechnotes-output-mp3s directory"<br>
+        mkdir -p speechnotes-output-mp3s<br>
+        echo "Success making speechnotes-output-mp3s directory"<br>
+        <br>
+        COUNTER=0;<br>
+        echo "Searching for wav files in directory"<br>
+        for input in *.flac; do<br>
+        # ffmpeg -i "$input" "speechnotes-output-mp3s/$(basename -s .flac "$input").mp3"<br>
+        if [ -f "$input" ]; then<br>
+        COUNTER=$((COUNTER + 1))<br>
+        echo "Found and converting $input"<br>
+        ffmpeg -i "$input" "speechnotes-output-mp3s/$(basename -s .flac "$input").mp3" -nostdin -loglevel panic<br>
+        fi<br>
+        done<br>
+        echo "Done. Found total $COUNTER wav files in directory"<br>
+      </code>
+    </li>
+    <li>Now you should have created a folder named 'speechnotes-output-mp3s' where in it are converted mp3 files. Congrats.</li>
+    <li>Got more wav files to convert in a different directory? Simply repeat <a href="#post_prep_steps_mac"><i>Got ffmpeg - lets convert some audio</i></a> for any directory you need. No need to install brew nor ffmpeg again.</li>
+  </ol>
+
+</section>
+
+
+
+<h2>Contact Us</h2>
+<p>Please contact us for any further inquiries at &nbsp;&nbsp; <code>admin@speechlogger.com</code></p>
+
+<script>
+  // Tab selector:
+  function onTabSelected(tabName) {
+    let tabSelectors = document.getElementsByClassName("tab-selector");
+    for (const tabSelector of tabSelectors) {
+      if (tabSelector.getAttribute('data-tab') == tabName) {
+        tabSelector.className = "tab-selector selected";
+      } else {
+        tabSelector.className = "tab-selector";
+      }
+    }
+
+    let tabSections = document.getElementsByClassName("tab-section");
+    for (const tab of tabSections) {
+      if (tab.getAttribute('data-tab') == tabName) {
+        tab.className = "tab-section";
+      } else {
+        tab.className = "tab-section hidden";
+      }
+    }
+
+
+  }
+
+  let tabSelectors = document.getElementsByClassName("tab-selector");
+  for (const tabSelector of tabSelectors) {
+    tabSelector.addEventListener('click',function (e) {
+      onTabSelected(tabSelector.getAttribute('data-tab'));
+    })
+  }
+</script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
