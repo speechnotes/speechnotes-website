@@ -44,26 +44,38 @@
     url = "/converters/"
     parent = "tools"
   [[main]]
-    name = "Transcription API & Zapier automation"
+    name = "Transcription API"
     weight = 45
     identifier = "tools-api"
-    url = "/api/"
+    url = "/files/guides/api/"
+    parent = "tools"
+  [[main]]
+    name = "Zapier automation"
+    weight = 45
+    identifier = "tools-zapier"
+    url = "https://zapier.com/apps/speechnotes/integrations"
     parent = "tools"
   [[main]]
     name = "Affiliates program"
     weight = 46
     identifier = "tools-affiliates"
-    url = "/affiliates/"
+    url = "/files/affiliates/"
     parent = "tools"
   [[main]]
     name = "Speechnotes Android App"
     weight = 47
     identifier = "tools-android"
-    url = "/affiliates/"
+    url = "https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes"
     parent = "tools"
   [[main]]
     name = "TextHear - iOS App"
     weight = 48
     identifier = "tools-texthear"
     url = "https://apps.apple.com/us/app/texthear/id1246677907"
+    parent = "tools"
+  [[main]]
+    name = "Pricing"
+    weight = 49
+    identifier = "pricing"
+    url = "/#pricing"
     parent = "tools"
