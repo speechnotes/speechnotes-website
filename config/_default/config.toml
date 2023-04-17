@@ -10,6 +10,7 @@ rssLimit = 10
 publishDir = "docs"
 
 # Multilingual
+# Make sure multilingualMode = true in Params.options.multilingualMode
 defaultContentLanguage = "en"
 disableLanguages = ["de","nl", "he"]
 # defaultContentLanguageInSubdir = true

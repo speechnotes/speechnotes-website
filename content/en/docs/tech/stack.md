@@ -1,7 +1,7 @@
 ---
 title: "Tech Stack"
-description: "About the technologies operating SpeechNinja"
-lead: "About the technologies operating SpeechNinja"
+description: "About the technologies operating Speechnotes"
+lead: "About the technologies operating Speechnotes"
 date: 2023-02-12T15:22:20+01:00
 lastmod: 2023-02-12T15:22:20+01:00
 draft: false
@@ -13,19 +13,22 @@ weight: 310
 toc: true
 ---
 
-## Speech Synthesis
+## Speech Recognition Engines
 
-SpeechNinja is powered by [TTSReader's Engine](https://ttsreader.com/), which is in its turn powered by the `Web Speech API`.
+- Dictation: web speech API
+- Transcription: server side powered by Google's / Microsoft's speech to text engines.
 
 
 ## Hosting
 
-Hosted by github pages. Github project repository is here https://github.com/ttsreader/speechninja
+Hosted on Google Cloud
 
 
 ## App technology
 
 The app itself is built on JavaScript, using npm. The code behind it is not open source.
+
+We are open sourcing the wrapper javascript library around the web speech API.
 
 ## Site technology
 

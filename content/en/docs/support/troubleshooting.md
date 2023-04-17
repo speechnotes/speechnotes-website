@@ -15,9 +15,6 @@ toc: true
 
 ** This page is not complete **
 
-{{< details "I cannot hear anything" >}}
-Can you hear on other websites, like [YouTube](https://youtube.com/) ? If not, check the following:
-- Volume / mute
-- Speakers on
-- Maybe bluetooth or line-in speakers / headset is connected?
+{{< details "Mic does not show on dictation notepad" >}}
+- Make sure you are using either Chrome or Edge browser.
 {{< /details >}}

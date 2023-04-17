@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html class="no-js consumer" lang="en"> <!-- Page Specific -->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- TODO: Update metas correct title & content description -->
+	<meta content="Speech to Text Online Notepad. Free. The Professional Speech Recognition Text Editor. Distraction-free, Fast, Easy to Use & Free Web App for Dictation & Typing" name="description"/>
+	<title>Speechnotes | Speech to Text Online Notepad</title>
+
+	<!-- fb metas TODO: update -->
+		<meta property="og:title" content="Speech to Text Online Notepad. Free" />
+		<meta property="og:site_name" content="Speechnotes"/>
+		<meta property="og:description" content="Professional Dictation & Text Editing. Distraction-free, Fast, Easy to Use & Free Web App for Dictation & Typing" />
+		<meta property="og:image" content="https://speechnotes.co/images/tile_1400x560.jpg"/>
+		<meta property="og:image:secure_url" content="https://speechnotes.co/images/tile_1400x560.jpg" />
+		<meta property="og:locale:alternate" content="en_US" />  <!-- En -->
+		<meta property="og:locale:alternate" content="fr_FR" />  <!-- French -->
+		<meta property="og:locale:alternate" content="it_IT" />  <!-- Italian -->
+		<meta property="og:locale:alternate" content="es_ES" />  <!-- Spanish -->
+		<meta property="og:locale:alternate" content="de_DE" />  <!-- German -->
+		<meta property="og:locale:alternate" content="ru_RU" />  <!-- Ruassian -->
+		<meta property="og:locale:alternate" content="ja_JP" />  <!-- Japanese -->
+		<meta property="og:locale:alternate" content="zh_CN" />  <!-- Chinese -->
+		<meta property="og:locale:alternate" content="pt_BR" />  <!-- Portuguese (Brazil)  -->
+		<meta property="og:locale:alternate" content="ar_AR" />  <!-- Arabic -->
+	<!-- end of fb metas -->
+
+		<link rel="alternate" hreflang="x-default" href="https://speechnotes.co/" />
+		<link rel="alternate" hreflang="en" href="https://speechnotes.co/" />
+		<link rel="alternate" hreflang="de" href="https://speechnotes.co/de/" />
+		<link rel="alternate" hreflang="es" href="https://speechnotes.co/es/" />
+		<link rel="alternate" hreflang="fr" href="https://speechnotes.co/fr/" />
+		<link rel="alternate" hreflang="it" href="https://speechnotes.co/it/" />
+		<link rel="alternate" hreflang="ja" href="https://speechnotes.co/ja/" />
+		<link rel="alternate" hreflang="pt" href="https://speechnotes.co/pt/" />
+		<link rel="alternate" hreflang="ar" href="https://speechnotes.co/ar/" />
+		<link rel="alternate" hreflang="ru" href="https://speechnotes.co/ru/" />
+		<link rel="alternate" hreflang="zh" href="https://speechnotes.co/zh/" />
+
+	<script type="text/javascript" src="resources/scriptA9.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/style3.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/premium3.css">
+
+	<style>
+		.invisible {
+			display: none;
+		}
+
+		#top_pane {
+			overflow-y: visible;
+		}
+
+		.marker {
+			margin: 20px auto;
+			background-color: antiquewhite;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		*, ::after, ::before {
+			box-sizing: unset;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: .5rem;
+			margin-bottom: .5rem;
+		}
+
+		.dropdown-menu {
+			overflow-x: hidden;
+		}
+
+	</style>
+	<script>
+		localStorage.setItem("interfaceLang", "en");
+	</script>
+
+	<script>
+	  function popCookieConsent() {
+
+	  	if (window.cookieconsent) {
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#000"
+					},
+					"button": {
+						"background": "#ffd600"
+					}
+				},
+				"content": {
+					"href": "https://speechnotes.co/#privacy"
+				}
+			});
+		}
+	  }
+
+
+	  function getIpKey() {
+		return 'd'+'A'+'nM'+'trn1NM'+'Ba4fh';
+      }
+
+	  function runGdprStuff() {
+	  	// Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden and the UK, Iceland, Liechtenstein and Norway, IL, Switzerland
+	  	var gdprCountryCodes = ["FI","AT","PT","BE","BG","ES","HR","CY","CZ","DK","EE","FI","FR","GF","DE","GI","GR","GP","GG","HU","IS","IE","IM","IT","JE","LV","LI","LT","LU","PT","MT","MQ","YT","NL","NO","PL","PT","RE","RO","BL","MF","PM","SK","SI","ES","SE","GB","IL","CH"];
+	  	$.getJSON('https://pro.ip-api.com/json/?key='+getIpKey(), function(data) {
+			console.log("got json: ", data);
+			if (gdprCountryCodes.indexOf(data.countryCode.toUpperCase())>=0) {
+		  		console.log("Country is in eu");
+		  		popCookieConsent();
+			} else {
+		  		console.log("Not in eu. Hurray!");
+			}
+	  	});
+	  }
+	</script>
+	<!-- endof GDPR stuff... -->
+
+
+	<!-- post load stuff -->
+	<script>
+		function loadAdditionalResources() {
+			var cssFiles = [
+				"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css",
+					"https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+			];
+
+			var integrity = ["","sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"];
+
+			for (var i=0; i<cssFiles.length; i++) {
+				var link = document.createElement('link');
+				link.setAttribute('rel', 'stylesheet');
+				link.setAttribute('crossorigin', 'anonymous');
+				link.setAttribute('integrity', integrity[i]);
+				link.type = 'text/css';
+				link.href = cssFiles[i];
+
+				document.head.appendChild(link);
+			}
+
+			// TODO: Google ads... etc...
+
+			var scripts = [
+				"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+				"https://apis.google.com/js/client.js?onload=handleClientLoad",
+				"https://use.fontawesome.com/8c3313ade0.js"];
+
+			for (var i=0; i<scripts.length; i++) {
+				var s = document.createElement('script');
+				s.setAttribute('async', 'async');
+				s.type = 'text/javascript';
+				s.src = scripts[i];
+
+				document.head.appendChild(s);
+			}
+	}
+	</script>
+
+	<script src="resources/page-state.js"></script>
+
+</head>
+
+<body onload="loadAdditionalResources();"  class="color-themed">
+
+<div id="top_pane">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Speechnotes</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <b><a class="nav-link" style="color:black" href="#" >Dictate</a></b>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color:black" href="/files/" target="_blank">Transcribe</a>
+        </li>
+      </ul>
+
+
+      <style>
+        .special-nav-btn {
+          padding: 0 20px;
+          border-radius: 50px;
+          background-color: orange;
+          border: none;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      </style>
+      <button id="go_premium_nav_button" class="ad special-nav-btn" onclick="window.open('/upgrade/','_blank')" data-ws-show-if="license-none license-expired license-unknown">
+        <span data-ws-show-if="signed-out">SIGN IN & </span>GO PREMIUM
+      </button>
+      <span data-ws-show-if="license-life license-subscription-valid" style="display: none;">
+				<button class="special-nav-btn"  onclick="toggleSignIn()" style="background-color: lightgrey;display: none;" data-ws-show-if="signed-in">
+					SIGN OUT
+				</button>
+				<button class="special-nav-btn"  onclick="toggleSignIn()" style="display: none;" data-ws-show-if="signed-out">
+					SIGN IN
+				</button>
+			</span>
+
+    </div>
+  </nav>
+
+
+  <!--<div id="top_menu">
+    <a href="https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes" target="_blank"><img style="position:relative;top:-5px;height:50px;vertical-align:middle" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a>
+    <a href="#app" target="_self">App</a>
+    <a href="about/" target="_blank">About</a>
+    <a href="http://ttsreader.com" target="_blank" title="Unlimited Online Text Reader (TTSReader)">Read Aloud</a>
+    &lt;!&ndash;<a href="mailto:admin@speechlogger.com" target="_blank">Contact</a>&ndash;&gt;
+    &lt;!&ndash;<a href="https://speechnotes.co/transcribe/" target="_blank" title="Transcribe audio files">Transcribe Audio Files</a>&ndash;&gt;
+    <a href="https://chrome.google.com/webstore/detail/speechnotesx-voice-typing/oibmlbjklbogiccfokpgddgoleeiilid" target="_blank" title="Enhance ALL websites with speech recognition"><b>Dictate in Any Website</b></a>
+      <a style="color: #00ff00;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Products&nbsp;<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li style="cursor: pointer">
+          <a style="" href="https://ttsreader.com"><i class="fas fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+        </li>
+        <li style="cursor: pointer">
+          <a style="" href="https://chrome.google.com/webstore/detail/ttsreader-premium-token/ednjnllbonbpinfgoonegkanhgieddlj" target="_blank"><i class="fas fa-gem" aria-hidden="true"></i>&nbsp;Premium</a>
+        </li>
+        <li style="cursor: pointer">
+          <a style="" href="https://chrome.google.com/webstore/detail/ttsreaderx-in-page-text-t/pakknklefcjdhejnffafpeelofiekebg" target="_blank"><i class="fas fa-volume-up" aria-hidden="true"></i>&nbsp;Extension to Read Aloud ANY Website</a>
+        </li>
+        <li style="cursor: pointer">
+          <a style="" href="https://play.google.com/store/apps/details?id=com.speechlogger.ttsreader&hl=en" target="_blank"><i class="fab fa-android" aria-hidden="true"></i>&nbsp;Android App</a>
+        </li>
+        <li style="cursor: pointer">
+          <a style="" href="https://speechnotes.co" target="_blank"><i class="fas fa-microphone" aria-hidden="true"></i>&nbsp;Speechnotes for Dictation</a>
+        </li>
+        <li style="cursor: pointer">
+          <a style="" href="https://pairing.co" target="_blank"><i class="fas fa-heart" aria-hidden="true"></i>&nbsp;NEW: Pairing for Meaningful Relationships</a>
+        </li>
+        <li style="cursor: pointer">
+          <a style="" href="https://ttsreader.com/voiceover/" target="_blank"><i class="fas fa-video" aria-hidden="true"></i>&nbsp;Professional Voice Over Artists</a>
+        </li>
+      </ul>
+  </div>
+  <div id="shareButtons" style="top:13px;">
+    <div class="addthis_sharing_toolbox" ></div>
+  </div>
+  <div id="donateButton" style="top: 8px;">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom:0;">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="ATE9M96JNAYY8">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>-->
+</div>
+<div id="goPremiumBtn" class="ad" style="position: fixed;top:70px;right:0;left:0;z-index: 99;cursor: pointer;text-transform: uppercase" data-ws-class="show-when-signed-out show-when-signed-out ">
+  <a style="width:100%;display:block;line-height:44px;height: 40px;background-color: orange;text-align: center;font-weight:bold;color: white;" target="_blank" href="upgrade/">
+    Rid ads, boost productivity &amp; voice-type anywhere - Click to learn more
+  </a>
+</div>
+<div id="app" style="margin:0;padding:0;height:0;width:0;background-color:black"></div>
+<div id="app_container">
+
+	<div id="app_inner_container" style="height: 100%;width: 100%;"   class="color-themed">
+
+	<div id="application_pane"  >
+		<div id = "application_header">
+			<div id="session_title" contentEditable="true"></div>
+			<hr/>
+			<div id="buttons_row" style="z-index: 9;top: 17px;pointer-events: none;">
+				<select id="select_language" onchange="updateLanguage();" style="pointer-events: all;"></select>
+				<div id="start_button" style="width: 72px;height: 72px;pointer-events: all;" onclick="if(variables.recognizing){isToRestartImmediately=false}startButton(event);" title="Start / Pause"><img alt="Start" id="start_img" src="https://speechlogger.appspot.com/images/micoff2.png" style="vertical-align: unset;position: relative;top: -1px;right: 1px;"></div>
+			</div>
+		</div>
+		<div id="output_box" style="bottom: 70px;padding-top: 20px;">
+			<textarea resizeable="false" name="results_box" class="resultsClass widebox color-themed" id="results_box" onscroll="rememberScroll()" onblur="rememberScroll()" onfocus="scrollToMemory()" placeholder="Click the mic to start dictating.
+
+Quick tips:
+
+(1) Use the speaker icon for proof reading.
+
+(2) Punctuating. Use any of the 3 methods to punctuate: i. Dictate it. ii. Type it - without stopping the microphone. iii. Tap the punctuation mark on the punctuation panel on the right.
+
+(3) Press the Enter key on your keyboard to instantly finalize pending results.
+
+(4) Dictate on other sites with our extension - see 'Voice Typing' at the top menu.
+
+(5) Transcribe audio & video files with our automatic transcription - see 'Transcribe' at the top menu.
+
+Enjoy notes-talking :)">
+
+			</textarea>
+		</div>
+		<div id="mirror_container">
+			<div id="mirror"></div>
+		</div>
+		<div style="position: absolute;height:70px;bottom:0;right:0;left:0;">
+			<div id="copyButton" onclick="copyButton(event);" title="Copy to clipboard" style="bottom: 15px;right: 50px;"></div>
+			<div id="speakerBtnContainer" style="position: absolute; bottom: 12px;right: 111px;"></div>
+		</div>
+	</div><!-- application_pane -->
+
+	<div id="menu_pane" class="water_mark">
+		<div id="toggleFullScreenButton" onclick="toggleFullScreen();" title="Full Screen Mode" style="cursor:pointer;position: absolute;height: 40px;width:40px;top:10px;left:10px;background-image: url('images/largeView.png'); background-size: cover;"></div>
+
+		<div id="menu_container">
+
+			<button class="menuhead" id="preferences_button">
+				<ul class="dropdownmenu" id="preferences">
+					<li>
+						<input type="checkbox" id="save_checkbox">&nbsp;<label for="save_checkbox" id="lbl_save_checkbox">Auto Save</label>
+					</li>
+					<li id="darkThemeBtn">
+						<input type="checkbox" id="dark_theme_checkbox">&nbsp;<label for="dark_theme_checkbox" id="lbl_dark_theme_checkbox">Dark Theme</label>
+					</li>
+					<li onclick="toggleHelpPane()"><div>Show /Hide Help Pane</div></li>
+					<li id="wordCounterBtn"><div>Word Count</div></li>
+					<li class="nonSelectable"><div>User-Interface Language:</div></li>
+					<li><div onclick="updateInterfaceLang('en');">English</div></li>
+					<li><div onclick="updateInterfaceLang('de');">Deutsch</div></li>
+					<li><div onclick="updateInterfaceLang('es');">español</div></li>
+					<li><div onclick="updateInterfaceLang('fr');">français</div></li>
+					<li><div onclick="updateInterfaceLang('it');">italiano</div></li>
+					<li><div onclick="updateInterfaceLang('pt');">Português</div></li>
+					<li><div onclick="updateInterfaceLang('ru');">России</div></li>
+					<li><div onclick="updateInterfaceLang('zh');">中國</div></li>
+					<li><div onclick="updateInterfaceLang('yue');">廣東話</div></li>
+					<li><div onclick="updateInterfaceLang('ja');">日本語</div></li>
+					<li><div onclick="updateInterfaceLang('ar');">العربية</div></li>
+				</ul>
+			</button>
+
+			<button id="new_button" onclick="newButton(event);" title="New Session"></button>
+			<button class="menuhead" id="open_button">
+				<ul class="dropdownmenu" id="select_session">
+					<!-- TODO: clean "openfile" from old speechnotes & speechlogger - both in layout and in code -->
+					<div id="sessions_menu"></div>
+				</ul>
+			</button>
+			<button id="email_button" onclick="emailButton(event);" title="Email"></button>
+			<button  class="menuhead" id="export_button">
+				<ul class="dropdownmenu" id="export_menu">
+					<li><div class="exportOption" id="save_drive" onclick="saveToDrive();">Upload to Google Drive</div></li>
+					<li><div class="exportOption" id="save_txt" onclick="saveAsTxtFile();">Download as file (.txt)</div></li>
+					<li><div class="exportOption" id="save_doc" onclick="saveAsDocFile();">Word Document (.doc)</div></li>
+					<li><div class="exportOption" id="save_to_disc" onclick="saveButton(event);">Save Session (Ctrl+S)</div></li>
+				</ul>
+			</button>
+			<button id="print_button" onclick="printButton(event);" title="Print"></button>
+
+			<button id="enlarge_button" onclick="zoom(1.20);" title="Zoom In Text"></button>
+			<button id="shrink_button" onclick="zoom(1/1.20);" title="Zoom Out Text"></button>
+
+		</div>
+	</div>
+
+	<div id="help_pane" class="water_mark color-themed">
+	<h2>Say or Click</h2>
+		<p><b>Tip:</b> While dictating, press Enter&crarr; (on keyboard) to quickly move results from buffer to text editor.
+		</p>
+		<table id="commands_table">
+			<tr>
+				<th id="cell_say">Say</th>
+				<th>Insert</th>
+			</tr>
+			<tr onclick="insertSymbol('.')" title="Click to insert">
+				<td id="cell_period">Period</td>
+				<td>.</td>
+			</tr>
+			<tr onclick="insertSymbol(',')" title="Click to insert">
+				<td id="cell_comma">Comma</td>
+				<td>,</td>
+			</tr>
+			<tr onclick="insertSymbol('?')" title="Click to insert">
+				<td id="cell_question">Question mark</td>
+				<td>?</td>
+			</tr>
+			<tr onclick="insertSymbol(':')" title="Click to insert">
+				<td id="cell_colon">Colon</td>
+				<td>:</td>
+			</tr>
+			<tr onclick="insertSymbol(';')" title="Click to insert">
+				<td id="cell_semi">Semi colon</td>
+				<td>;</td>
+			</tr>
+			<tr onclick="insertSymbol('!')" title="Click to insert">
+				<td id="cell_exclamation">Exclamation mark, Exclamation point</td>
+				<td>!</td>
+			</tr>
+			<tr onclick="insertSymbol('-')" title="Click to insert">
+				<td id="cell_dash">Dash</td>
+				<td>-</td>
+			</tr>
+			<tr onclick="insertSymbol(NEW_LINE)" title="Click to insert">
+				<td id="cell_line">New line</td>
+				<td>&crarr;</td>
+			</tr>
+			<tr onclick="insertSymbol(NEW_LINE+NEW_LINE)" title="Click to insert">
+				<td id="cell_paragraph">New paragraph</td>
+				<td>&crarr;&crarr;</td>
+			</tr>
+			<tr onclick="insertSymbol('(')" title="Click to insert">
+				<td id="cell_open">Open parentheses</td>
+				<td>(</td>
+			</tr>
+			<tr onclick="insertSymbol(')')" title="Click to insert">
+				<td id="cell_close">Close parentheses</td>
+				<td>)</td>
+			</tr>
+			<tr onclick="insertSymbol(':-)')" title="Click to insert">
+				<td id="cell_smiley">Smiley, Smiley face</td>
+				<td>:-)</td>
+			</tr>
+			<tr onclick="insertSymbol(':-(')" title="Click to insert">
+				<td id="cell_sad">Sad face</td>
+				<td>:-(</td>
+			</tr>
+		</table>
+	</div>
+
+	</div>
+
+</div>
+
+<div class="ad" id="bottom_ad_pane" style="right: 0; background-color: whitesmoke;padding: 4px 0;height:50px;" >
+
+	<div style="margin:auto;height:50px;max-width: 95%;overflow: hidden" >
+		<div style="display: block"
+			 data-ws-ad
+			 data-ws-ad-provider="adsense"
+			 data-ad-client="ca-pub-5030295218223297"
+			 data-ad-slot="3296641206"
+		></div>
+	</div>
+
+	<div class="closeAdBtn">
+		X
+	</div>
+</div>
+
+<div id="notification" style="z-index:999;"></div>
+
+<div id="dialogContainer" style="z-index: 9999;color:black;position: fixed;top: 0;bottom: 0;right: 0;left: 0;background-color: rgba(11,11,11,0.5);display: none;">
+	<div id="dialogBox" style="overflow-y:scroll;
+								padding: 20px;
+                                position: relative;
+                                top: 70px;
+                                background-color: rgba(256,256,256,1);
+                                border-radius: 20px;
+                                width: 50%;
+                                min-width: 300px;
+                                max-height: 80%;
+                                margin: 0 auto;">
+
+		<div class="no-bg-button" id="closeDialogBtn" style="    z-index: 99;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    border: solid 3px white;
+    border-radius: 17px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 31px;">
+			X
+		</div>
+
+		<div style="overflow-y: scroll;width: 95%;height:95%;margin: 0 auto;">
+			<div id="goPremiumDialog2" style="display: none;text-align: center;overflow-y: scroll" class="dialog">
+				<a style="display: block;width: 100%;height: 100%;" href="https://chrome.google.com/webstore/detail/speechnotes-voice-typing/nncconplehmbkbhkgkodmnkfaflopkji/" target="_blank">
+					<p style="color: green;letter-spacing: 0.2em"><b>GO PREMIUM - UNLEASH CREATIVITY<br/><br/></b></p>
+					<p>Save time & energy every time you type - on ANY website! Unleash your full creativity</p>
+
+					<p><span style="color:#666666;">Remove ads & unlock premium features<br/>
+						In addition:<br/>
+					Dictate on ANY website<br/>
+						One tap to insert pre-typed texts<br/>
+						On ANY website across the web!
+					</span></p>
+				<br/>
+
+					<button style="padding: 5px 20px;background-color: #ffaa22;cursor: pointer;">Get it now on the Chrome store &rarr;</button>
+					<br/>
+					<br/>
+					<br/>
+					<img src="images/popup_top.png" style="width:300px;max-width: 95%;margin:auto;">
+
+					<br/><br/><br/><br/>
+
+					<button style="padding: 5px 20px;background-color: #ffaa22;cursor: pointer;">Get it now on the Chrome store &rarr;</button>
+					<br/>
+				</a>
+			</div>
+
+			<div id="notificationDialog" style="display: none;text-align: center;padding: 50px 20px;" class="dialog">
+				<p id="notificationMsg" style="font-size: larger"></p>
+				<button style="padding: 10px 50px; border-radius: 20px; background-color: orange; color: white; text-transform: uppercase;margin: 50px auto 20px;" class="btn" id="notificationBtn"></button>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- *** DIALOG-CONTAINER END ***-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="resources/scriptB5.min.js"></script>
+<script type="text/javascript" src="resources/premium10.js"></script>
+<script>
+	document.getElementById("dialogContainer").addEventListener('click',(ev)=>{
+		closeDialog();
+	});
+</script>
+
+
+<script src="resources/dom-hooks.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script defer src="resources/init-firebase.js"></script>
+<script defer src="resources/init-firebase-signin.js"></script>
+
+<script defer type="text/javascript" src="resources/ttsreader2.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

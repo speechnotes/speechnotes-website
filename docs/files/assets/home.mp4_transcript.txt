@@ -1,0 +1,77 @@
+Without timestamps:
+----------------------
+
+In the short video, we will demonstrate speech notes the new professional speech recognition notepad for Chrome speechnotes is a free web app for dictation and text editing.
+ To get started. All we have to do is go to speech notes. Co
+ as you can see the design is very clean. That was our designers choice so that I users could focus on their thoughts and text without distractions this and other features such as auto save and Export options make speechnotes a great choice, even if he use it as a regular notepad without a speech recognition features.
+ To start dictating. The only thing you have to do is click the mic no need to download install or even log in.
+ If it's your first time Chrome will ask for permission to listen to your microphone. Click allow.
+ Let's see how it works. I will click the mic and start dictating a few lines from Little Red Riding Hood.
+ Little Red Riding Hood promise to obey her mother.
+ the grandmother lived out in the woods,
+ a half hour from the village.
+ When Little Red Riding Hood enter the woods a wolf came up to her.
+ She did not know what a wicked animal he was,
+ and was not afraid of him.
+ new line
+ good day to you, Little Red Riding Hood.
+ new line
+ Thank You, wolf.
+ That's it. Everything is automatically saved on your browser. You can download it exported to drive print or email with a single click.
+ Here's an important tip for more advanced users.
+ Well dictating. You can press enter to finalize buffered results.
+ No that uses voice commands that are listed on the right panel there also clickable.
+ Clicking a punctuation command or Mark will at the Mark right after the dictated speech even if buffered speech is still being processed.
+ Speechnotes was released on October 1st 2015. And since then we've gotten great reviews. You're welcome to check our user feedback on the Chrome Store.
+ Thanks for watching and we hope you find speech notes helpful and enjoyable.
+
+
+With timestamps (seconds):
+------------------------------
+
+0: In the short video, we will demonstrate speech notes the new professional speech recognition notepad for Chrome speechnotes is a free web app for dictation and text editing.
+
+13:  To get started. All we have to do is go to speech notes. Co
+
+19:  as you can see the design is very clean. That was our designers choice so that I users could focus on their thoughts and text without distractions this and other features such as auto save and Export options make speechnotes a great choice, even if he use it as a regular notepad without a speech recognition features.
+
+41:  To start dictating. The only thing you have to do is click the mic no need to download install or even log in.
+
+49:  If it's your first time Chrome will ask for permission to listen to your microphone. Click allow.
+
+57:  Let's see how it works. I will click the mic and start dictating a few lines from Little Red Riding Hood.
+
+65:  Little Red Riding Hood promise to obey her mother.
+
+71:  the grandmother lived out in the woods,
+
+76:  a half hour from the village.
+
+80:  When Little Red Riding Hood enter the woods a wolf came up to her.
+
+87:  She did not know what a wicked animal he was,
+
+93:  and was not afraid of him.
+
+97:  new line
+
+99:  good day to you, Little Red Riding Hood.
+
+106:  new line
+
+108:  Thank You, wolf.
+
+115:  That's it. Everything is automatically saved on your browser. You can download it exported to drive print or email with a single click.
+
+127:  Here's an important tip for more advanced users.
+
+130:  Well dictating. You can press enter to finalize buffered results.
+
+136:  No that uses voice commands that are listed on the right panel there also clickable.
+
+142:  Clicking a punctuation command or Mark will at the Mark right after the dictated speech even if buffered speech is still being processed.
+
+153:  Speechnotes was released on October 1st 2015. And since then we've gotten great reviews. You're welcome to check our user feedback on the Chrome Store.
+
+163:  Thanks for watching and we hope you find speech notes helpful and enjoyable.
+

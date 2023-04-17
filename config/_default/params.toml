@@ -36,7 +36,7 @@ schemaImageWidth = 1024
 schemaImageHeight = 512
 schemaTwitter = "https://twitter.com/speechlogger"
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/ttsreader/speechninja"
+schemaGitHub = "https://github.com/speechnotes/speechnotes-website/"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -79,7 +79,7 @@ alertDismissible = true
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/ttsreader/speechninja"
+docsRepo = "https://github.com/speechnotes/speechnotes-website"
 docsRepoBranch = "main"
 docsRepoSubPath = ""
 editPage = false
@@ -94,13 +94,13 @@ lastMod = false
   instantPage = true
   flexSearch = true
   searchSectionsShow = []
-  searchSectionsIndex = []
+  searchSectionsIndex = "ALL" # used in assets/js/index.js, "All" or an array that includes the Types to include in search. Defaults to the docs folder in content.
   darkMode = true
   bootStrapJs = true
   breadCrumb = false
   highLight = true
   kaTex = false
-  multilingualMode = true
+  multilingualMode = false
   docsVersioning = false
   fullWidth = false
   navbarSticky = true

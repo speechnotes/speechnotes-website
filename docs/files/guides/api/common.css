@@ -1,0 +1,94 @@
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 1.1em;
+    color: #333;
+}
+
+header {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+h1 {
+    margin: 1em 0 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 3em;
+    line-height: 1.1em;
+}
+
+h2 {
+    text-align: center;
+}
+
+.dotted_line_class {
+    border-bottom: 1px dotted #ccc;
+    height: 10px;
+}
+
+h2 {
+    margin: 1.5em 0 1.5em 0;
+    padding: 0;
+    font-size: 1.8em;
+}
+p {
+    margin: 0 0 0.5em 0;
+    line-height: 1.8em;
+}
+ol {
+
+}
+ol li {
+    margin: 0 0 0.5em 0;
+    font-size: 0.9em;
+    line-height: 1.8em;
+}
+a {
+    color: #50B1FF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+figure {
+    text-align: center;
+    font-weight: bold;
+    font-size: small;
+    margin-bottom: 40px;
+}
+
+code {
+    display: inline-block;
+    padding: 0.1em;
+    background-color: #F8F8F8;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    font-size: 0.9em;
+    line-height: 1;
+}
+.logo {
+    display: block;
+    margin: 3em 0;
+    text-align: center;
+}
+.centered-img {
+    display: block;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.shadowed {
+    box-shadow: 10px 10px 5px #888888;
+}

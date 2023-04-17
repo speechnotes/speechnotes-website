@@ -1,0 +1,38 @@
+Without timestamps:
+----------------------
+
+Hi, I'm running. I'm one of the developers of speech notes. This recording was taken outside the speech notes files.
+It was taken on my smartphone and outside and I have it for an accent. So it should be quite difficult for any automatic transcription to do a good job. I hope speechnotes files can handle it.
+Mgs5 was also compressed.
+So it's really like any standard recording you would do on your smartphone.
+Please note speech notes eyes. Also all the palm trees.
+your fines and adds timestamps to
+every few sentences
+so you can sync between the audio recording.
+In the text why you received from us?
+I hope you like it and I hope you get good results with us. And we'd love to hear from you or email is admin at speech locker.com. Feel free to contact us by by.
+
+
+With timestamps (seconds):
+------------------------------
+
+0: Hi, I'm running. I'm one of the developers of speech notes. This recording was taken outside the speech notes files.
+
+10:  It was taken on my smartphone and outside and I have it for an accent. So it should be quite difficult for any automatic transcription to do a good job. I hope speechnotes files can handle it.
+
+27:  Mgs5 was also compressed.
+
+31:  So it's really like any standard recording you would do on your smartphone.
+
+40:  Please note speech notes eyes. Also all the palm trees.
+
+45:  your fines and adds timestamps to
+
+54:  every few sentences
+
+57:  so you can sync between the audio recording.
+
+61:  In the text why you received from us?
+
+66:  I hope you like it and I hope you get good results with us. And we'd love to hear from you or email is admin at speech locker.com. Feel free to contact us by by.
+

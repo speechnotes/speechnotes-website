@@ -1,0 +1,274 @@
+
+<!doctype html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47292499-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-47292499-4');
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+  <title>Minimize Audio / Video Files for Transcription</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0 auto;
+      padding: 1em;
+      font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 1.1em;
+      color: #333;
+    }
+    @media screen and (min-width: 40em) {
+      body {
+        width: 40em;
+      }
+    }
+    h1, h2, h3 {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+    }
+    h1 {
+      margin: 1em 0;
+      padding: 0 0 0.7em 0;
+      border-bottom: 1px dotted #ccc;
+      text-align: center;
+      font-size: 3em;
+      line-height: 1.1em;
+    }
+    h2 {
+      margin: 1.5em 0 1.5em 0;
+      padding: 0;
+      font-size: 1.8em;
+    }
+    p {
+      margin: 0 0 0.5em 0;
+      line-height: 1.8em;
+    }
+    ol {
+
+    }
+    ol li {
+      margin: 0 0 0.5em 0;
+      font-size: 0.9em;
+      line-height: 1.8em;
+    }
+    a {
+      color: #50B1FF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    figure {
+      text-align: center;
+      font-weight: bold;
+      font-size: small;
+      margin-bottom: 40px;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0.1em;
+      background-color: #F8F8F8;
+      border: 1px solid #DDD;
+      border-radius: 3px;
+      font-family: Consolas,"Liberation Mono",Courier,monospace;
+      font-size: 0.9em;
+      line-height: 1;
+    }
+    .logo {
+      display: block;
+      margin: 3em 0;
+      text-align: center;
+    }
+    .centered-img {
+      display: block;
+      max-width: 80%;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+<style>
+  #top_pane {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+</style>
+<div id="top_pane">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://speechnotes.co/">Speechnotes</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More Products by Us
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://speechnotes.co/x/" target="_blank"><i style="color: darkorange" class="fas fa-microphone" aria-hidden="true"></i>&nbsp;&nbsp;Premium Chrome Extension</a>
+          <a class="dropdown-item" href="https://speechnotes.co/" target="_blank"><i style="color: darkorange" class="fas fa-fa-microphone" aria-hidden="true"></i>&nbsp;&nbsp;Speechnotes Online Notepad (Speech to Text)</a>
+          <a class="dropdown-item" href="https://ttsreader.com" target="_blank"><i style="color: darkorange" class="fas fa-volume-up" aria-hidden="true"></i>&nbsp;&nbsp;TTSReader - Online Text Reader (Text to Speech)</a>
+          <a class="dropdown-item" href="https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes" target="_blank"><i style="color: darkorange" class="fab fa-android" aria-hidden="true"></i>&nbsp;&nbsp;Speechnotes for Android</a>
+          <a class="dropdown-item" href="https://apps.apple.com/il/app/texthear/id1246677907?mt=8" target="_blank"><i style="color: darkorange" class="fab fa-apple" aria-hidden="true"></i>&nbsp;&nbsp;TextHear for iOS</a>
+          <!--<a class="dropdown-item" href="https://chrome.google.com/webstore/detail/speechnotesx-voice-typing/oibmlbjklbogiccfokpgddgoleeiilid?hl=en" target="_blank"><i style="color: darkorange" class="fab fa-chrome" aria-hidden="true"></i>&nbsp;&nbsp;Speechnotes extension - for ANY website</a>-->
+          <!--
+                                  <a class="dropdown-item" href="https://pairing.co" target="_blank"><i style="color: darkorange" class="fas fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Pairing Matchmaking & Meaningful Dating</a>
+          -->
+          <a class="dropdown-item" href="https://speechnotes.co/files/" target="_blank"><i style="color: darkorange" class="fas fa-microphone-alt" aria-hidden="true"></i>&nbsp;&nbsp;<b>New</b>&nbspAutomatic Transcription of Audio & Video Files</a>
+        </div>
+      </li>
+      <li class="nav-item ad">
+        <a class="nav-link" href="https://speechnotes.co/x/" target="_blank">
+          Dictate Anywhere
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:black" href="https://speechnotes.co/files/" target="_blank">Upload Audio Files & Videos</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="howToDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          How to...
+        </a>
+        <div class="dropdown-menu" aria-labelledby="howToDropdown">
+          <a class="dropdown-item" href="https://speechnotes.co/files/guide/" target="_blank">Quickly Transcribe Audio and Video Files</a>
+          <a class="dropdown-item" href="https://speechnotes.co/transcribe_youtubes/" target="_blank">Transcribe YouTube Videos</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/affiliates/" target="_blank">Earn Money From Our Affiliates Program</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/extract_audio/" target="_blank">Extract Audio From Videos</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/wav_to_flac/" target="_blank">Convert wav Audio Files to Lossless flac</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/wav_to_mp3/" target="_blank">Convert wav Audio Files to mp3</a>
+          <!--<a class="dropdown-item" href="know/youtube-downloader/" target="_blank">Download YouTube Videos</a>
+          <a class="dropdown-item" href="know/youtube-to-mp3/" target="_blank">Turn YouTube to Audio (Mp3 or other)</a>
+          <a class="dropdown-item" href="know/transcribe-youtube/" target="_blank">Transcribe & Translate YouTubes</a>
+          <a class="dropdown-item" href="know/translate-audio/" target="_blank">Translate Audio and Video Files</a>
+          <a class="dropdown-item" href="know/web-voice-typing/" target="_blank">Enable Speech Recognition Anywhere</a>
+          <a class="dropdown-item" href="know/generate-captions/" target="_blank">Easily Generate Video Captions (Subtitles)</a>
+          <a class="dropdown-item" href="know/transcribe-recordings/" target="_blank">Quickly Transcribe Recordings</a>-->
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tools
+        </a>
+        <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+          <a class="dropdown-item" href="https://speechnotes.co/files/extract_audio/" target="_blank">Automatic Transcription for Audio/Video Files</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/extract_audio/" target="_blank">Audio From Videos Extractor</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/wav_to_flac/" target="_blank">Wav to Flac Converter</a>
+          <a class="dropdown-item" href="https://speechnotes.co/files/wav_to_mp3/" target="_blank">Wav to Mp3 Converter</a>
+          <!--<a class="dropdown-item" href="know/youtube-downloader/" target="_blank">Download YouTube Videos</a>
+          <a class="dropdown-item" href="know/youtube-to-mp3/" target="_blank">Turn YouTube to Audio (Mp3 or other)</a>
+          <a class="dropdown-item" href="know/transcribe-youtube/" target="_blank">Transcribe & Translate YouTubes</a>
+          <a class="dropdown-item" href="know/translate-audio/" target="_blank">Translate Audio and Video Files</a>
+          <a class="dropdown-item" href="know/web-voice-typing/" target="_blank">Enable Speech Recognition Anywhere</a>
+          <a class="dropdown-item" href="know/generate-captions/" target="_blank">Easily Generate Video Captions (Subtitles)</a>
+          <a class="dropdown-item" href="know/transcribe-recordings/" target="_blank">Quickly Transcribe Recordings</a>-->
+        </div>
+      </li>
+    </ul>
+
+
+    <style>
+      #go_premium_nav_button {
+        padding: 0 20px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+    <button id="go_premium_nav_button" onclick="window.open('https://speechnotes.co/files/','_blank')">
+      START TRANSCRIBING
+    </button>
+
+    <!--<form class="form-inline my-2 my-lg-0" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom:0;">
+
+        <div id="shareButtons" style="top:28px;right:120px;">
+            <div class="addthis_sharing_toolbox" ></div>
+        </div>
+
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="ATE9M96JNAYY8">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>-->
+  </div>
+</nav>
+</div>
+<br><br>
+
+<h1>Minimize Audio / Video Files for Transcription</h1>
+<h2>Here are links to our useful tools to easily batch minimize files, as a preparation for quick upload for transcription.</h2>
+
+<style>
+  .selection-list li {
+    margin-bottom: 20px;
+  }
+</style>
+<ul class="selection-list">
+  <a href="../extract_audio/"><li><h3>Minimize Video Files</h3></li></a>
+  <a href="../wav_to_mp3/"><li><h3>Minimize Wav Files</h3></li></a>
+</ul>
+
+<br/>
+
+<p>The links above will lead you to our tools that will enable you to quickly reduce your files size by many folds. Which will save you data and uploading times significantly. As such - it will also help prevent errors using Speechnotes Transcription tools. It also supports batch operations - meaning working automatically on all files in directory, so it saves you operational time.</p>
+
+<br/><br/>
+
+
+<h2>Contact Us</h2>
+<p>Please contact us for any further inquiries at &nbsp;&nbsp; <code>admin@speechlogger.com</code></p>
+
+<script>
+  // Tab selector:
+  function onTabSelected(tabName) {
+    let tabSelectors = document.getElementsByClassName("tab-selector");
+    for (const tabSelector of tabSelectors) {
+      if (tabSelector.getAttribute('data-tab') == tabName) {
+        tabSelector.className = "tab-selector selected";
+      } else {
+        tabSelector.className = "tab-selector";
+      }
+    }
+
+    let tabSections = document.getElementsByClassName("tab-section");
+    for (const tab of tabSections) {
+      if (tab.getAttribute('data-tab') == tabName) {
+        tab.className = "tab-section";
+      } else {
+        tab.className = "tab-section hidden";
+      }
+    }
+
+
+  }
+
+  let tabSelectors = document.getElementsByClassName("tab-selector");
+  for (const tabSelector of tabSelectors) {
+    tabSelector.addEventListener('click',function (e) {
+      onTabSelected(tabSelector.getAttribute('data-tab'));
+    })
+  }
+</script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

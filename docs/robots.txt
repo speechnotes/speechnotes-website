@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://speechninja.co/sitemap.xml
+Sitemap: https://speechnnotes.co/sitemap.xml

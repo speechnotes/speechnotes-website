@@ -1,0 +1,18 @@
+Hi, I'm Ronen. I'm one of the developers of speechnotes. This recording was taken outside to test speechnotes files.
+ It was taken on my smartphone and outside and I have a foriegn accent. So it should be quite difficult for any automatic transcription to do a good job. I hope speechnotes files can handle it.
+ The audio file was also compressed.
+ So it's really like any standard recording you would do on your smartphone.
+ Please note speechnotes files also auto punctuates your files and adds timestamps to
+ every few sentences, so you can sync between the audio recording and the text you received from us.
+ I hope you like it and I hope you get good results with us. 
+
+And we'd love to hear from you our email is admin@speechlogger.com. 
+Feel free to contact us. Bye bye.
+
+
+--
+
+Recording length: 1:20
+Editing took me: 2:20
+Automatic transcription got 84% accuracy on this recording, as it got 115 correct words out of 137 spoken.
+
