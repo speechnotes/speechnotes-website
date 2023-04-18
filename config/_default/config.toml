@@ -1,4 +1,4 @@
-baseurl = "https://speechnnotes.co/"
+baseurl = "https://speechnotes.co/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

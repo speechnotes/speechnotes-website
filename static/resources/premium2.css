@@ -1,0 +1,42 @@
+#bottom_ad_pane {
+    bottom:0;
+}
+
+#app_container {
+    top: 90px;
+}
+
+.closeAdBtn {
+    background-color: white;
+    border: solid #888888 2px;
+    color: #888888;
+    display: block;
+    width: 20px;  height: 20px;    line-height: 20px;     border-radius: 12px; font-size: 14px;
+    position: absolute;
+    right: 13px;  top: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.closeAdBtn:hover {
+    color: black;
+    border-color: black;
+}
+
+.water_mark {
+    opacity: 0.5;
+}
+
+#start_button {
+    background-color: whitesmoke;
+}
+
+#results_box::-webkit-scrollbar{width:12px}
+#results_box::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 2px rgba(150,150,150,1);-webkit-border-radius:10px;border-radius:10px;margin:20px 0}
+#results_box::-webkit-scrollbar-thumb{-webkit-border-radius:10px;border-radius:10px;background:rgba(150,150,150,0.2);-webkit-box-shadow:inset 0 0 2px rgba(0,0,0,0.3)}
+#results_box::-webkit-scrollbar-thumb:hover{-webkit-border-radius:10px;border-radius:10px;background:rgba(150,150,150,0.4);-webkit-box-shadow:inset 0 0 2px rgba(0,0,0,0.5)}
+
+#results_box {
+    padding-top: 10px;
+}

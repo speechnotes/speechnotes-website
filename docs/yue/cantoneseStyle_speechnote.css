@@ -1,0 +1,247 @@
+@charset "utf-8";
+/*  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+	The following CSS Styles are written by Patrick 劉肇庭 (patrick@MarcomApp.com) at Taipei City
+	♥ Version : 2017/03/03 Fri 12:28PM Taipei GMT+8
+	▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
+
+#myHeader {
+	padding:8px 0; margin:0 !important;
+	font-size:20px !important; text-align:center;
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	color:#F5F5F5; background-color:#626262; border-bottom:6px solid #888888;
+}
+#app_container {
+	margin-top:28px !important;
+}
+#application_pane {
+	width:80% !important;
+}
+#select_language {
+	font-size:13px !important;
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	height:30px !important;
+}
+
+#session_title {
+	background-color:#F4F4F4 !important; border:1px dashed #888888;
+	width:340px !important; padding:2px 4px 3px 20px !important;
+    border-radius:15px !important;
+}
+#session_title_span {
+	float:left; clear:none;
+	font-size:15px !important;
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	color:#626262;
+	padding:7px 0 0 0;
+}
+
+#divInputABCY {
+	padding:0 !important; margin:0 !important;
+}
+#divInputABCY #abcInputTitle {
+	float:left; clear:none; padding:2px 0 0 0;
+	font-size:13px !important;
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+}
+#divInputABCY .abcBox {
+	font-size:11px;
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	text-align:center; cursor:pointer !important; color:#000000 !important;
+    width:14px; height:14px; padding:1px 4px; margin:0 !important; border:1px solid #ababab !important; border-right:none !important;
+    background-color:#eeeeee !important;
+}
+#divInputABCY .abcBoxSel {
+	font-size:11px;
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	text-align:center; cursor:pointer !important; color:#FFFFFF !important;
+    width:14px; height:14px; padding:1px 4px; margin:0 !important; border:1px solid #ababab !important; border-right:none !important;
+    background-color:#F68F43 !important;
+}
+#divInputABCY .abcBox:hover,
+#divInputABCY .abcBoxSel:hover {
+	background-color:#EF3A25 !important; color:#FFFFFF !important;
+}
+
+#divCanWord {
+	padding:2px; margin:4px 0px 8px 0;
+}
+#divCanWord #spanCanWordTitle {
+	float:left; clear:none;
+	padding:1px 6px 2px 6px !important; margin-right:2px !important;
+	background-color:#686868 !important; color:#F6F6F6 !important;
+	border-radius:15px !important;
+	border:1px solid #ffffff !important;
+}
+#divCanWord .btnCanWord {
+	font-size:13px !important; line-height:153px !important;
+	margin-bottom:2px !important; height:22px !important;
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	cursor:pointer;
+}
+
+.halfPunc {
+	/*font-size:22px !important; font-family:'Times New Roman',serif !important;*/
+	font-size:22px !important; font-family:consolas,monospace,serif !important;
+	color:#CC0000;
+}
+.fullPunc {
+	font-size:20px !important;	color:#CC0000;
+	font-family:'新細明體','細明體',MingLiu,sans-serif !important;
+}
+
+#results_box, #mirror {
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+}
+
+#commands_table {
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	width:150px !important; margin:0 0 0 30px !important;
+}
+#commands_table td { text-align:center !important; width:75px !important;  }
+
+#help_pane {
+	width:20% !important; min-width:136px !important;
+	height:100% !important; min-height:600px !important;
+}
+#help_pane p {
+	padding:0 !important; margin:0 !important; text-align:center !important;
+}
+#help_pane #commands_table .notHover:hover {
+	background-color:#FFF !important; cursor:default;
+}
+#help_pane #commands_table .tL {
+	text-align:left !important;
+	padding:0 0 0 5px !important;
+	white-space:nowrap !important;
+}
+#helpBox {
+	position:absolute !important; top:168px !important; left:74px !important;
+	font-size:15px; font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	width:660px !important; height:auto;
+	border:1px solid #888888 !important;
+	background:#FAFAFA;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	z-index:997; overflow-y:auto;
+}
+#helpBox #helpTitle {
+	padding:0 !important; background-color:#E4E4E4;
+	border-bottom:1px solid #AAAAAA;
+}
+#helpBox #helpBody  {
+	padding:0 30px 10px 10px !important;
+}
+#helpBox #helpTitle #icon_exit_help {
+	float:right; clear:none; cursor:pointer; border:1px solid #FFFFFF;
+}
+#helpBox #helpTitle #icon_exit_help:hover {
+	 border:1px solid #FF0000;
+}
+#helpBox #helpTitle h1 {
+	font-size:26px; font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	margin:0; padding:8px 0; text-align:center;
+}
+#helpBox #helpBody input #btnClose {
+	font-size:20px !important; font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	padding:6px 12px;
+}
+#helpBox #helpBody #helpBox_ul {
+	list-style-type: square;
+}
+#helpBox #helpBody #helpBox_ul li {
+	padding-bottom:18px !important;
+	line-height:18px !important;
+}
+.helpBox_ul_punc {
+	margin-bottom:7px; margin-top:7px;
+}
+.helpBox_ul_punc li {
+	height:14px !important;
+	line-height:12px !important;
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
+.helpBox_table_punc {
+	width:200px !important;
+}
+.helpBox_table_punc th {
+	text-align:center !important; white-space:nowrap !important;
+}
+
+#fixCantoneseInput {
+	position:absolute !important;
+	top:168px !important; left:74px !important;
+	width:660px !important; height:auto;
+	background-color:#ED9E63;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	z-index:998; overflow-y:hidden;
+	padding:none;
+}
+#fixCantoneseInput h2 {
+	padding: 10px 0 10px 25px !important;
+	margin:0 0 24px 0 !important;
+	text-align:left !important;
+	font-size:22px;
+	font-weight:bold;
+	border-bottom:1px solid #080808;
+	background-color:#EF3924;
+	color:#FFFFFF;
+}
+#fixCantoneseInput p {
+	padding:0 25px 8px 25px !important;
+	margin:0 !important;
+	text-align:left !important;
+	font-size:15px;
+	color:#080808;
+}
+#fixCantoneseInput table td {
+	color:#080808;
+	padding:none;
+}
+#fixCantoneseInput table td:hover {
+	background-color:#ED9E63 !important;
+	cursor:default !important;
+}
+#fixCantoneseInput table td .action {
+	margin:0 0 0 10px;
+	border:1px solid #989898 !important;
+	font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important;
+	font-size:15px;
+	padding:12px 20px;
+	cursor:pointer;
+}
+#fixCantoneseInput .exitBox {
+	float:right; clear:none; cursor:pointer; border:1px solid #FFFFFF;
+}
+
+/*------- General Format ------- */
+.shadow { display:none !important; }
+.zh { font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important; }
+.mono { font-family:consolas,monospace !important; }
+.fs10 { -webkit-text-size-adjust:none; font-size:10px !important; }
+.fs11 { -webkit-text-size-adjust:none; font-size:11px !important; }
+.fs12 { font-size:12px !important; }
+.fs13 { font-size:13px !important; }
+.fs14 { font-size:14px !important; }
+.fs15 { font-size:15px !important; }
+.fs16 { font-size:16px !important; }
+.fs17 { font-size:17px !important; }
+.fs18 { font-size:18px !important; }
+.fs20 { font-size:20px !important; }
+.fs25 { font-size:25px !important; }
+.fs30 { font-size:30px !important; }
+.fs35 { font-size:35px !important; }
+.fs40 { font-size:40px !important; }
+.fL { float:left; clear:none; }
+.fR { float:right; clear:none; }
+.tL { text-align:left !important; }
+.tR { text-align:right !important; }
+.tC { text-align:center !important; }
+.font_red { color:#CC0000 !important; }
+.font_arial   { font-family:sans-serif !important; }
+.font_calibri { font-family:calibri,tahoma,sans-serif !important; }
+.font_courier { font-family:'courier new',courier,monospace !important; }
+.font_tahoma  { font-family:tahoma,sans-serif !important; }
+.font_verdana { font-family:verdana,sans-serif !important; }
+.font_MJH     { font-family:'微軟正黑體','蘋果儷中黑','儷黑 Pro','儷黑',sans-serif !important; }
+.font_MYH     { font-family:'微软雅黑','Microsoft YaHei','黑体',SimHei,'华文细黑',sans-serif !important; }
+.font_ML      { font-family:'新細明體',MingLiu,PMingLiu,'細明體',tahoma,sans-serif !important; }

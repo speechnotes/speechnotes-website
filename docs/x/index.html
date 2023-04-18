@@ -1,0 +1,452 @@
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8"/>
+
+    <style>
+        /* Arizonia */
+        /* latin-ext */
+        @font-face {
+            font-family: 'Arizonia';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Arizonia'), local('Arizonia-Regular'), url(https://fonts.gstatic.com/s/arizonia/v6/2LCopz-tiFTquWPI_IJCyBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Arizonia';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Arizonia'), local('Arizonia-Regular'), url(https://fonts.gstatic.com/s/arizonia/v6/PwrsyFTYH2Wmsvpn0dx4s_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        /* Sans Open */
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        /* Droid Mono */
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Droid Sans Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Droid Sans Mono'), local('DroidSansMono'), url(https://fonts.gstatic.com/s/droidsansmono/v7/ns-m2xQYezAtqh7ai59hJYdJ2JT0J65PSe7wdxAnx_I.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            font-family: "Open+Sans", "Century Gothic", "Apple Gothic", sans-serif;
+            background-color: white;
+            font-size: 100%;
+        }
+        h1, h2, p {
+            text-align: center;
+            font-weight: normal;
+        }
+
+        h1 {
+            font-family: 'Arizonia';
+            font-size: 3.5em;
+            font-weight: normal;
+        }
+
+        h2 {
+            line-height: 160%;
+        }
+        #center_screen {
+            width: 80%;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 150%;
+        }
+        #logo {
+            display: inline-block;
+            width: 50px;
+            height: 128px;
+            background-image: url('https://speechnotes.co/images/logo.png');
+        }
+
+        #footer {
+            padding: 10px 30px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        #footer_menu {
+            text-align: center;
+            width: 100%;
+        }
+
+        #footer_menu a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #footer_menu a:hover, a:visited, a:link, a:active {
+            text-decoration: none;
+        }
+
+        #languageLinks a {
+            display: inline-block;
+            padding: 10px 10px;
+            margin: 0 2px;
+            border-radius: 20px;
+            font-weight: normal;
+            color: green;
+        }
+
+        #footer_menu a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        img {
+            margin: 20px;
+            box-shadow: 10px 10px 5px #888888;
+            background: transparent;
+        }
+
+        .share {
+            height: 50px;
+            cursor: pointer;
+            display: inline-block;
+            box-shadow: none;
+        }
+
+        .share:hover {
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        .facebook {
+            border-radius: 5px;
+        }
+
+        .gplus {
+            border-radius: 25px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 5px 5px 2px #888888;
+        }
+
+        .buy_button {
+            font-size: large;
+            color: black;
+            background: lightgreen;
+            border-radius: 10px;
+            padding: 10px 15px;
+        }
+
+        .buy_button:hover {
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        .arizonia {
+            font-family: Arizonia;
+            font-size: 200%;
+            line-height: 200%;
+            font-weight: lighter;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        .screenshot_class {
+            max-width: 90%;
+            display: block;
+            margin: 30px auto;
+        }
+
+        h3 {
+            margin-top: 60px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<a href="https://chrome.google.com/webstore/detail/speechnotes-speech-to-tex/nncconplehmbkbhkgkodmnkfaflopkji" target="_blank" style="font-family:Monaco;text-transform:uppercase;text-decoration:none;z-index:9999;display:block;position:fixed;top:0;right:0;left:0;text-align: center;padding: 10px;cursor: pointer;color: black;background: lightgreen;">
+    Save time, Increase productivity. Try it now for free.
+</a>
+
+<div style="position: absolute;top:50px;right:0;left:0;bottom:0;">
+    <video style="border-radius: 20px;" loop="true" width="100%" height="100%" muted loop controls poster="speechnotesx_poster.jpg">
+        <source src="screen.mov" type="video/mp4" />
+    </video>
+
+    <div>
+        <div id="center_screen">
+            <br><br>
+            <h1>Speechnotes Chrome Extension</h1>
+            <br><br>
+            <img style="margin: auto; max-width: 100%;" src="speechnotesx_poster.jpg">
+
+            <br><br><br>
+            <h2>Speech recognition on ANY website & Speechnotes.co premium</h2>
+            <br>
+            <div>
+            <a href="https://chrome.google.com/webstore/detail/speechnotes-speech-to-tex/nncconplehmbkbhkgkodmnkfaflopkji" target="_blank">
+                <span class="buy_button">GET IT NOW ON THE CHROME STORE</span>
+            </a>
+            </div>
+            <br><br>
+
+            <div id="quick_start">
+                <h2>Main Features</h2>
+
+                <h3>The extension's popup window</h3>
+
+                <h4>This main extension's window is called the 'popup window' and it holds all of the extension's controls and preferences.</h4>
+
+                <h4>To open the popup window, tap the extension's mic icon next to the browser's address-bar</h4>
+                <img class="screenshot_class" src="images/screenshots/tutorial_open_popup_button.png">
+
+                <h4>Microphone button to start / stop recognition. Language selector follows.</h4>
+                <img  class="screenshot_class" src="images/screenshots/tutorial_popup_mic_btn.png" />
+
+                <h3>Floating Microphone Button on Page</h3>
+                <p>By default, a floating microphone will appear whenever you are editing text, or whenever speech recognition is on. The floating microphone is a quick way to start or pause recognition and also to change recognition language.</p>
+                <img  class="screenshot_class" src="images/screenshots/tutorial_floating_mic_options.png" />
+                <p>You can change the preferences, such that the microphone never shows, or always shows. These options appear in the extension's popup window, when tapping the extension's icon next to the address bar.</p>
+
+                <h3>Context Menu on Page</h3>
+                <h4>Right-click on page to invoke the context menu</h4>
+                <p>We added a 'Speech Recognition' option to Chrome's context menu - the one invoked by right-click. Go ahead and try it - click a mouse right-click and then select 'Start Speech Recognition'. You can start & pause recognition right from there.</p>
+                <img  class="screenshot_class" src="images/screenshots/tutorial_context_menu.png" />
+
+                <h3>Keyboard shortcut</h3>
+                <h4>Keyboard shortcut to start / stop recognition <code>Ctrl+Shift+L</code></h4>
+                <img  class="screenshot_class" src="images/screenshots/keyboard_shortcut.png" />
+
+
+                <h3>Stamps - Emojis & Texts</h3>
+                <p>In addition to speech recognition, the Speechnotes extension enables you to insert emojis and pre-typed texts into the page with one click. Open the popup window by clicking the extension's mic icon (next to the browser's address bar).</p>
+                <h4>Emojis</h4>
+                <img style="max-width: 300px;" class="screenshot_class" src="images/screenshots/popup_top.png" />
+
+                <h4>Texts</h4>
+                <p>Tap on the 'Texts' tab. There, you can add and edit as many texts as you like. This feature comes in handy for difficult-to-recognize texts (eg symbols, names or technical terms) as well as for frequently needed texts, such as your signature, address or even email address.</p>
+                <img  style="max-width: 300px;" class="screenshot_class" src="images/screenshots/popup_texts_tab.png" />
+
+            </div>
+
+            <br/><br/>
+
+            <div id="tips">
+                <h2>Tips & More</h2>
+
+                <div id="guide_text_area" class="guide_section_class">
+                    <h3>Editing text in a text box & the floating text box</h3>
+                    <p>When we recognize the caret is already in a text-input-box dictation results will be typed right in it. In case the mouse is not in a text-input-box, our own temporary text-box will appear, and results will be typed in it. You can then copy the text and close it.</p>
+                    <img  class="screenshot_class" src="images/screenshots/tutorial_text_area.png" />
+
+                    <p>Please note - when closing the temporary results-text-box, it erases the text - so make sure to copy it before closing.</p>
+                </div>
+
+
+
+                <div>
+                    <h3>Edit Text Stamps</h3>
+                    <p>Tap on the text-stamp to insert it into the text-box on page. Alternatively you can COPY it, by tapping the 'Copy' icon on the text row.</p>
+                    <img style="max-width: 300px;" class="screenshot_class" src="images/screenshots/tutorial_text_stamps.png" />
+
+                    <p>Tap the 'pencil icon' to edit a text. Clearing the text from the box will remove that text-stamp altogether. You can add as many as you like by tapping the '+ New Text Stamp' button.</p>
+                    <img  style="max-width: 300px;" class="screenshot_class" src="images/screenshots/popup_stamp_editing.png" />
+                </div>
+
+                <div>
+                    <h3>Preferences</h3>
+                    <p>Open the popup window, and scroll down a little. You will find the preferences section.</p>
+
+                    <img  style="max-width: 300px;" class="screenshot_class" src="images/screenshots/popup_prefs.png" />
+                </div>
+
+            </div>
+
+
+            <br>
+            <h2>Note: Semi-Different Behaviour on Facebook</h2>
+            <p>On facebook, and some other websites, we will append the transcription results to a popped text-box to avoid potential errors that might come from editing facebook's own post text area.</p>
+
+
+            <br/>
+
+            <br>
+            <h2>Buy Now</h2>
+            <p>No hidden costs, including all future upgrades, cancel any time - secured purchase on the Chrome store.</p>
+            <a href="https://chrome.google.com/webstore/detail/speechnotes-speech-to-tex/nncconplehmbkbhkgkodmnkfaflopkji" target="_blank">
+                <div class="buy_button">GET IT NOW ON THE CHROME STORE</div>
+            </a>
+
+            <br><br>
+
+
+            <h2>Please Share</h2>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://chrome.google.com/webstore/detail/speechnotes-speech-to-tex/nncconplehmbkbhkgkodmnkfaflopkji"
+               target="_blank">
+                <img class="share facebook" src="images/like-button.png">
+            </a>
+
+        </div>
+
+        <br><br>
+        <!-- TODO: ... -->
+        <div id="footer">
+            <div id="footer_menu">
+                <a id="contact_us" href="mailto:admin@speechlogger.com" target="_blank">Contact Us</a>
+                <a href="https://speechnotes.co" target="_blank" title="Online dictation notepad">Dictation Notepad</a>
+                <a href="https://speechkeys.io" target="_blank" title="A New Kind of Voice Typing Keyboard"><b>Dictation Keyboard</b></a>
+                <a href="http://ttsreader.com" target="_blank" title="Unlimited Online Text Reader (TTSReader)">Text-To-Speech Reader</a>
+                <a href="http://Speechninja.co" target="_blank" title="Speech Aid (SpeechNinja - AAC)">Speech Aid (AAC)</a>
+                <a href="https://speechlogger.appspot.com/en/" target="_blank" title="Speech captions & Instant Translation">Captionist & Instant Translator</a>
+                <a href="https://speechnotes.co/#privacy" title="Privacy"><b>Privacy</b></a>
+                <a href="https://chrome.google.com/webstore/detail/speechnotes-speech-to-tex/nncconplehmbkbhkgkodmnkfaflopkji" rel="nofollow" target="_blank" title="Rate SpeechnotesX">Rate</a>
+                <br>
+                <!--<div id="languageLinks">
+                    <a href="https://speechnotes.co/">English</a>
+                    <a href="https://speechnotes.co/de/">Deutsch</a>
+                    <a href="https://speechnotes.co/es/">español</a>
+                    <a href="https://speechnotes.co/fr/">français</a>
+                    <a href="https://speechnotes.co/it/">italiano</a>
+                    <a href="https://speechnotes.co/pt/">Português</a>
+                    <a href="https://speechnotes.co/ru/">России</a>
+                    <a href="https://speechnotes.co/ja/">日本語</a>
+                    <a href="https://speechnotes.co/zh/">中國</a>
+                    <a href="https://speechnotes.co/yue/">廣東話</a>
+                    <a href="https://speechnotes.co/ar/">العربية</a>
+                </div>-->
+            </div>
+            <p>All rights reserved worldwide to owner. No permission to copy or use code, style, names, and any content without explicit written permission from owner (admin@speechlogger.com). You may demonstrate usage of Speechnotes, reviews, etc. Thank you.
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+
+</body>

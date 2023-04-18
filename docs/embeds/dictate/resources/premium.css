@@ -1,0 +1,33 @@
+#bottom_ad_pane {
+    bottom:0;
+}
+
+#app_container {
+    top: 90px;
+}
+
+.closeAdBtn {
+    background-color: white;
+    border: solid #888888 2px;
+    color: #888888;
+    display: block;
+    width: 20px;  height: 20px;    line-height: 20px;     border-radius: 12px; font-size: 14px;
+    position: absolute;
+    right: 13px;  top: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.closeAdBtn:hover {
+    color: black;
+    border-color: black;
+}
+
+.water_mark {
+    opacity: 0.5;
+}
+
+#start_button {
+    background-color: whitesmoke;
+}

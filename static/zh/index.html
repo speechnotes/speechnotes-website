@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js consumer" lang="zh-Hans" dir="ltr"> <!-- Page Specific -->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"></meta>
+	<meta charset="UTF-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+	<!-- metas correct title & content description -->
+	<meta name="description" content="专业语音识别的文本编辑器。准确的，免费的，易于使用和无限。"></meta>  
+	<title>Speechnotes |听写记事本</title>
+  
+	<!-- fb metas -->
+		<meta property="og:title" content="听写记事本" />
+		<meta property="og:site_name" content="Speechnotes"/>
+		<meta property="og:description" content="专业语音识别的文本编辑器。准确的，免费的，易于使用和无限。" /> 
+		<meta property="og:image" content="https://speechnotes.co/images/tile_1400x560.jpg"/>
+		<meta property="og:image:secure_url" content="https://speechnotes.co/images/tile_1400x560.jpg" />
+		<meta property="og:locale:alternate" content="en_US" />  <!-- En -->
+		<meta property="og:locale:alternate" content="fr_FR" />  <!-- French -->
+		<meta property="og:locale:alternate" content="it_IT" />  <!-- Italian -->
+		<meta property="og:locale:alternate" content="es_ES" />  <!-- Spanish -->
+		<meta property="og:locale:alternate" content="de_DE" />  <!-- German -->
+		<meta property="og:locale:alternate" content="ru_RU" />  <!-- Ruassian -->
+		<meta property="og:locale:alternate" content="ja_JP" />  <!-- Japanese -->
+		<meta property="og:locale:alternate" content="zh_CN" />  <!-- Chinese -->
+		<meta property="og:locale:alternate" content="pt_BR" />  <!-- Portuguese (Brazil)  -->
+		<meta property="og:locale:alternate" content="ar_AR" />  <!-- Arabic -->
+	<!-- end of fb metas -->
+
+		<link rel="alternate" hreflang="x-default" href="https://speechnotes.co/" />
+		<link rel="alternate" hreflang="en" href="https://speechnotes.co/" />
+		<link rel="alternate" hreflang="de" href="https://speechnotes.co/de/" />
+		<link rel="alternate" hreflang="es" href="https://speechnotes.co/es/" />
+		<link rel="alternate" hreflang="fr" href="https://speechnotes.co/fr/" />
+		<link rel="alternate" hreflang="it" href="https://speechnotes.co/it/" />
+		<link rel="alternate" hreflang="ja" href="https://speechnotes.co/ja/" />
+		<link rel="alternate" hreflang="pt" href="https://speechnotes.co/pt/" />
+		<link rel="alternate" hreflang="ar" href="https://speechnotes.co/ar/" />
+		<link rel="alternate" hreflang="ru" href="https://speechnotes.co/ru/" />
+		<link rel="alternate" hreflang="zh" href="https://speechnotes.co/zh/" />
+	
+	<script>
+		(function(e, p){
+		  var m = location.href.match(/platform=(win8|win|mac|linux|cros)/);
+		  e.id = (m && m[1]) ||
+		  (p.indexOf('Windows NT 6.2') > -1 ? 'win8' : p.indexOf('Windows') > -1 ? 'win' : p.indexOf('Mac') > -1 ? 'mac' : p.indexOf('CrOS') > -1 ? 'cros' : 'linux');
+		  e.className = e.className.replace(/\bno-js\b/,'js');
+		})(document.documentElement, window.navigator.userAgent)
+	</script>
+
+	<link href="https://speechnotes.co/images/favicon.ico" rel="icon" type="image/x-icon"> 
+	
+	<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+	
+	<script type="text/javascript" src="https://speechnotes.co/resources/scriptA2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://speechnotes.co/resources/style3.min.css">
+
+	<style>
+		.invisible {
+			display: none;
+		}
+	</style>
+	<script>
+		localStorage.setItem("interfaceLang", "zh");
+	</script>
+</head>
+
+<body dir="ltr" onload="runOnload();">
+
+<div id="top_pane">
+	<div id="top_menu">
+		<a href="https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes" target="_blank"><img style="position:relative;top:-5px;height:50px;vertical-align:middle" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a>
+		<!--<a href="#app" target="_self">App</a>
+		<a href="#content" target="_self">关于</a>-->
+		<a href="https://ttsreader.com/zh/" target="_blank" title="文字转语音">文字转语音</a>
+		<a href="https://speechnotes.co/files/?lng=zh" target="_blank" title="音频和视频文件的自动转录">音频和视频文件的自动转录</a>
+
+		<!--<a href="mailto:admin@speechlogger.com" target="_blank">联系我们</a>
+		<a href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews?hl=en" rel="nofollow" target="_blank" title="Please give us 5 stars, we would really appreciate it :)">给我们评分</a>
+		<a href="http://amzn.to/28SMkEY" target="_blank">Shop (@amazon)</a>-->
+	</div>
+	<div id="shareButtons">
+		<div class="addthis_sharing_toolbox"></div>
+	</div>
+	<div id="donateButton">
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom:0;">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="ATE9M96JNAYY8">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+</div>
+
+
+<div id="app" style="margin:0;padding:0;height:0;width:0;background-color:black"></div> <div id="app_container">
+	<div id="menu_pane" class="water_mark">
+		<div id="menu_container">
+						
+			<button class="menuhead" id="preferences_button">
+			  <ul class="dropdownmenu" id="preferences">
+				<li>
+					<input type="checkbox" id="save_checkbox"><label for="save_checkbox" id="lbl_save_checkbox">自动保存</label>
+				</li>
+				<li class="nonSelectable" style="background-color:white;border-bottom:none;border-top-color:lightgray;"><div>Share Speechnotes:</div></li>
+				<li style="background-color:white;border-top:none;"><div class="addthis_sharing_toolbox water_mark"></div></li>
+				<li class="nonSelectable" style="background-color:white;"><div>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin-bottom:0;">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="ATE9M96JNAYY8">
+						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form>
+				</div></li>
+				<li class="nonSelectable"><div>User-Interface Language:</div></li>
+				<li><div onclick="updateInterfaceLang('en');">English</div></li>
+				<li><div onclick="updateInterfaceLang('de');">Deutsch</div></li>
+				<li><div onclick="updateInterfaceLang('es');">español</div></li>
+				<li><div onclick="updateInterfaceLang('fr');">français</div></li>
+				<li><div onclick="updateInterfaceLang('it');">italiano</div></li>
+				<li><div onclick="updateInterfaceLang('pt');">Português</div></li>
+				<li><div onclick="updateInterfaceLang('ru');">России</div></li>
+				<li><div onclick="updateInterfaceLang('zh');">中國</div></li>
+				  <li><div onclick="updateInterfaceLang('yue');">廣東話</div></li>
+				  <li><div onclick="updateInterfaceLang('ja');">日本語</div></li>
+				<li><div onclick="updateInterfaceLang('ar');">العربية</div></li>
+			  </ul>
+			</button>
+			
+			<button id="new_button" onclick="newButton(event);" title="新建会话"></button>
+			<button class="menuhead" id="open_button">
+			  <ul class="dropdownmenu" id="select_session">
+			  <!-- TODO: clean "openfile" from old speechnotes & speechlogger - both in layout and in code -->
+				<div id="sessions_menu"></div>
+			  </ul>
+			</button>
+			<button id="email_button" onclick="emailButton(event);" title="电子邮件"></button>
+			<button  class="menuhead" id="export_button">
+			  <ul class="dropdownmenu" id="export_menu">
+				<li><div class="exportOption" id="save_drive" onclick="saveToDrive();">上传到Google Drive</div></li>
+				<li><div class="exportOption" id="save_txt" onclick="saveAsTxtFile();">下载文件（.txt）</div></li>
+				<li><div class="exportOption" id="save_doc" onclick="saveAsDocFile();">Word文档（.doc）</div></li>
+				<li><div class="exportOption" id="save_to_disc" onclick="saveButton(event);">保存会话（Ctrl + S）</div></li>
+			  </ul>
+			</button>
+
+			<button id="print_button" title="打印" onclick="printButton(event);"></button>
+			<button id="enlarge_button" title="放大文本" onclick="zoom(1.20);"></button>
+			<button id="shrink_button" title="缩小文本" onclick="zoom(1/1.20);"></button>
+			
+		</div>
+	</div>
+	
+	<div id="application_pane">
+		<div id="application_header">
+			<div id="session_title" contenteditable="true"></div>
+			<hr>
+			<div id="buttons_row">
+				<select id="select_language" onchange="updateLanguage();"></select>
+				<div id="start_button" title="开始/暂停" onclick="if(variables.recognizing){isToRestartImmediately=false}startButton(event);"><img alt="开始" id="start_img" src="https://speechlogger.appspot.com/images/micoff2.png"></div> 
+			</div>			
+		</div>
+		<div id="output_box">
+			<textarea name="results_box" class="resultsClass widebox" id="results_box" resizeable="false" onscroll="rememberScroll()" onblur="rememberScroll()" onfocus="scrollToMemory()" placeholder="Click the mic to start dictating.
+			
+Try the following three punctuation methods, to see which one works the best for you:
+(1) Dictating punctuation marks.
+(2) Key-typing the marks using your keyboard. This is usually the fastest, as it appends the mark to the speech, even before it finalized.
+(3) Click the mark on the screen.
+			
+Enjoy dictating :)"></textarea>
+		</div>
+		<div id="mirror_container">
+			<div id="mirror"></div>
+		</div>
+		<div id="copyButton" onclick="copyButton(event);" title="Copy to clipboard"></div> 	</div><!-- application_pane -->
+
+	<div id="help_pane" class="water_mark">
+	<h2>语音命令和快捷键</h2>
+		<p><b>提示：</b>口述时，按Enter↵（在键盘上）来快速将结果从缓冲区移动到文本编辑器中。
+		</p>
+		<table id="commands_table">
+			<tr>
+				<th id="cell_say">说</th>
+				<th>插入</th>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;.&#39;)">
+				<td id="cell_period">句号</td>
+				<td>。</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;,&#39;)">
+				<td id="cell_comma">逗号</td>
+				<td>，</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;?&#39;)">
+				<td id="cell_question">问号</td>
+				<td>？</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;:&#39;)">
+				<td id="cell_colon">冒号</td>
+				<td>：</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;;&#39;)">
+				<td id="cell_semi">分号</td>
+				<td>;</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;!&#39;)">
+				<td id="cell_exclamation">感叹号</td>
+				<td>！</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;-&#39;)">
+				<td id="cell_dash">破折号</td>
+				<td>——</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(NEW_LINE)">
+				<td id="cell_line">换行</td>
+				<td>↵</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(NEW_LINE+NEW_LINE)">
+				<td id="cell_paragraph">新段落</td>
+				<td>↵↵</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;(&#39;)">
+				<td id="cell_open">左圆括号</td>
+				<td>（</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;)&#39;)">
+				<td id="cell_close">右圆括号</td>
+				<td>）</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;:-)&#39;)">
+				<td id="cell_smiley">笑脸</td>
+				<td>:-)</td>
+			</tr>
+			<tr title="点击插入" onclick="insertSymbol(&#39;:-(&#39;)">
+				<td id="cell_sad">悲伤的脸</td>
+				<td>:-(</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+
+<div id="bottom_ad_pane" class="water_mark">
+	<div class="ad_728x15 ad">
+		<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async=""></script>
+		<!-- ad_728x15_notepad -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:15px" data-ad-client="ca-pub-5030295218223297" data-ad-slot="8822269200"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+</div>
+
+<div id="content_pane">
+	<!--<div id="about_tag" class="water_mark" onclick="window.location=&#39;#content&#39;;">关于我们以及更多内容<div id="logo"></div>
+	</div>-->
+	<div id="content">
+		<div id="top_sharing_buttons" class="addthis_sharing_toolbox water_mark"></div> <!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<h1>Speechnotes（语音笔记）</h1>
+		<br>
+		<h2>专业语音识别文本编辑器<br>用于听写和打字的不需分心、快速、易用且免费的网络应用</h2>
+		<div class="link_box">
+			<a target="_blank" href='https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes'>
+				<div id="android_promo">
+					<div id="store_img_container"><img style="vertical-align:middle" alt="Get it on Google Play" class="" id="logo-img" src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'></div>
+					<p id="android_app_left_text"><i>- 新 -</i> Speechnotes为Android!</p>
+				</div>
+			</a>
+		</div>
+
+		<div class="ad_728x15 ad">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- ad_728x15_notepad -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:728px;height:15px"
+				 data-ad-client="ca-pub-5030295218223297"
+				 data-ad-slot="8822269200"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+
+		<br>
+		<p>Speechnotes是一个功能强大的开启了语音功能的在线记事本，旨在通过采用简洁和高效的设计来助您思考，从而使您可以专注于您的想法。
+			<br>我们努力提供最好的在线听写工具，我们所用的方法是结合尖端语音识别技术来取得当今科技所能得出的最准确的结果，再加上结合内置工具（自动或手动）来提高用户的工作效率、生产率和舒适度。
+		</p>
+		<p>完全在您的Chrome浏览器中在线工作。无需下载，无需安装，甚至无需注册，这样您就可以立即开始工作。</p> 
+		<br>
+		
+		<h3>旨在鼓励创新并使人专注</h3>
+		<div class="resizeableYoutube">
+			<div>
+				<iframe src="https://www.youtube.com/embed/aCs21PsNjNA" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<p>Speechnotes被特别设计用于为您提供一个不需分心的环境。
+			<br>每一篇笔记都以一张新的白纸开始，以此用一个清新的开始来刺激您的思维。除了文本本身所有其他元素都会淡出，这样您就可以专注于最重要的部分——您自己的创造力。
+			<br>除此之外，说话而不是打字，可以让您不间断且流畅的思考，而这又激励出创新和清晰的思路。应用中所用的所有字体和颜色都被设计为棱角分明并具有优异的清晰度。
+		</p>
+		<br>
+
+		<h3>评论与用户反馈</h3>
+		<p>我们上线时间并不长，然而已经载入《ProductHunt》和其他国际科技杂志。但是，我们最引以为傲的是我们的用户反馈。Speechnotes是在Chrome商店中排名最高的语音识别应用，评分高于4.5分！远远高于其他在线同类产品。下面是在Chrome商店中一些用户对我们的评价：</p>
+		<div id="userReviews">
+			<p>"I would like to say that I am very pleased with this dictation plug in. It is better and much more accurate than the other two that I have tried. This is definitely my preferred dictation app.<br>
+			In fact, I wrote this review using the app.<br>
+			Thumbs up to the developers!!"
+			</p>
+			<p>"It does what it says on the tin...& more. Priceless. <br>Tony Hawes. Whose faith has been restored in Apps by this one."
+			</p>
+		</div>
+		<p>... And there are many more. Read all of them on the <a href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews?hl=en" rel="nofollow" target="_blank" title="Speechnotes reviews on the store">Chrome store</a></p>
+		<p>多谢！您的反馈给了我们巨大的动力，使我们继续前进来开发超赞的解决方案</p>
+		<br> 
+		
+		<h2>Dragon Naturally Speaking的免费替代品</h2>
+		<p>Speechnotes是完全免费的，且它就准确性来说与Dragon Naturally Speaking也有可比性。客户中许多人告诉我们，在某些方面它甚至优于Dragon。然而我们应该强调，Speechnotes只可在听写方面替代Dragon，但不可用于语音控制其他软件或者在其他软件内进行语音输入。Dragon有这些额外功能。然而如果您只需听写一篇文章，您会发现Speechnotes不仅更便宜，而且甚至效果更好。
+		</p>
+		<br>
+		
+		<h3>用以提高语音打字与普通按键打字生产率和效率的内置功能</h3>
+		<p>对于许多人来说，按键打字速度很慢，因此耗时。Speechnotes允许您按语速（缓慢而清晰的语音）打字。
+			<br>Speechnotes可让您从语音输入（听写）无缝过渡到按键打字。通过这种方式，您可以在方便的时候听写并在合适的时候打字。您也可以立即听写并编辑您的文本结果，然后继续听写。不需通过应用模式来完成这些操作甚至停止听写。
+			<br>通过语音（语音命令）或单击来插入标点符号。
+		</p>
+		<p>为两种打字类型提高效率的其它特性包括：<br>就任何变化实时保存文档的自动保存功能，这样您就不必亲自动手来保存。
+			<br>导出到Google Drive（云端硬盘），或者把文件下载到您的计算机。
+			<br>单机以电子邮件发送或打印您的笔记。
+			<br>句首字母自动智能大写。
+			<br>不需登录、注册、安装或下载。“即开即用”的工作方式。那么，所有被自动保存的笔记都存储在哪里？Speechnotes通过您的浏览器把所有的数据存储在您自己的电脑上。这样做的优点是您不必登录。缺点是您不能从其他计算机来访问这些文档。就此而言——Speechnotes可以导出文件到Google Drive。另一个小缺点是在完成了很多很多的笔记后，您可能会用完存储空间，因此，不时删掉不必要的旧笔记不失为一个很好的做法。
+			<br>无限制免费使用。
+		</p>
+		<br>
+		
+		<h3>领先技术</h3>
+		<p>Speechnotes基于谷歌的高端语音识别引擎。事实上，所有的语音都会被发送给谷歌，然后它就会利用强大的并行服务器和算法来对其运算，并将所得结果作为可能的转录结果流送回Speechnotes。正确处理这些结果和语音到文本引擎的命令集，我们已能够做到在准确性上不逊于目前市场上最专业、最昂贵的软件。再加上点击和语音命令之标点符号插入功能以及智能大写功能，您就得到了最先进的行业应用之一。
+			<br>定量来说，应该可以预期精确度水平高于90％。
+		</p>
+		<br>
+		
+		<h3>语音打字的健康优势</h3>
+		<p>一般坐在电脑前可能会导致不同类型的电脑相关重复性劳损（RSI）。避免它们的最佳方式，是不在电脑前久坐。但是，如果您不得不这么做，您就得格外小心您的姿势。就此您可以<a href="http://rsi.unl.edu/" target="_blank">在这里（http://rsi.unl.edu/）阅读更多内容。</a>语音打字是减少这些风险的被主要推荐的方法之一，因为它使您能够在输入的同时舒舒服服的坐下来，放松您的臂、手、肩和背。您可以在完成听写后返回打字过程来进行更正和编辑。
+		</p>
+		<br>
+		
+		<h3>说明与提示</h3>
+		<div class="ad_336x280">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- ad_336x280 -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:336px;height:280px"
+				 data-ad-client="ca-pub-5030295218223297"
+				 data-ad-slot="3052681201"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<p><i>操作前：</i>
+			<br>讲一个高品质麦克风连接到您的电脑（如果您有一个内置麦克风，它可能足够好）。
+			<br><br>
+			<i>操作：</i>
+			<br>1）点击麦克风<br>2）仅在第一次时：您的浏览器会弹出一个对话框请求您允许该网站监听您的麦克风。点击“允许”。
+			<br>3）开始听写。缓慢而清晰的说话。抑扬顿挫并强调正确的文辞来获得更好的结果。
+			<br>4）过渡结果将显示在缓冲器中。有3种方法来完成终稿，并将转录结果从缓冲区中移动到文本编辑器自身中：<br>（一）在键盘上按“Enter”键<br>（二）说或点击一个标点符号<br>（三）等待<br><br>
+			<i>故障排除：</i>
+			<br>最常见的故障原因是：<br>1）麦克风硬件问题<br>2）未使用Chrome浏览器<br>3）未授予监听权限<br>4）Chrome浏览器监听到错误的麦克风<br>要解决最后2个问题，您应该点击浏览器地址栏中的小相机图标（点击麦克风后会出现），把权限设置改为允许speechnotes，并从下拉列表中选择正确的麦克风。
+		</p>
+		<br>
+		
+		<h3>谁可以从Speechnotes中受益？
+		</h3>
+		<p>任何厌倦了普通的按键打字的人士都可能会发现Speechnotes非常有用。它也可能对有打字困难的人士很有益。这些困难可能是生理方面的，也可能仅仅是因为没能在足够年轻时掌握键盘打字技巧。
+			<br>此外，以打字为职业或爱好的人士也可能会发现Speechnotes非常有用，因为长时间的键盘打字可能会使人非常疲倦，甚至产生医学副作用。更不必说，誊写人士（从学生到专业人士）会发现Speechnotes超级有用，因为他们可以听录音并对麦克风重复其录音，从而让Speechnotes为他们进行转录。
+		</p>
+		<br>
+		
+		<h3>兼容性和系统要求</h3>
+		<p>Speechnotes是一个真正的多平台应用。只要您通过Chrome浏览器运行它，它就会奏效。无需安装，无需磁盘空间，无需高端机器。它会在您的电脑、台式机、笔记本电脑和Chromebook上流畅运行。您可以尝试在您的平板电脑和手机上运行，但它可能会与某些设备产生些许问题。
+		</p>
+		<br>
+		
+		<h3>隐私</h3>
+		<p>Speechnotes尊重您的隐私，这就是为什么我们不存储您所说和所录入的任何内容或实际上您的任何其他数据。您的语音被发送到谷歌的语音到文本引擎仅供转录。
+		</p>
+		<br>
+		
+		<h3>免责声明</h3>
+		<p>虽然我们尽力尝试，但语音效果仍有可能会不准确。此外，Speechnotes是按原样提供服务，我们不能保证在未来它会继续如此。出于这个原因，也出于软件故障这种小概率事件也可能发生的原因，我们建议您导出您的重要文本，要么到Google Drive要么到您的计算机，从而防止意外的数据丢失。我们对数据丢失或不准确概不负责。
+		</p>
+		<br>
+		
+		<h3>感谢您的反馈和支持</h3>
+		<p>Speechnotes是在2015年由<a href="https://speechlogger.appspot.com/en/" rel="nofollow" target="_blank"></a><a href="http://ttsreader.com" target="_blank">Speechlogger＆TTSReader团队所开发的，</a>其目的是要帮助在世界各地的所有人以更方便、更舒适的方式录入他们的想法、故事和笔记。这就是为什么Speechnotes是免费的，且可以在网上供所有人使用。我们的用户反馈邮件提醒了我们对这种软件工具的需求。如果您有意见、想法或要求，请<a href="mailto:admin@speechlogger.com" target="_blank">与我们联系</a> ，我们将很乐意听取您的意见。
+			<br>如果您喜欢Speechnotes，请在Chrome商店<a title="请给我们5星，我们将不胜感激:)" href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews" rel="nofollow" target="_blank">给我们评分</a>、与朋友分享或在您的帖子和博客中提及我们来支持我们。您的朋友和追随者也会感激您的。您也可以通过一个小的捐款来支持我们（“给我买一杯咖啡”的风格）。
+		</p>
+
+	</div>
+	
+	<div class="ad_728x90 ad">
+		<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async=""></script>
+		<!-- ad_728x90 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5030295218223297" data-ad-slot="9173644800"></ins>
+		<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	</div> 
+	
+	<div class="invisible">
+		<p>Speechnotes  - 听写记事本</p>
+		<p>专业语音识别的文本编辑器。准确的，免费的，易于使用和无限。</p>
+	</div>
+	
+	<div id="footer">
+		<div id="footer_menu">
+			<a href="mailto:admin@speechlogger.com" id="contact_us" target="_blank">联系我们</a> <a title="无限的在线文本阅读器（TTSReader）" href="http://ttsreader.com" target="_blank">文本到语音阅读器</a> <a title="助讲器（SpeechNinja  -  AAC）" href="http://Speechninja.co" target="_blank">助讲器（AAC）</a> <a title="语音字幕和实时翻译" href="https://speechlogger.appspot.com/en/" rel="nofollow" target="_blank">字幕员和实时翻译</a> <a title="请给我们5星，我们将不胜感激:)" href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews" rel="nofollow" target="_blank">给我们评分</a>
+			<br>
+			<div id="languageLinks">
+			  <a href="https://speechnotes.co/">English</a>
+			  <a href="https://speechnotes.co/de/">Deutsch</a>
+			  <a href="https://speechnotes.co/es/">español</a>
+			  <a href="https://speechnotes.co/fr/">français</a>
+			  <a href="https://speechnotes.co/it/">italiano</a>
+			  <a href="https://speechnotes.co/pt/">Português</a>
+			  <a href="https://speechnotes.co/ru/">России</a>
+			  <a href="https://speechnotes.co/ja/">日本語</a>
+			  <a href="https://speechnotes.co/zh/">中國</a>
+				<a href="https://speechnotes.co/yue/">廣東話</a>
+				<a href="https://speechnotes.co/ar/">العربية</a>
+			</div>
+		</div>
+		<p>拥有者在全球范围内保留所有权利。未经所有者（admin@speechlogger.com）明确的书面许可，任何人都无权复制或使用有关代码、款式、名称以及任何相关内容。您可以展示对Speechnotes的使用、评论等，谢谢您。
+		</p>
+		
+		<div class="addthis_sharing_toolbox"></div> <!-- Go to www.addthis.com/dashboard to customize your tools -->
+		
+	</div>
+</div>
+
+<div id="notification"></div>
+
+<div id="refer_box">
+  <div class="x-button" id="refer_box_closeButton" onclick="$(&#39;#refer_box&#39;).hide();"></div>
+  <p>喜欢Speechnotes吗？请<a class="link" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+document.URL,'_blank');">分享</a> 。<br>感谢您，Speechnotes团队</p>
+</div>
+
+<script src="https://speechnotes.co/resources/scriptB2.min.js"></script>
+
+<script>//Google analytics
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47292499-1', 'speechlogger.appspot.com'); //TODO: do I need to change the address here?
+  ga('send', 'pageview');
+  
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fe89bcc181f95ed" async=""></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+</body>
+</html>

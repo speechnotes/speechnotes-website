@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Speechnotes | 港式粵語 | Speech to Text Online Notepad</title>
+	<script>
+        (function(e, p){
+            var m = location.href.match(/platform=(win8|win|mac|linux|cros)/);
+            e.id=(m && m[1]) ||
+                (p.indexOf('Windows NT 6.2') > -1 ? 'win8' : p.indexOf('Windows') > -1 ? 'win' : p.indexOf('Mac') > -1 ? 'mac' : p.indexOf('CrOS') > -1 ? 'cros' : 'linux');
+            e.className = e.className.replace(/\bno-js\b/,'js');
+        })(document.documentElement, window.navigator.userAgent)
+	</script>
+	<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+	<script type="text/javascript" src="https://speechnote.appspot.com/resources/scriptA2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://speechnote.appspot.com/resources/style3.min.css">
+	<link rel="stylesheet" type="text/css" href="cantoneseStyle_speechnote.css">
+	<link href="http://speechnotes.co/favicon.ico" rel="icon" type="image/x-icon">
+	<script>
+        localStorage.setItem("interfaceLang", "yue"); //set Cantonese as default option
+		/* put your GATC here */
+	</script>
+</head>
+<body onload="runOnload();">
+
+<div id="top_pane">
+	<div id="top_menu">
+		<a>港式粵語筆記簿</a>
+		<a href="https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes" target="_blank"><img style="position:relative;top:-5px;height:50px;vertical-align:middle" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a>
+		<a href="https://speechnotes.co/#content" target="_blank">About (English)</a>
+		<a href="https://ttsreader.com/zh/" target="_blank" title="文字转语音">文字转语音</a>
+		<a href="https://speechnotes.co/files/?lng=zh" target="_blank" title="音频和视频文件的自动转录">音频和视频文件的自动转录</a>
+		<!--<a href="mailto:admin@speechlogger.com" target="_blank">Contact</a>
+		<a href="https://chrome.google.com/webstore/detail/speechnotesx-voice-typing/oibmlbjklbogiccfokpgddgoleeiilid" target="_blank" title="Enhance ALL websites with speech recognition"><b>New - Voice Type on ANY website</b></a>-->
+	</div>
+	<div id="shareButtons">
+		<div class="addthis_sharing_toolbox"></div>
+	</div>
+	<div id="donateButton">
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom:0;">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="ATE9M96JNAYY8">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+</div>
+
+<div id="fixCantoneseInput" style="display:none">
+	<img class="exitBox" src="images/icon_contonese_info_exit.png" onclick="closeFixCantoneseInput()" title="取消">
+	<h2>修整標點及多餘空白</h2>
+	<p><b class="fs18">請確認是否要修整已輸入的標點及廣東字，並移除中文字之間的多餘空白？</b></p>
+	<p>把半形標點改為全形標點，並把所有用 "o" 代表廣東字的字詞修正為單一個字，例如：</p>
+	<table style="width:100%">
+		<tr>
+			<td nowrap>
+				<p>「o係」→「喺」
+					<br>「o的」→「啲」
+					<br>「o野」→「嘢」
+					<br>「o黎」→「嚟」
+				</p>
+				<p>按：一經執行後無法還原 (undo)
+					<br>___________________________________</p>
+				<p><input type="checkbox" id="chkAskFixCantoneseInput" checked><label class="zh fs13" for="chkAskFixCantoneseInput">只有在第一次使用時才顯示本確認視窗</label></p>
+			</td>
+			<td align="right" valign="bottom" nowrap>
+				<input type="button" class="action" onclick="closeFixCantoneseInput()" value="取消">
+				<input type="button" class="action" onclick="confirmFixCantoneseInput();" value="確認修整">
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div id="helpBox">
+	<div id="helpTitle">
+		<img id="icon_exit_help" src="images/icon_contonese_info_exit.png" onclick="closeBrief();" title="關閉使用說明">
+		<h1><b>港式粵語筆記簿 使用說明</b></h1>
+	</div>
+	<div id="helpBody">
+		<h2 class="fs18"><b>Cantonese version is customized and enhanced by Patrick 劉肇庭, at Taipei City</b></h2>
+		<ul id="helpBox_ul">
+			<li>按右上方的 <img src="https://speechlogger.appspot.com/images/micoff2.png" width="40" align="absmiddle"> 啟動或暫停 Speechnotes 語音輸入文字，按右方的<b>符號鍵</b>插入標點符號。</li>
+			<li>按上方的【<b>常用廣東字</b>】顯示選項鍵，即「<b class="fs20">哋</b>」、「<b class="fs20">喺</b>」、「<b class="fs20">啲</b>」、「<b class="fs20">嚟</b>」、「<b class="fs20">咗</b>」、「<b class="fs20">嘅</b>」、「<b class="fs20">嗰</b>」、「<b class="fs20">嘢</b>」、「<b class="fs20">吓</b>」、「<b class="fs20">攞</b>」，再按一下選項鍵把它插入內文。</li>
+			<li>你也可以根據廣東字的發音按上方的 <b>A</b> 至 <b>Z</b> 鍵，例如：
+				<ul class="helpBox_ul_punc">
+					<li>按 <b>D</b> 會出現「<b class="fs20">哋</b>」、「<b class="fs20">啲</b>」、「<b class="fs20">唞 </b>」、「<b class="fs20">嘟</b>」、「<b class="fs20">兜</b>」等選項</li>
+					<li>按 <b>H</b> 會出現「<b class="fs20">吓</b>」、「<b class="fs20">慳</b>」、「<b class="fs20">喺 </b>」、「<b class="fs20">冚</b>」、「<b class="fs20">嚡</b>」等選項</li>
+				</ul>
+			</li>
+			<li>你也可以用<b>傳統 o+ 的方式</b>輸入廣東字，例如：
+				<ul class="helpBox_ul_punc">
+					<li>輸入「<b class="fs20">o的</b>」自動轉 →「<b class="fs20">啲</b>」</li>
+					<li>輸入「<b class="fs20">o地</b>」自動轉 →「<b class="fs20">哋</b>」</li>
+					<li>輸入「<b class="fs20">o既</b>」自動轉 →「<b class="fs20">嘅</b>」</li>
+					<li>輸入「<b class="fs20">o下</b>」自動轉 →「<b class="fs20">吓</b>」</li>
+					<li>輸入「<b class="fs20">o左</b>」自動轉 →「<b class="fs20">咗</b>」</li>
+					<li>輸入「<b class="fs20">o黎</b>」自動轉 →「<b class="fs20">嚟</b>」......如此類推。</li>
+				</ul>
+			</li>
+			<li>要輸入常用的全形標點符號，你只須連續<b>輸入２個重複的半形標點符號</b>，網頁會自動馬上把它們轉換為１個全形標點符號，即：
+				<table cellspacing="0" cellpadding="0" class="helpBox_table_punc">
+					<tr>
+						<th>輸入半形標點符號</th><th> → </th><th>自動轉換為</th>
+						<th width="100">&nbsp; &nbsp; &nbsp; &nbsp;</th>
+						<th>輸入半形標點符號</th><th> → </th><th>自動轉換為</th>
+					</tr>
+					<tr>
+						<th class="halfPunc">,,</th><th> → </th><th class="fullPunc">，</th><th>&nbsp;</th>
+						<th class="halfPunc">''</th><th> → </th><th class="fullPunc">、</th>
+					</tr>
+					<tr>
+						<th class="halfPunc">..</th><th> → </th><th class="fullPunc">。</th><th>&nbsp;</th>
+						<th class="halfPunc">::</th><th> → </th><th class="fullPunc">：</th>
+					</tr>
+					<tr>
+						<th class="halfPunc">!!</th><th> → </th><th class="fullPunc">！</th><th>&nbsp;</th>
+						<th class="halfPunc">??</th><th> → </th><th class="fullPunc">？</th>
+					</tr>
+					<tr>
+						<th class="halfPunc">[[</th><th> → </th><th class="fullPunc">「</th><th>&nbsp;</th>
+						<th class="halfPunc">]]</th><th> → </th><th class="fullPunc">」</th>
+					</tr>
+					<tr>
+						<th class="halfPunc">((</th><th> → </th><th class="fullPunc">（</th><th>&nbsp;</th>
+						<th class="halfPunc">))</th><th> → </th><th class="fullPunc">）</th>
+					</tr>
+					<tr>
+						<th class="halfPunc">{{</th><th> → </th><th class="fullPunc">【</th><th>&nbsp;</th>
+						<th class="halfPunc">}}</th><th> → </th><th class="fullPunc">】</th>
+					</tr>
+					<tr>
+						<th class="halfPunc">&lt;&lt;</th><th> → </th><th class="fullPunc">《</th><th>&nbsp;</th>
+						<th class="halfPunc">&gt;&gt;</th><th> → </th><th class="fullPunc">》</th>
+					</tr>
+					<tr>
+						<th class="halfPunc">&lt;-</th><th> → </th><th class="fullPunc">←</th><th>&nbsp;</th>
+						<th class="halfPunc">-&gt;</th><th> → </th><th class="fullPunc">→</th>
+					</tr>
+				</table>
+			</li>
+			<li>由於使用 Speechnotes 語言輸入時，會自動在每一組文字之後加入１個空格，你可以在輸入全文後按右方的<br>
+				<b class="font_red fs20">★移除空白★</b>移除中文字之間的空白。按：一經移除後無法恢復 (undo)。
+			</li>
+		</ul>
+		<hr/>
+		<p align="center"><input type="button" id="btnClose" onclick="closeBrief();" value="關閉本說明"></p>
+	</div>
+</div>
+
+<div id="app_container">
+	<div id="menu_pane" class="water_mark">
+		<div id="menu_container">
+			<!-- [1] 新增一個儲存頁 -->
+			<button id="new_button" onclick="newButton(event);" title="新增一個儲存頁"></button>
+			<!-- [2] 開啟儲存頁 -->
+			<button class="menuhead" id="open_button">
+				<ul class="dropdownmenu" id="select_session"><div id="sessions_menu" title="開啟儲存頁"></div></ul>
+			</button>
+			<!-- [3] Email 本儲存頁文字 -->
+			<button id="email_button" onclick="emailButton(event);" title="Email 本儲存頁文字"></button>
+			<!-- [4] 上傳或儲存本儲存頁-->
+			<button  class="menuhead" id="export_button">
+				<ul class="dropdownmenu" id="export_menu">
+					<li><div class="exportOption zh" id="save_drive" onclick="saveToDrive();">上傳到 Google Drive</div></li>
+					<li><div class="exportOption zh" id="save_txt" onclick="saveAsTxtFile();">儲存純文字檔 (.txt)</div></li>
+					<li><div class="exportOption zh" id="save_doc" onclick="saveAsDocFile();">儲存 Word 文件 (.doc)</div></li>
+					<li><div class="exportOption zh" id="save_to_disc" onclick="saveButton(event);">預設儲存頁 (Ctrl+S)</div></li>
+				</ul>
+			</button>
+			<!-- [5] 列印本儲存頁 -->
+			<button id="print_button" onclick="printButton(event);" title="列印本儲存頁"></button>
+			<!-- [6] -->
+			<button id="enlarge_button" onclick="zoom(1.20);" title="放大字型"></button>
+			<!-- [7] -->
+			<button id="shrink_button" onclick="zoom(1/1.20);" title="縮小字型"></button>
+		</div>
+	</div>
+	<div id="application_pane">
+		<div id="application_header">
+			<span id="session_title_span" title="儲存本頁的文字檔案標題">標題：</span>
+			<div id="session_title" contentEditable="true" class="zh" onclick="closeBrief()"></div>
+			<hr/>
+			<div id="buttons_row">
+				<select id="select_language" onchange="updateLanguage();"></select>
+				<div id="start_button" onclick="if(variables.recognizing){isToRestartImmediately=false}startButton(event);closeBrief();" title="開始 / 暫停">
+					<img alt="開始" id="start_img" src="https://speechlogger.appspot.com/images/micoff2.png"></div>
+			</div>
+		</div>
+		<div id="output_box">
+			<!-- WordBox 廣東字快打 start here -->
+			<div id="divInputABCY">
+				<span id="abcInputTitle">廣東字快打：</span><span id="abcBox_common" class="abcBox" onclick="clickAbcBox('common',this);" title="常用廣東字">常用廣東字</span><span id="abcBox_a" class="abcBox" onclick="clickAbcBox('a',this);" title=" A : 吖、嗌、翳、啱、屙……">A</span><span id="abcBox_b" class="abcBox" onclick="clickAbcBox('b',this);" title=" B : 俾、畀、抦、啵、噃、埗……">B</span><span id="abcBox_c" class="abcBox" onclick="clickAbcBox('c',this);" title=" C : 唓、嘈、睺、昅、擢、嚫……">C</span><span id="abcBox_d" class="abcBox" onclick="clickAbcBox('d',this);" title=" D : 哋、掟、啲、唞、嘟、兜、趸、躉、揼、戥、沓、耷、凳……">D</span><span id="abcBox_e" class="abcBox" onclick="clickAbcBox('e',this);" title=" E : 咦……">E</span><span id="abcBox_f" class="abcBox" onclick="clickAbcBox('f',this);" title=" F : 瞓……">F</span><span id="abcBox_g" class="abcBox" onclick="clickAbcBox('g',this);" title=" G : 嘎、甴、甴曱、嚿、嘅、嗰、啩、哽、揸、咁、噤、喼……">G</span><span id="abcBox_h" class="abcBox" onclick="clickAbcBox('h',this);" title=" H : 吓、慳、喺、冚、扻、囧、閪、呷、乞嗤、嚡……">H</span><span id="abcBox_i" class="abcBox" onclick="clickAbcBox('i',this);" title=" I : 吖、嗌、翳……">I</span><span id="abcBox_j" class="abcBox" onclick="clickAbcBox('j',this);" title=" J : 咋、曱、甴曱、啫、嗻、喳、着、咗、嗟、噚、噱、擳、趲、喆、騭……">J</span><span id="abcBox_k" class="abcBox" onclick="clickAbcBox('k',this);" title=" K : 佢、攰、撳、噤……">K</span><span id="abcBox_l" class="abcBox" onclick="clickAbcBox('l',this);" title=" L : 嚟、嗱、嘞、冧、諗、靚、靚、脷、躝、嬲、拎、邋、叻、喱、囖、攞、轆、捩手、俹簁、掅起……">L</span><span id="abcBox_m" class="abcBox" onclick="clickAbcBox('m',this);" title=" M : 冇、咩、孭、乜、踎、踎、掹、嘜、踎、慳、搣、嫲嫲……">M</span><span id="abcBox_n" class="abcBox" onclick="clickAbcBox('n',this);" title=" N : 嗱、乸……">N</span><span id="abcBox_o" class="abcBox" onclick="clickAbcBox('o',this);" title=" O : 拗、戇……">O</span><span id="abcBox_p" class="abcBox" onclick="clickAbcBox('p',this);" title=" P : 樖、仆、扑……">P</span><span id="abcBox_s" class="abcBox" onclick="clickAbcBox('s',this);" title=" S : 嗮、嘥、嗮、餸……">S</span><span id="abcBox_t" class="abcBox" onclick="clickAbcBox('t',this);" title=" T : 氹、劏、糴……">T</span><span id="abcBox_u" class="abcBox" onclick="clickAbcBox('u',this);" title=" U : 噏、罨……">U</span><span id="abcBox_w" class="abcBox" onclick="clickAbcBox('w',this);" title=" W : 揾、喔、喎、污……">W</span><span id="abcBox_y" class="abcBox" onclick="clickAbcBox('y',this);" title=" Y : 嘢、咦……">Y</span><span id="abcBox_z" class="abcBox" onclick="clickAbcBox('z',this);" title=" Z : 黐、揸、砸、咋、擳、嚫……" style="border-right:1px solid #ababab !important">Z</span>
+			</div>
+			<!-- 廣東字快打 starts -->
+			<div id="divCanWord">
+				<span id="spanCanWordTitle" class="mono" style="display:none"></span>
+				<input type="button" id="btnCanWord0" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord1" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord2" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord3" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord4" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord5" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord6" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord7" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord8" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord9" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord10" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord11" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord12" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord13" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord14" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord15" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord16" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord17" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord18" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord19" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord20" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord21" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord22" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord23" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord24" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord25" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord26" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord27" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord28" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord29" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord30" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord31" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord32" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord33" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+				<input type="button" id="btnCanWord34" value="" onclick="insertWord(this)" onkeypress="insertWord(this)" class="btnCanWord" style="display:none;" title="">
+			</div>
+			<!-- 廣東字快打 ends -->
+			<textarea name="results_box" id="results_box" resizeable="false"
+					  class="resultsClass widebox"
+					  onscroll="rememberScroll()"
+					  onblur="rememberScroll()"
+					  onfocus="scrollToMemory()"
+					  onkeyup="convCantoneseKW()"
+					  onclick="closeBrief()">
+				</textarea>
+		</div>
+		<div id="mirror_container">
+			<div id="mirror"></div>
+		</div>
+		<div id="copyButton" onclick="copyButton(event);" title="複製到剪貼簿 (clipboard)"></div>
+	</div><!-- application_pane -->
+	<div id="help_pane">
+		<table id="commands_table">
+			<tr>
+				<td colspan="4" id="tdShowBrief" onclick="showHideBrief();" class="tC fs13">
+					<img src="images/icon_info_01.gif" align="absmiddle">
+					隱藏使用說明</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="zh fs18 notHover"><hr>標點符號</td>
+			</tr>
+			<tr>
+				<td onclick="insertSymbol('，');closeBrief();" id="cell_comma1">，</td>
+				<td onclick="insertSymbol('、');closeBrief();" id="cell_comma2">、</td>
+				<td onclick="insertSymbol('。');closeBrief();" id="cell_period2">。</td>
+				<td onclick="insertSymbol('…');closeBrief();" id="cell_sad2">…</td>
+			</tr>
+			<tr>
+				<td onclick="insertSymbol('：');closeBrief();" id="cell_colon2">：</td>
+				<td onclick="insertSymbol('；');closeBrief();" id="cell_semi2">；</td>
+				<td onclick="insertSymbol('？');closeBrief();" id="cell_question2">？</td>
+				<td onclick="insertSymbol('！');closeBrief();" id="cell_exclamation2">！</td>
+			</tr>
+			<tr>
+				<td onclick="insertSymbol('（');closeBrief();" id="cell_open">（</td>
+				<td onclick="insertSymbol('）');closeBrief();" id="cell_close">）</td>
+				<td onclick="insertSymbol('「');closeBrief();" id="cell_open2">「</td>
+				<td onclick="insertSymbol('」');closeBrief();" id="cell_close2">」</td>
+			</tr>
+			<tr>
+				<td onclick="insertSymbol('『');closeBrief();" id="cell_open3">『</td>
+				<td onclick="insertSymbol('』');closeBrief();" id="cell_close3">』</td>
+				<td onclick="insertSymbol('【');closeBrief();" id="cell_open4">【</td>
+				<td onclick="insertSymbol('】');closeBrief();" id="cell_close4">】</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="notHover"><hr></td>
+			</tr>
+			<tr>
+				<td colspan="2" onclick="insertSymbol(NEW_LINE);closeBrief();" id="cell_line" class="zh fs13">開新行</td>
+				<td colspan="2" onclick="insertSymbol(NEW_LINE+NEW_LINE);closeBrief();" id="cell_paragraph" class="zh fs13">開新段</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="notHover"><hr></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="notHover"><input type="button" onclick="fixCantoneseInput();closeBrief();" class="zh fs13" value="修整標點及空白"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="zh fs18 notHover"><hr>粵語字詞參考</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="tL notHover zh fs13">
+					<img src="images/icon_contonese_wikipedia.png" title="Wikipedia" align="absmiddle">&nbsp;<a href="https://zh-yue.wikipedia.org/wiki/Wikipedia:%E7%B2%B5%E8%AA%9E%E7%94%A8%E8%BE%AD" onclick="closeBrief()" target="_blank" title="Wikipedia 粵語用辭">粵語用辭</a>
+					<br>
+					<img src="images/icon_contonese_wikipedia.png" title="Wikipedia" align="absmiddle">&nbsp;<a href="https://zh-yue.wikipedia.org/wiki/Wikipedia:%E7%B2%B5%E8%AA%9E%E6%9C%AC%E5%AD%97%E8%A1%A" onclick="closeBrief()" target="_blank" title="Wikipedia 粵語本字表">粵語本字表</a>
+					<br>
+					<img  src="images/icon_contonese_wikipedia.png" title="Wikipedia" align="absmiddle">&nbsp;<a href="https://zh-yue.wikipedia.org/wiki/Wikipedia:%E5%94%94%E5%90%8C%E7%B2%B5%E8%AA%9E%E5%9C%B0%E5%8D%80%E7%94%A8%E5%AD%97%E7%BF%92%E6%85%A3" onclick="closeBrief()"  target="_blank" title="Wikipedia 唔同粵語地區用字習慣">各區用字習慣</a>
+					<br>
+					<img  src="images/icon_contonese_dictionary.png" align="absmiddle">&nbsp;<a href="http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/" onclick="closeBrief()" target="_blank" title="香港中文大學粵語審音配詞字庫">粵語審音配詞字庫</a></td>
+			</tr>
+			<!-- The following are invisible but please don't deleted -->
+			<tr>
+				<td onclick="insertSymbol('，')" id="cell_comma" class="fs11 shadow">，</td>
+				<td onclick="insertSymbol('。')" id="cell_period" class="fs11 shadow">。</td>
+				<td onclick="insertSymbol('：')" id="cell_colon" class="fs11 shadow">：</td>
+				<td onclick="insertSymbol('；')" id="cell_semi" class="fs11 shadow">；</td>
+			</tr>
+			<tr>
+				<td onclick="insertSymbol('？')" id="cell_question" class="fs11 shadow">？</td>
+				<td onclick="insertSymbol('！')" id="cell_exclamation" class="fs11 shadow">！</td>
+				<td onclick="insertSymbol('-')" id="cell_dash" class="fs11 shadow">-</td>
+				<td onclick="insertSymbol(':-)')" id="cell_smiley" class="fs11 shadow">:-)</td>
+			</tr>
+			<tr>
+				<td onclick="insertSymbol(':-(')" id="cell_sad" class="fs11 shadow">:-(</td>
+				<td onclick="insertSymbol(':-(')" id="cell_sad3" class="fs11 shadow">:-(</td>
+				<td class="shadow"></td>
+				<td class="shadow"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div id="bottom_ad_pane" class="water_mark">
+	<div class="ad_728x15 ad">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- ad_728x15_notepad -->
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:728px;height:15px"
+			 data-ad-client="ca-pub-5030295218223297"
+			 data-ad-slot="8822269200"></ins>
+		<script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+</div>
+
+<div id="content_pane">
+<div id="footer">
+	<div id="footer_menu">
+		<a id="contact_us" href="mailto:admin@speechlogger.com" target="_blank">Contact Us</a>
+		<a href="https://chrome.google.com/webstore/detail/speechnotesx-voice-typing/oibmlbjklbogiccfokpgddgoleeiilid" target="_blank" title="Enhance ALL websites with speech recognition"><b>New - Voice Type on ANY website</b></a>
+		<a href="https://speechkeys.io" target="_blank" title="A New Kind of Voice Typing Keyboard"><b>Dictation Keyboard</b></a>
+		<a href="http://ttsreader.com" target="_blank" title="Unlimited Online Text Reader (TTSReader)">Text-To-Speech Reader</a>
+		<a href="http://Speechninja.co" target="_blank" title="Speech Aid (SpeechNinja - AAC)">Speech Aid (AAC)</a>
+		<a href="https://speechlogger.appspot.com/en/" target="_blank" title="Speech captions & Instant Translation">Captionist & Instant Translator</a>
+		<a href="#privacy" title="Privacy"><b>Privacy</b></a>
+		<a href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews?hl=en" rel="nofollow" target="_blank" title="Please give us 5 stars, we would really appreciate it :)">Rate Us</a>
+		<br>
+		<div id="languageLinks">
+			<a href="https://speechnotes.co/">English</a>
+			<a href="https://speechnotes.co/de/">Deutsch</a>
+			<a href="https://speechnotes.co/es/">español</a>
+			<a href="https://speechnotes.co/fr/">français</a>
+			<a href="https://speechnotes.co/it/">italiano</a>
+			<a href="https://speechnotes.co/pt/">Português</a>
+			<a href="https://speechnotes.co/ru/">России</a>
+			<a href="https://speechnotes.co/ja/">日本語</a>
+			<a href="https://speechnotes.co/zh/">中國</a>
+			<a href="https://speechnotes.co/yue/">廣東話</a>
+			<a href="https://speechnotes.co/ar/">العربية</a>
+		</div>
+	</div>
+	<p>All rights reserved worldwide to owner. No permission to copy or use code, style, names, and any content without explicit written permission from owner (admin@speechlogger.com). You may demonstrate usage of Speechnotes, reviews, etc. Thank you.
+	</p>
+
+	<div class="addthis_sharing_toolbox"></div> <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+</div>
+</div>
+
+
+<script src="https://speechnote.appspot.com/resources/scriptB2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="cantonese_speechnote.js"></script>
+</body>
+</html>
+
+<!--
+	Cantonese version is customized and enhanced by Patrick 劉肇庭 (patrick@MarcomApp.com) at Taipei City
+	♥ Version : 2017/03/03 Fri 12:28PM Taipei GMT+8
+-->
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */

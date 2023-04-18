@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js consumer" lang="ja" dir="ltr"> <!-- Page Specific -->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"></meta>
+	<meta charset="UTF-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+	<!-- metas correct title & content description -->
+	<meta name="description" content="テキストエディタを認識プロフェッショナルスピーチ。使いやすい＆無制限、無料、正確な。"></meta>  
+	<title>Speechnotes |ディクテーションメモ帳　</title>
+  
+	<!-- fb metas TODO: update -->
+		<meta property="og:title" content="ディクテーションメモ帳" />
+		<meta property="og:site_name" content="Speechnotes"/>
+		<meta property="og:description" content="テキストエディタを認識プロフェッショナルスピーチ。使いやすい＆無制限、無料、正確な。" /> 
+		<meta property="og:image" content="https://speechnotes.co/images/tile_1400x560.jpg"/>
+		<meta property="og:image:secure_url" content="https://speechnotes.co/images/tile_1400x560.jpg" />
+		<meta property="og:locale:alternate" content="en_US" />  <!-- En -->
+		<meta property="og:locale:alternate" content="fr_FR" />  <!-- French -->
+		<meta property="og:locale:alternate" content="it_IT" />  <!-- Italian -->
+		<meta property="og:locale:alternate" content="es_ES" />  <!-- Spanish -->
+		<meta property="og:locale:alternate" content="de_DE" />  <!-- German -->
+		<meta property="og:locale:alternate" content="ru_RU" />  <!-- Ruassian -->
+		<meta property="og:locale:alternate" content="ja_JP" />  <!-- Japanese -->
+		<meta property="og:locale:alternate" content="zh_CN" />  <!-- Chinese -->
+		<meta property="og:locale:alternate" content="pt_BR" />  <!-- Portuguese (Brazil)  -->
+		<meta property="og:locale:alternate" content="ar_AR" />  <!-- Arabic -->
+	<!-- end of fb metas -->
+
+		<link rel="alternate" hreflang="x-default" href="https://speechnotes.co/" />
+		<link rel="alternate" hreflang="en" href="https://speechnotes.co/" />
+		<link rel="alternate" hreflang="de" href="https://speechnotes.co/de/" />
+		<link rel="alternate" hreflang="es" href="https://speechnotes.co/es/" />
+		<link rel="alternate" hreflang="fr" href="https://speechnotes.co/fr/" />
+		<link rel="alternate" hreflang="it" href="https://speechnotes.co/it/" />
+		<link rel="alternate" hreflang="ja" href="https://speechnotes.co/ja/" />
+		<link rel="alternate" hreflang="pt" href="https://speechnotes.co/pt/" />
+		<link rel="alternate" hreflang="ar" href="https://speechnotes.co/ar/" />
+		<link rel="alternate" hreflang="ru" href="https://speechnotes.co/ru/" />
+		<link rel="alternate" hreflang="zh" href="https://speechnotes.co/zh/" />
+	
+	<script>
+		(function(e, p){
+		  var m = location.href.match(/platform=(win8|win|mac|linux|cros)/);
+		  e.id = (m && m[1]) ||
+		  (p.indexOf('Windows NT 6.2') > -1 ? 'win8' : p.indexOf('Windows') > -1 ? 'win' : p.indexOf('Mac') > -1 ? 'mac' : p.indexOf('CrOS') > -1 ? 'cros' : 'linux');
+		  e.className = e.className.replace(/\bno-js\b/,'js');
+		})(document.documentElement, window.navigator.userAgent)
+	</script>
+
+	<link href="https://speechnotes.co/images/favicon.ico" rel="icon" type="image/x-icon"> 
+	
+	<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+	
+	<script type="text/javascript" src="https://speechnotes.co/resources/scriptA2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://speechnotes.co/resources/style3.min.css">
+
+	<style>
+		.invisible {
+			display: none;
+		}
+	</style>
+	<script>
+		localStorage.setItem("interfaceLang", "ja");
+	</script>
+</head>
+
+<body dir="ltr" onload="runOnload();">
+
+<div id="top_pane">
+	<div id="top_menu">
+		<a href="https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes" target="_blank"><img style="position:relative;top:-5px;height:50px;vertical-align:middle" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a>
+		<!--<a href="#app" target="_self">App</a>
+		<a href="#content" target="_self">About</a>-->
+		<a href="https://ttsreader.com/ja/" target="_blank" title="音声リーダー">音声リーダー</a>
+		<a href="https://speechnotes.co/files/?lng=ja" target="_blank" title="音声および動画ファイルの自動文字起こし">音声および動画ファイルの自動文字起こし</a>
+
+		<!--<a href="mailto:admin@speechlogger.com" target="_blank">お問い合わせ</a>
+		<a href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews?hl=en" rel="nofollow" target="_blank" title="Please give us 5 stars, we would really appreciate it :)">レートUS</a>
+		<a href="http://amzn.to/28SMkEY" target="_blank">Shop (@amazon)</a>-->
+	</div>
+	<div id="shareButtons">
+		<div class="addthis_sharing_toolbox"></div>
+	</div>
+	<div id="donateButton">
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-bottom:0;">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="ATE9M96JNAYY8">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+</div>
+
+
+<div id="app" style="margin:0;padding:0;height:0;width:0;background-color:black"></div> <div id="app_container">
+	<div id="menu_pane" class="water_mark">
+		<div id="menu_container">
+						
+			<button class="menuhead" id="preferences_button">
+			  <ul class="dropdownmenu" id="preferences">
+				<li>
+					<input type="checkbox" id="save_checkbox"><label for="save_checkbox" id="lbl_save_checkbox">自動保存</label>
+				</li>
+				<li class="nonSelectable" style="background-color:white;border-bottom:none;border-top-color:lightgray;"><div>Share Speechnotes:</div></li>
+				<li style="background-color:white;border-top:none;"><div class="addthis_sharing_toolbox water_mark"></div></li>
+				<li class="nonSelectable" style="background-color:white;"><div>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin-bottom:0;">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="ATE9M96JNAYY8">
+						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form>
+				</div></li>
+				<li class="nonSelectable"><div>User-Interface Language:</div></li>
+				<li><div onclick="updateInterfaceLang('en');">English</div></li>
+				<li><div onclick="updateInterfaceLang('de');">Deutsch</div></li>
+				<li><div onclick="updateInterfaceLang('es');">español</div></li>
+				<li><div onclick="updateInterfaceLang('fr');">français</div></li>
+				<li><div onclick="updateInterfaceLang('it');">italiano</div></li>
+				<li><div onclick="updateInterfaceLang('pt');">Português</div></li>
+				<li><div onclick="updateInterfaceLang('ru');">России</div></li>
+				<li><div onclick="updateInterfaceLang('zh');">中國</div></li>
+				<li><div onclick="updateInterfaceLang('ja');">日本語</div></li>
+				<li><div onclick="updateInterfaceLang('ar');">العربية</div></li>
+			  </ul>
+			</button>
+			
+			<button id="new_button" onclick="newButton(event);" title="新しいセッション　"></button>
+			<button class="menuhead" id="open_button">
+			  <ul class="dropdownmenu" id="select_session">
+			  <!-- TODO: clean "openfile" from old speechnotes & speechlogger - both in layout and in code -->
+				<div id="sessions_menu"></div>
+			  </ul>
+			</button>
+			<button id="email_button" onclick="emailButton(event);" title="電子メール　"></button>
+			<button  class="menuhead" id="export_button">
+			  <ul class="dropdownmenu" id="export_menu">  
+				<li><div class="exportOption" id="save_drive" onclick="saveToDrive();">Googleドライブ</div></li> 
+				<li><div class="exportOption" id="save_txt" onclick="saveAsTxtFile();">にアップロードする。ファイル(.txt)</div></li> 
+				<li><div class="exportOption" id="save_doc" onclick="saveAsDocFile();">Word文書(.doc)</div></li> 
+				<li><div class="exportOption" id="save_to_disc" onclick="saveButton(event);">としてダウンロードする。セッションを保存する。(Ctrl + S)</div></li>
+			  </ul>
+			</button>
+			
+			<button id="print_button" title="印刷　" onclick="printButton(event);"></button>
+			<button id="enlarge_button" title="テキストを拡大　" onclick="zoom(1.20);"></button>  
+			<button id="shrink_button" title="テキストを縮小　" onclick="zoom(1/1.20);"></button>	
+	
+		</div>
+	</div>
+	
+	<div id="application_pane">
+		<div id="application_header">
+			<div id="session_title" contenteditable="true"></div>
+			<hr>
+			<div id="buttons_row">
+				<select id="select_language" onchange="updateLanguage();"></select>
+				<div id="start_button" title="スタート/一時停止　" onclick="if(variables.recognizing){isToRestartImmediately=false}startButton(event);"><img alt="スタート　" id="start_img" src="https://speechlogger.appspot.com/images/micoff2.png"></div> 
+			</div>			
+		</div>
+		<div id="output_box">
+			<textarea name="results_box" class="resultsClass widebox" id="results_box" resizeable="false" onscroll="rememberScroll()" onblur="rememberScroll()" onfocus="scrollToMemory()" placeholder="Click the mic to start dictating.
+			
+Try the following three punctuation methods, to see which one works the best for you:
+(1) Dictating punctuation marks.
+(2) Key-typing the marks using your keyboard. This is usually the fastest, as it appends the mark to the speech, even before it finalized.
+(3) Click the mark on the screen.
+			
+Enjoy dictating :)"></textarea>
+		</div>
+		<div id="mirror_container">
+			<div id="mirror"></div>
+		</div>
+		<div id="copyButton" onclick="copyButton(event);" title="Copy to clipboard"></div> 	</div><!-- application_pane -->
+
+	<div id="help_pane" class="water_mark">
+	<h2>ボイスコマンド＆ショートカット　</h2>
+		<p><b>ヒント：</b>バッファーからテキストエディタにすばやく結果を移動するには、ディクテーションしている間にEnterキーを押します。
+		</p>
+		<table id="commands_table">
+			<tr>
+				<th id="cell_say">ディクテーションする語</th>
+				<th>挿入される記号</th>
+			</tr>
+			<tr title="クリックして挿入　" onclick="insertSymbol(&#39;.&#39;)">
+				<td id="cell_period">ピリオド</td>
+				<td>.</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;,&#39;)">
+				<td id="cell_comma">コンマ　</td>
+				<td>,　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;?&#39;)">
+				<td id="cell_question">疑問符　</td>
+				<td>？　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;:&#39;)">
+				<td id="cell_colon">コロン</td>
+				<td>：　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;;&#39;)">
+				<td id="cell_semi">セミコロン　</td>
+				<td>;　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;!&#39;)">
+				<td id="cell_exclamation">感嘆符、感嘆符記号</td>
+				<td>！　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;-&#39;)">
+				<td id="cell_dash">ダッシュ　</td>
+				<td>-　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(NEW_LINE)">
+				<td id="cell_line">改行　</td>
+				<td>↵　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(NEW_LINE+NEW_LINE)">
+				<td id="cell_paragraph">新しい段落　</td>
+				<td>↵↵　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;(&#39;)">
+				<td id="cell_open">括弧開き</td>
+				<td>（　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;)&#39;)">
+				<td id="cell_close">括弧閉じ</td>
+				<td>）　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;:-)&#39;)">
+				<td id="cell_smiley">スマイリー、スマイリーフェイス　</td>
+				<td>:-)　</td>
+			</tr>
+			<tr title="クリックして挿入" onclick="insertSymbol(&#39;:-(&#39;)">
+				<td id="cell_sad">悲しい顔　</td>
+				<td>:-(　</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+
+<div id="bottom_ad_pane" style="right: 0; background-color: whitesmoke;padding: 0;" >
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- ad_728x15_notepad -->
+
+
+	<!--<div class="ad_728x15 ad">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		&lt;!&ndash; ad_728x15_notepad &ndash;&gt;
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:728px;height:15px"
+			 data-ad-client="ca-pub-5030295218223297"
+			 data-ad-slot="8822269200"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>-->
+</div>
+
+<div id="content_pane">
+	<!--<div id="about_tag" class="water_mark" onclick="window.location=&#39;#content&#39;;">詳細情報<div id="logo"></div>
+	</div>-->
+	<div id="content">
+		<div id="top_sharing_buttons" class="addthis_sharing_toolbox water_mark"></div> <!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<h1>Speechnotes　</h1>
+		<br>
+		<h2>テキストエディタを認識するプロフェッショナルスピーチ<br>シンプル、高速で使いやすいディクテーション＆タイピング用の無料Webアプリ</h2>
+		<div class="link_box">
+			<a target="_blank" href='https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes'>
+				<div id="android_promo">
+					<div id="store_img_container"><img style="vertical-align:middle" alt="Get it on Google Play" class="" id="logo-img" src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'></div>
+					<p id="android_app_left_text"><i>- 新た -</i> Speechnotes for Android!</p>
+				</div>
+			</a>
+		</div>
+
+		<div class="ad_728x15 ad">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- ad_728x15_notepad -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:728px;height:15px"
+				 data-ad-client="ca-pub-5030295218223297"
+				 data-ad-slot="8822269200"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<br>
+		<p>Speechnotesは、​​クリーンで効率的な設計を実装することによりアイデアを実現できるよう設計された強力な音声対応のオンラインメモ帳ですので、自分の思考に集中することができます。
+			<br>私たちは、ユーザーの効率性、生産性、快適性を高める（自動または手動の）組み込みツールと共に、最も正確な結果を得るための今日の技術で達成可能な最先端音声認識技術を保証することにより、最高のオンラインディクテーションツールを提供するよう努めています。
+		</p>
+		<p>Chromeブラウザ内でオンラインで完全に動作します。ダウンロード、インストールや登録の必要がないため、すぐに作業を開始することができます。</p> 
+		<br>
+
+		<h3>創造性を刺激し、集中力を維持する設計</h3>
+		<div class="resizeableYoutube">
+			<div>
+				<iframe src="https://www.youtube.com/embed/aCs21PsNjNA" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<p>Speechnotesは気をそらす必要のない環境を提供するよう設計されています。
+			<br>清潔で爽やかなスタートでユーザーの皆様の心を刺激することができるよう、すべてのメモは新しいきれいな白い紙から始まっています。テキストを除く他のすべての要素をフェードアウトさせて目につかないようにしているため、最も重要な部分である独自の創造性に集中することができます。
+			<br>さらにタイプする代わりに声を出すことにより思考したアイデアをよどみなくスラスラと述べることが出来るため、創造的で明確な思考を再び刺激します。アプリのすべてのフォントや色はくっきりと読みやすい特徴をもたせるよう設計されています。
+		</p>
+		<br>
+
+		<h3>レビュー＆ユーザーのフィードバック　</h3>
+		<p>このアプリは世に出たばかｒですが、すでに「ProductHunt」を初めとする世界的なハイテク雑誌で取り上げられています。しかし私達が最も誇りとするのはユーザーの皆様からのフィードバックです。SpeechnotesはChromeストアで4.5星以上の高い評価を誇る最高ランクの音声認識アプリです！これは他のオンライン製品を遥かに上回るものです。次に、Chromeのストアに掲載されたユーザーレビューをいくつかご紹介します。</p>
+		<div id="userReviews">
+			<p>"I would like to say that I am very pleased with this dictation plug in. It is better and much more accurate than the other two that I have tried. This is definitely my preferred dictation app.<br>
+			In fact, I wrote this review using the app.<br>
+			Thumbs up to the developers!!"
+			</p>
+			<p>"It does what it says on the tin...& more. Priceless. <br>Tony Hawes. Whose faith has been restored in Apps by this one."
+			</p>
+		</div>
+		<p>... And there are many more. Read all of them on the <a href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews?hl=en" rel="nofollow" target="_blank" title="Speechnotes reviews on the store">Chrome store</a></p>
+		<p>フィードバックありがとうございました！皆様のフィードバックは偉大なソリューションの開発に続ける私たちに大きなモチベーションを与えてくれます。</p>
+		<br> 
+		
+		<h2>ドラゴンスピーチに匹敵する無償の製品</h2>
+		<p>Speechnotesは完全に無償でありながらその正確性においてはドラゴンスピーチに匹敵します。多くのユーザーは、いくつかの点ではドラゴンスピーチよりも性能が優れていると語っています。ただし、お断りしておかなければならないのは、Speechnotesはディクテーションの目的のみにおいてドラゴンスピーチの代替品となり得ることで、他の音声ソフトウェアの管理やソフトウェア内での音声タイピングには使用できません。ドラゴンスピーチは、これらの追加機能を備えています。けれども、記事のディクテーションが必要な場合、Speechnotesは安価であるばかりでなく、おそらくより優れた製品であることがお分かりになるでしょう。
+		</p>
+		<br>
+		
+		<h3>音声タイピング、通常のキー入力用の生産性と効率性を高めるために組み込まれている機能</h3>
+		<p>私たちの多くは、キー入力が遅く時間がかかります。Speechnotesならスピーチ（ゆっくり、はっきりと話すスピーチ）する速度で入力できます。
+			<br>Speechnotesなら、キー入力から音声入力（ディクテーション）にスムーズに移動することができます。このように、都合のよい場面でディクテーションし、適切な場面でタイピングすることができるのです。また、すぐにテキストの結果をディクテーション、編集し、ディクテーションを続けることもできます。アプリのモードを調べたりディクテーションを中断する必要はありません。
+			<br>スピーチ（音声コマンド）またはシングルクリックで句読点を挿入します。
+		</p>
+		<p>双方の入力の種類に応じて構築された他の機能は次のとおりです。<br>自動保存機能によりどのような変更でもリアルタイムで文書を保存するので、保存に煩わされる必要がありません。
+			<br>お使いのコンピューターのGoogleドライブ（クラウド保存）またはダウンロードに文書としてエクスポートします。
+			<br>ワンクリックで電子メール送信やメモの印刷を行ないます。
+			<br>文頭の文字は自動でスマートに大文字にします。
+			<br>ログイン、登録、インストール、ダウンロードする必要がありません。「箱から出してすぐに」動作します。　それでは全ての自動保存されたメモはどこにあるのでしょうか。Speechnotesはお使いのブラウザを介してお手持ちのコンピューターに全てのデータを保存します。その利点は、サインインする必要がないことです。欠点は、他のコンピュータからこれらの文書にアクセスできないことです。そのためSpeechnotesでは​​Googleドライブにエクスポートできるようにしています。もう一つのささやかな欠点は、メモが多く貯まると保存領域がなくなる可能性があることです。そこで、古い不要なメモは時々削除することをお勧めします。
+			<br>無償で無制限にご利用頂けます。
+		</p>
+		<br>
+		
+		<h3>最先端のテクノロジー</h3>
+		<p>Speechnotesは、​​Googleのハイエンド音声認識エンジンに基づいています。実際、すべての音声がGoogleに送信され、そこで強力なパラレル・サーバーとアルゴリズムを使用して解釈され、翻音結果候補のストリームとしてSpeechnotes に送り返されます。この結果の正しい取扱いと音声文字化エンジンへのコマンドのセットにより、市場で入手可能な最も専門的で高価なソフトウェアと比較しても、その精度においてひけをとらない結果を達成することができます。クリックして句読点挿入、音声コマンド、スマート大文字化機能を追加しましょう。市場に出回っている中で最先端のアプリの１つを手に入れることが出来ます。
+			<br>定量的には、精度レベルは90％以上と予想されます。
+		</p>
+		<br>
+		
+		<h3>音声タイピングの健康へのメリット　</h3>
+		<p>一般的にコンピュータの前に座っていると、様々な種類のコンピューター関連反復性過労障害（RSI）を発症することがあります。それを防ぐ最良の方法は、長時間コンピューターの前に座らないようにすることです。しかし長時間座っていなければならない場合は、姿勢に十分注意することが必要です。こちら<a href="http://rsi.unl.edu/" target="_blank">（http://rsi.unl.edu/）</a>からそれに関する詳細記事をお読み頂けます。音声入力は、腕、手、肩、背中などを開放し深く腰掛けることが出来るため、RSI発症リスクを最小限に抑える最も推奨される方法です。修正、編集のためのディクテーションが終わったら、タイプを再開することが出来ます。
+		</p>
+		<br>
+		
+		<h3>取扱説明とヒント</h3>
+		<div class="ad_336x280">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- ad_336x280 -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:336px;height:280px"
+				 data-ad-client="ca-pub-5030295218223297"
+				 data-ad-slot="3052681201"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<p><i>操作の前に：</i>
+			<br>お使いのコンピューターに高品質のマイクを接続してください（内臓マイクがあれば、それで十分です。）
+			<br><br>
+			<i>操作：　</i>
+			<br>1）マイクをクリックしてください<br>2）初めてお使いの場合のみ：ご使用のブラウザが、当サイトがあなたのマイクを聞くことができるようにするための要求をポップアップします。「許可」をクリックしてください。
+			<br>3）ディクテーションを開始してください。ゆっくり、はっきりと話してください。より良い結果を得るためには、言葉の間を区切り、正しい話し方を強調してください。
+			<br>4）中間結果がバッファに表示されます。終了して、翻音結果をバッファからテキストエディタ事態に移動させるには３つの方法があります：<br>（a）キーボードの「Enter」キーを押す<br>（b）句読点と発音する、またはクリックする<br>（C）待つ<br><br>
+			<i>トラブルシューティング：　</i>
+			<br>障害の最も一般的な原因は、次のとおりです。　<br>1）マイクとハードウェアの問題<br>2）Chrome以外のブラウザ<br>3）聴く許可が付与されていない<br>4）Chromeが間違ったマイク音を聞き取っている<br>3)、4)の問題を解決するには、ブラウザのアドレスバーにある小さなカメラのアイコンをクリックする必要があります（マイクをクリックした後に表示されます）。speechnotesが許可され、ドロップダウンリストから適切なマイクが選択されるよう設定されます。
+		</p>
+		<br>
+		
+		<h3>Speechnotesの受益者
+		</h3>
+		<p>通常のキー入力に疲れている人であれば誰もがSpeechnotesの便利さがわかるでしょう。特にタイピングが困難な人のお役に立てる可能性もあります。そのような困難は、身体条件であったり単に早い段階でキーボード入力の技術を習得していなかった結果である場合もあるでしょう。
+			<br>また、自分の職業や趣味として多くのタイプを行なう人であれば、長時間のキーボードタイピングは非常に疲れ、さらに副作用として医療への影響も出てくるため、Speechnotesは非常に有用なアプリとなるに違いありません。言うまでもなく、Speechnotesは翻音するために録音を聴き、スピーチをマイクで繰り返すことができるため、（学生から専門家まで）翻音する人ならSpeechnotesが大変便利なアプリであることがわかるに違いありません。
+		</p>
+		<br>
+		
+		<h3>互換性とシステム要件　</h3>
+		<p>Speechnotesは本当に広範なプラットフォームをもつアプリです。Chromeブラウザを介して実行する限り、アプリは動作します。インストール、ディスク容量やハイエンド・マシンは必要ありません。お手持ちのデスクトップ、ラップトップパソコンや Chromebookで動作します。お手持ちのコンピューター、デスクトップ、ラップトップ、 Chromebookで動作します。お手持ちのタブレットや携帯電話でもお試し頂けますが機種によっては問題が起こる場合があります。
+		</p>
+		<br>
+		
+		<h3>プライバシー　</h3>
+		<p>Speechnotesでは、お客様のプライバシーを尊重しておりますので、お客様が読み上げ、入力する内容その他お客様に関する一切のデータは保存いたしません。お客様のスピーチは翻音のためGoogleの音声テキスト化エンジンに送信されます。
+		</p>
+		<br>
+		
+		<h3>免責事項　</h3>
+		<p>私達は正確な結果が得られるよう努めていますが、スピーチの結果が正確でない可能性があります。また、SpeechnotesはAS-ISが提供するサービスであり、それが将来も継続することを保証することはできません。上記のような理由により、また可能性は低いもののソフトウェアの障害が起こる可能性がありますので、お客様を予想外のデータの損失から保護するためにGoogleドライブまたはお手持ちのコンピューターに重要なテキストをエクスポートされることをお勧めします。Speechnotesはデータの損失や不正確な記述に対して責任を負いません。
+		</p>
+		<br>
+		
+		<h3>皆様のフィードバックとサポートに感謝します</h3>
+		<p>Speechnotesは2015年<a href="https://speechlogger.appspot.com/en/" rel="nofollow" target="_blank">Speechlogger</a>＆<a href="http://ttsreader.com" target="_blank"></a>TTSReaderチームにより世界中の人々が自分の思考、ストーリー、メモをより簡単かつ快適にタイプすることができるようにと開発されました。それがSpeechnotesが無償で、オンラインで誰でもアクセスすることができる理由です。私達はユーザーの皆様から頂いたフィードバックの電子メールからそのようなソフトウェアツールが必要であることに気づくようになりました。フィードバック、アイデアやリクエストがありましたら、<a href="mailto:admin@speechlogger.com" target="_blank">お問い合わせ</a> にご連絡ください。皆様のご意見を頂ければ幸いです。
+			<br>Speechnotesがお気に召しましたら、Chromeストアで友達と共有、または投稿やブログ記事で紹介して<a title="５つ星の評価を頂きますよう何卒よろしくお願いいたします:)" href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews" rel="nofollow" target="_blank">評価</a> して頂くことで、サポートを頂きますようお願いいたします。お友達やフォロワーもそれに感謝されることでしょう。また（「コーヒー1杯」程度の）少額の寄付によって貢献して頂くことも可能です。
+		</p>
+
+	</div>
+	
+	<div class="ad_728x90 ad">
+		<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async=""></script>
+		<!-- ad_728x90 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5030295218223297" data-ad-slot="9173644800"></ins>
+		<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	</div> 
+	
+	<div class="invisible">
+		<p>Speechnotes  - ディクテーションメモ帳</p>
+		<p>テキストエディタを認識プロフェッショナルスピーチ。使いやすい＆無制限、無料、正確な。</p>
+	</div>
+	
+	<div id="footer">
+		<div id="footer_menu">
+			<a id="contact_us" href="mailto:admin@speechlogger.com" target="_blank">お問い合わせ</a> <a href="http://ttsreader.com" title="無制限のオンラインテキストリーダー（TTSReader）　" target="_blank">音声よみあげリーダー</a> <a href="http://Speechninja.co" title="スピーチエイド（SpeechNinja  -  AAC）　" target="_blank">スピーチエイド（AAC）</a> <a href="https://speechlogger.appspot.com/en/" title="スピーチキャプション＆インスタント翻訳" rel="nofollow" target="_blank">ドキャプション＆インスタント翻訳</a> <a href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews" rel="nofollow" title="5つ星の評価を頂きますよう何卒よろしくお願いいたします:)" target="_blank">レートUS</a>
+			<br>
+			<div id="languageLinks">
+			  <a href="https://speechnotes.co/">English</a>
+			  <a href="https://speechnotes.co/de/">Deutsch</a>
+			  <a href="https://speechnotes.co/es/">español</a>
+			  <a href="https://speechnotes.co/fr/">français</a>
+			  <a href="https://speechnotes.co/it/">italiano</a>
+			  <a href="https://speechnotes.co/pt/">Português</a>
+			  <a href="https://speechnotes.co/ru/">России</a>
+			  <a href="https://speechnotes.co/ja/">日本語</a>
+			  <a href="https://speechnotes.co/zh/">中國</a>
+			  <a href="https://speechnotes.co/ar/">العربية</a>
+			</div>
+		</div>
+		<p>世界中のすべての権利は、所有者に帰属します。所有者(admin@speechlogger.com)からの書面による明示的な許可なく、複製またはコード、スタイル、名前、コンテンツの使用を行なうことを禁止します。Speechnotesの使用やレビュー等は表示して頂いて構いません。よろしくお願いいたします。
+		</p>
+		
+		<div class="addthis_sharing_toolbox"></div> <!-- Go to www.addthis.com/dashboard to customize your tools -->
+		
+	</div>
+</div>
+
+<div id="notification"></div>
+
+<div id="refer_box">
+  <div class="x-button" id="refer_box_closeButton" onclick="$(&#39;#refer_box&#39;).hide();"></div>
+  <p>Speechnotesをお楽しみ頂いていますか。<a class="link" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+document.URL,'_blank');">共有</a>してください 。<br>感謝と愛を込めて　Speechnotesチーム</p>
+</div>
+
+<script src="https://speechnotes.co/resources/scriptB2.min.js"></script>
+
+<script>//Google analytics
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47292499-1', 'speechlogger.appspot.com'); //TODO: do I need to change the address here?
+  ga('send', 'pageview');
+  
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fe89bcc181f95ed" async=""></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+</body>
+</html>
