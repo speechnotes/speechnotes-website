@@ -3,7 +3,7 @@
 ## Homepage
 title = "🎤 Speechnotes"
 titleSeparator = "-"
-titleAddition = "#1 Speech to Text"
+titleAddition = "#1 Speech to Text - Dictation & Transcription"
 description = "Speechnotes - #1 speech to text online for dictation & transcription. Dictate your notes in real time, or upload recordings and get them transcribed automatically."
 
 ## Documentation
@@ -13,7 +13,7 @@ description = "Speechnotes - #1 speech to text online for dictation & transcript
 images = ["tile_1024x512.png"]
 ogLocale = "en_US"
 domainTLD = "speechnotes.co"
-titleHome = "Speechnotes - #1 Speech to Text"
+titleHome = "Speechnotes - #1 Speech to Text - Dictation & Transcription"
 
 ## Twitter Cards
 twitterSite = "@speechlogger"

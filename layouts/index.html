@@ -14,14 +14,14 @@
       <div class="col-md-7 col-lg-6 card">
         <div class="text-center" style="margin-top: 30px;margin-bottom: -20px;"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MicIcon"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"></path></svg></div>
         <h2 class="h4">Dictate Notes</h2>
-        <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.dictation }}" role="button">Start dictating{{ i18n "start-dictating" }}</a>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.dictation }}" role="button" onclick="gtag('event', 'speechnotes_click_dictate_body', {'value': 'home_page_body'});">Start dictating{{ i18n "start-dictating" }}</a>
         <p class="meta">Start taking notes, on our online voice-enabled notepad right away, for free. <a href="#about_speechnotes_notepad">Learn more.</a></p>
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-7 col-lg-6 card">
         <div class="text-center" style="margin-top: 30px;margin-bottom: -20px;"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="AudioFileOutlinedIcon"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm10-9h-4v3.88c-.36-.24-.79-.38-1.25-.38-1.24 0-2.25 1.01-2.25 2.25S9.51 19 10.75 19 13 17.99 13 16.75V13h3v-2z"></path></svg></div>
         <h2 class="h4">Transcribe Recordings</h2>
-        <a class="btn btn-secondary btn-lg px-4 mb-2" href="{{ .Site.Params.links.transcription }}" role="button">Start transcribing{{ i18n "start-transcribing" }}</a>
+        <a class="btn btn-secondary btn-lg px-4 mb-2" href="{{ .Site.Params.links.transcription }}" role="button" onclick="gtag('event', 'speechnotes_click_transcribe_body', {'value': 'home_page_body'});">Start transcribing{{ i18n "start-transcribing" }}</a>
         <p class="meta">Automatically transcribe recordings, audio and video files, youtubes and more, in no time. <a href="#about_speechnotes_transcription">Learn more.</a></p>
       </div>
     </div>
@@ -35,7 +35,7 @@
     <br/>
     <div class="container">
       <p style="max-width: 800px;margin: auto; font-size: larger; text-align: justify">
-        Speechnotes is a reliable and secure web-based speech-to-text tool that enables you to quickly and accurately transcribe your audio and video recordings. You can also dictate your notes instead of typing, saving you time and effort. With features like voice commands for punctuation and formatting, automatic capitalization, and easy import/export options, Speechnotes provides an efficient and user-friendly dictation and transcription experience. Proudly serving millions of users since 2015, Speechnotes is the go-to tool for anyone who needs fast and accurate transcription.
+        Speechnotes is a reliable and secure web-based speech-to-text tool that enables you to quickly and accurately transcribe your audio and video recordings, as well as dictate your notes instead of typing, saving you time and effort. With features like voice commands for punctuation and formatting, automatic capitalization, and easy import/export options, Speechnotes provides an efficient and user-friendly dictation and transcription experience. Proudly serving millions of users since 2015, Speechnotes is the go-to tool for anyone who needs fast and accurate transcription.
 
         <br/><br/><br/>
         <span style="display: block;text-align: center; color: orangered"><i>Our Portfolio of Complementary Speech-To-Text Tools Includes:</i></span>
@@ -48,21 +48,21 @@
           <h3 class="h4">Voice typing - Chrome extension</h3>
           <p>Dictate instead of typing on any form & text-box across the web. Including on Gmail, and more.</p>
           <div style="flex: 1;min-height: 10px;"></div>
-          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.chromeExtension }}" role="button">Start voice typing{{ i18n "start-dictating" }}</a>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.chromeExtension }}" role="button" onclick="gtag('event', 'speechnotes_click_extension_body', {'value': 'home_page_body'});">Start voice typing{{ i18n "start-dictating" }}</a>
           <br/>
         </div>&nbsp;&nbsp;
         <div class="col-sm card" style="display: flex;flex-direction: column">
           <h3 class="h4">Transcription API & webhooks</h3>
           <p>Speechnotes' API enables you to send us files via standard POST requests, and get the transcription results sent directly to your server.</p>
           <div style="flex: 1;min-height: 10px;"></div>
-          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.api }}" role="button">Learn how{{ i18n "start-dictating" }}</a>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.api }}" role="button" onclick="gtag('event', 'speechnotes_click_api_body', {'value': 'home_page_body'});">Learn how{{ i18n "start-dictating" }}</a>
           <br/>
         </div>&nbsp;&nbsp;
         <div class="col-sm card" style="display: flex;flex-direction: column">
           <h3 class="h4">Zapier integration</h3>
           <p>Combine the power of automatic transcriptions with Zapier's automatic processes. Serverless & codeless automation! Connect with your CRM, phone calls, Docs, email & more.</p>
           <div style="flex: 1;min-height: 10px;"></div>
-          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.zapier }}" role="button">Start automation{{ i18n "start-dictating" }}</a>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.zapier }}" role="button" onclick="gtag('event', 'speechnotes_click_zapier_body', {'value': 'home_page_body'});">Start automation{{ i18n "start-dictating" }}</a>
           <br/>
         </div>
       </div>
@@ -71,21 +71,21 @@
           <h3 class="h4">Android Speechnotes app</h3>
           <p>Speechnotes' notepad for Android, for notes taking on your mobile, battle tested with more than 5Million downloads. Rated 4.3+ ⭐</p>
           <div style="flex: 1;min-height: 10px;"></div>
-          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.androidApp }}" role="button">Get it on Google Play{{ i18n "start-dictating" }}</a>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.androidApp }}" role="button" onclick="gtag('event', 'speechnotes_click_androidApp_body', {'value': 'home_page_body'});">Get it on Google Play{{ i18n "start-dictating" }}</a>
           <br/>
         </div>&nbsp;&nbsp;
         <div class="col-sm card" style="display: flex;flex-direction: column">
           <h3 class="h4">iOS TextHear app</h3>
           <p>TextHear for iOS, works great on iPhones, iPads & Macs. Designed specifically to help people with hearing impairment participate in conversations. Please note, this is a sister app - so it has its own pricing plan.</p>
           <div style="flex: 1;min-height: 10px;"></div>
-          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.iosApp }}" role="button">Get it on the App Store{{ i18n "start-dictating" }}</a>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.iosApp }}" role="button" onclick="gtag('event', 'speechnotes_click_iosApp_body', {'value': 'home_page_body'});">Get it on the App Store{{ i18n "start-dictating" }}</a>
           <br/>
         </div>&nbsp;&nbsp;
         <div class="col-sm card" style="display: flex;flex-direction: column">
           <h3 class="h4">Audio & video converting tools</h3>
           <p>Tools developed for fast - batch conversions of audio files from one type to another and extracting audio only from videos for minimizing uploads.</p>
           <div style="flex: 1;min-height: 10px;"></div>
-          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.converters }}" role="button">Browse converters{{ i18n "start-dictating" }}</a>
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.converters }}" role="button" onclick="gtag('event', 'speechnotes_click_converters_body', {'value': 'home_page_body'});">Browse converters{{ i18n "start-dictating" }}</a>
           <br/>
         </div>
       </div>
@@ -105,7 +105,7 @@
               <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VolumeUpOutlinedIcon"><path d="M3 9v6h4l5 5V4L7 9H3zm7-.17v6.34L7.83 13H5v-2h2.83L10 8.83zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77 0-4.28-2.99-7.86-7-8.77z"></path></svg>
             </div>
             <p class="h3">TTSReader</p>
-            <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.ttsreader }}" role="button">Get started{{ i18n "start-dictating" }}</a>
+            <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.ttsreader }}" role="button" onclick="gtag('event', 'speechnotes_click_ttsreader_body', {'value': 'home_page_body'});">Get started{{ i18n "start-dictating" }}</a>
             <p class="h5">Reads out loud texts, files & web pages</p>
             <p class="meta">Start taking notes, on our online voice-enabled notepad right away, for free</p>
           </div>
@@ -115,7 +115,7 @@
               <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ClosedCaptionOutlinedIcon"><path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V6h14v12zM7 15h3c.55 0 1-.45 1-1v-1H9.5v.5h-2v-3h2v.5H11v-1c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm7 0h3c.55 0 1-.45 1-1v-1h-1.5v.5h-2v-3h2v.5H18v-1c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1z"></path></svg>
             </div>
             <p class="h3">Speechlogger</p>
-            <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.speechlogger }}" role="button">Get started{{ i18n "start-transcribing" }}</a>
+            <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.Params.links.speechlogger }}" role="button" onclick="gtag('event', 'speechnotes_click_speechlogger_body', {'value': 'home_page_body'});">Get started{{ i18n "start-transcribing" }}</a>
             <p class="h5">Live Captioning & Translation</p>
             <p class="meta">Automatically transcribe recordings, audio and video files, youtubes and more, in no time.</p>
           </div>
