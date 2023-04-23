@@ -61,8 +61,8 @@ singleSize = false
 imageAddClass = "img-fluid lazyload blur-up"
 
 ### Image template
-defaultImage = "default-image.png" # put in `./assets/images/`
-fillImage = "1270x740 Center" # normalize image size
+defaultImage = "tile_1024x512.png" # put in `./assets/images/`
+fillImage = "1024x512 Center" # normalize image size
 
 # Footer
 footer = "Powered by <a class=\"text-muted\" href=\"https://speechnotes.co/\">Speechnotes</a>"

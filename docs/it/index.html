@@ -7,13 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 	<!-- metas correct title & content description -->
-	<meta name="description" content="Discorso professionale riconoscendo editor di testo. Preciso, gratuito, facile da usare e senza limiti."></meta>  
+	<meta name="description" content="Discorso professionale riconoscendo editor di testo. Preciso, gratuito, facile da usare e senza limiti."></meta>
 	<title>Speechnotes | Dettatura Notepad</title>
-  
+
 	<!-- fb metas TODO: update -->
 		<meta property="og:title" content="Dettatura Notepad" />
 		<meta property="og:site_name" content="Speechnotes"/>
-		<meta property="og:description" content="Discorso professionale riconoscendo editor di testo. Preciso, gratuito, facile da usare e senza limiti." /> 
+		<meta property="og:description" content="Discorso professionale riconoscendo editor di testo. Preciso, gratuito, facile da usare e senza limiti." />
 		<meta property="og:image" content="https://speechnotes.co/images/tile_1400x560.jpg"/>
 		<meta property="og:image:secure_url" content="https://speechnotes.co/images/tile_1400x560.jpg" />
 		<meta property="og:locale:alternate" content="en_US" />  <!-- En -->
@@ -39,7 +39,7 @@
 		<link rel="alternate" hreflang="ar" href="https://speechnotes.co/ar/" />
 		<link rel="alternate" hreflang="ru" href="https://speechnotes.co/ru/" />
 		<link rel="alternate" hreflang="zh" href="https://speechnotes.co/zh/" />
-	
+
 	<script>
 		(function(e, p){
 		  var m = location.href.match(/platform=(win8|win|mac|linux|cros)/);
@@ -49,10 +49,10 @@
 		})(document.documentElement, window.navigator.userAgent)
 	</script>
 
-	<link href="https://speechnotes.co/images/favicon.ico" rel="icon" type="image/x-icon"> 
-	
+	<link href="https://speechnotes.co/images/favicon2.ico" rel="icon" type="image/x-icon">
+
 	<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-	
+
 	<script type="text/javascript" src="https://speechnotes.co/resources/scriptA2.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://speechnotes.co/resources/style3.min.css">
 
@@ -116,7 +116,7 @@
 <div id="app_container">
 	<div id="menu_pane" class="water_mark">
 		<div id="menu_container">
-						
+
 			<button class="menuhead" id="preferences_button">
 			  <ul class="dropdownmenu" id="preferences">
 				<li>
@@ -145,7 +145,7 @@
 				<li><div onclick="updateInterfaceLang('ar');">العربية</div></li>
 			  </ul>
 			</button>
-			
+
 			<button id="new_button" onclick="newButton(event);" title="Nuova sessione"></button>
 			<button class="menuhead" id="open_button">
 			  <ul class="dropdownmenu" id="select_session">
@@ -155,38 +155,38 @@
 			</button>
 			<button id="email_button" onclick="emailButton(event);" title="E-mail"></button>
 			<button  class="menuhead" id="export_button">
-			  <ul class="dropdownmenu" id="export_menu">  
-				<li><div class="exportOption" id="save_drive" onclick="saveToDrive();">Carica in Google Drive</div></li> 
-				<li><div class="exportOption" id="save_txt" onclick="saveAsTxtFile();">Scarica come file (.txt)</div></li> 
-				<li><div class="exportOption" id="save_doc" onclick="saveAsDocFile();">Documento Word (.doc)</div></li> 
+			  <ul class="dropdownmenu" id="export_menu">
+				<li><div class="exportOption" id="save_drive" onclick="saveToDrive();">Carica in Google Drive</div></li>
+				<li><div class="exportOption" id="save_txt" onclick="saveAsTxtFile();">Scarica come file (.txt)</div></li>
+				<li><div class="exportOption" id="save_doc" onclick="saveAsDocFile();">Documento Word (.doc)</div></li>
 				<li><div class="exportOption" id="save_to_disc" onclick="saveButton(event);">Salva sessione (Ctrl + S)</div></li>
 			  </ul>
 			</button>
-			
+
 			<button id="print_button" title="Stampa" onclick="printButton(event);"></button>
-			<button id="enlarge_button" title="Ingrandisci testo" onclick="zoom(1.20);"></button>  
+			<button id="enlarge_button" title="Ingrandisci testo" onclick="zoom(1.20);"></button>
 			<button id="shrink_button" title="Riduci testo" onclick="zoom(1/1.20);"></button>
-			
+
 		</div>
 	</div>
-	
+
 	<div id="application_pane">
 		<div id="application_header">
 			<div id="session_title" contenteditable="true"></div>
 			<hr>
 			<div id="buttons_row">
 				<select id="select_language" onchange="updateLanguage();"></select>
-				<div id="start_button" title="Avvio/Pausa" onclick="if(variables.recognizing){isToRestartImmediately=false}startButton(event);"><img alt="Avvia" id="start_img" src="https://speechlogger.appspot.com/images/micoff2.png"></div> 
-			</div>			
+				<div id="start_button" title="Avvio/Pausa" onclick="if(variables.recognizing){isToRestartImmediately=false}startButton(event);"><img alt="Avvia" id="start_img" src="https://speechlogger.appspot.com/images/micoff2.png"></div>
+			</div>
 		</div>
 		<div id="output_box">
 			<textarea name="results_box" class="resultsClass widebox" id="results_box" resizeable="false" onscroll="rememberScroll()" onblur="rememberScroll()" onfocus="scrollToMemory()" placeholder="Click the mic to start dictating.
-			
+
 Try the following three punctuation methods, to see which one works the best for you:
 (1) Dictating punctuation marks.
 (2) Key-typing the marks using your keyboard. This is usually the fastest, as it appends the mark to the speech, even before it finalized.
 (3) Click the mark on the screen.
-			
+
 Enjoy dictating :)"></textarea>
 		</div>
 		<div id="mirror_container">
@@ -313,9 +313,9 @@ Enjoy dictating :)"></textarea>
 		<p>Speechnotes è un efficace blocco note online con funzione di riconoscimento vocale, progettato per dar vita alle tue idee attraverso un design pulito ed efficiente, in modo che tu possa concentrarti sui tuoi pensieri.
 			<br>Ci sforziamo di fornire il migliore strumento di dettatura online utilizzando tecnologie di riconoscimento vocale all'avanguardia per ottenere i risultati più accurati oggi raggiungibili e incorporando strumenti integrati (automatici o manuali) per aumentare l'efficienza, la produttività e il comfort degli utenti.
 		</p>
-		<p>L'applicazione opera interamente online nel browser Chrome. Nessuna necessità di download, installazione o persino registrazione: potrai così iniziare a lavorare fin da subito.</p> 
+		<p>L'applicazione opera interamente online nel browser Chrome. Nessuna necessità di download, installazione o persino registrazione: potrai così iniziare a lavorare fin da subito.</p>
 		<br>
-		
+
 		<h3>Progettato per stimolare la creatività e tenerti concentrato
 		</h3>
 		<div class="resizeableYoutube">
@@ -323,8 +323,8 @@ Enjoy dictating :)"></textarea>
 				<iframe src="https://www.youtube.com/embed/aCs21PsNjNA" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
-		<p>Speechnotes è stato appositamente progettato per fornirti un ambiente privo di distrazioni. 
-			<br>Per ogni nota viene usato un nuovo foglio bianco e vuoto, in modo da stimolare la tua mente con un inizio completamente nuovo. Tutti gli altri elementi, ad eccezione del testo, non sono visibili grazie a un effetto di dissolvenza a scomparsa, in modo che tu possa concentrarti sulla parte più importante: la tua creatività. 
+		<p>Speechnotes è stato appositamente progettato per fornirti un ambiente privo di distrazioni.
+			<br>Per ogni nota viene usato un nuovo foglio bianco e vuoto, in modo da stimolare la tua mente con un inizio completamente nuovo. Tutti gli altri elementi, ad eccezione del testo, non sono visibili grazie a un effetto di dissolvenza a scomparsa, in modo che tu possa concentrarti sulla parte più importante: la tua creatività.
 			<br>Inoltre, il fatto di parlare anziché scrivere con la tastiera, ti consente di pensare ed esprimere i tuoi pensieri in modo discorsivo, ininterrotto, favorendo ulteriormente un pensiero chiaro e creativo. I font e i colori usati nell'applicazione sono stati concepiti per essere limpidi e avere ottime caratteristiche di leggibilità.
 		</p>
 		<br>
@@ -341,45 +341,45 @@ Enjoy dictating :)"></textarea>
 		</div>
 		<p>... And there are many more. Read all of them on the <a href="https://chrome.google.com/webstore/detail/speechnotes-dictation-not/opekipbefdbacebgkjjdgoiofdbhocok/reviews?hl=en" rel="nofollow" target="_blank" title="Speechnotes reviews on the store">Chrome store</a></p>
 		<p>Grazie mille! Il tuo feedback ci fornisce un'ottima motivazione per continuare a sviluppare grandi soluzioni</p>
-		<br> 
-		
+		<br>
+
 		<h2>Un'alternativa gratuita a Dragon Naturally Speaking</h2>
-		<p>Speechnotes è completamente gratuito e vanta una precisione paragonabile a quella di Dragon Natuarlly Speaking. Molti di voi ci hanno detto che, in qualche modo, supera addirittura Dragon. 
+		<p>Speechnotes è completamente gratuito e vanta una precisione paragonabile a quella di Dragon Natuarlly Speaking. Molti di voi ci hanno detto che, in qualche modo, supera addirittura Dragon.
 			Dobbiamo comunque ricordare che Speechnotes è un'alternativa a Dragon solo ai fini della dettatura, ma non in termini di controllo vocale di altri software o di digitazione vocale all'interno di altri software. Dragon possiede queste funzionalità aggiuntive.
 			Se però hai bisogno di dettare un articolo, troverai Speechnotes non solo più economico, ma forse anche migliore.
 		</p>
 		<br>
-		
+
 		<h3>Funzionalità incorporate per aumentare la produttività e l'efficienza sia per l'inserimento vocale del testo sia per la normale digitazione con tastiera
 		</h3>
 		<p>Per molti di noi, la digitazione con la tastiera è lenta e dispendiosa in termini di tempo. Speechnotes ti consente di inserire il testo con la stessa velocità con cui fai un discorso (un discorso lento e chiaro).
 			<br>Speechnotes ti consente inoltre di passare senza interruzioni dall'inserimento vocale del testo (dettatura) alla digitazione mediante tastiera. In questo modo, potrai dettare quando ti conviene e digitare il testo quando più appropriato. Potrai inoltre dettare e modificare subito il testo inserito, e continuare quindi a dettare. Non c'è alcun bisogno di passare ad altre modalità dell'applicazione o addirittura di smettere di dettare.
-			<br>L'inserimento della punteggiatura può essere realizzato parlando (comandi vocali) o con un singolo clic. 
+			<br>L'inserimento della punteggiatura può essere realizzato parlando (comandi vocali) o con un singolo clic.
 		</p>
 		<p>Altre funzionalità integrate per una migliore produttività di entrambe le modalità di digitazione sono:
 			<br>Salvataggio automatico, con salvataggio del documento in tempo reale dopo qualsiasi modifica, in modo tale che non dovrai mai preoccuparti di farlo personalmente.
 			<br>Esportazione in Google Drive (salvataggio nel cloud) o download come documento sul tuo computer.
-			<br>Un clic per inviare il documento di testo via e-mail o per stamparlo. 
+			<br>Un clic per inviare il documento di testo via e-mail o per stamparlo.
 			<br>Uso automatico delle maiuscole all'inizio delle frasi.
 			<br>Nessuna necessità di accesso, registrazione, installazione o download. L'applicazione è immediatamente pronta all'uso. Ma dove vengono memorizzate tutte le note salvate automaticamente? Speechnotes memorizza tutti i dati sul tuo computer, attraverso il browser. Il vantaggio è che non c'è bisogno di effettuare alcun accesso. Lo svantaggio è che non è possibile accedere a questi documenti da altri computer. A tal fine, Speechnotes ti consente di esportare i documenti su Google Drive. Un altro piccolo svantaggio è che, dopo aver salvato moltissime note, è possibile che lo spazio di archiviazione si esaurisca; per questo motivo, è buona pratica eliminare di tanto in tanto le note vecchie non più necessarie.
 			<br>Uso illimitato gratis.
 		</p>
 		<br>
-		
+
 		<h3>Tecnologia leader
 		</h3>
-		<p>Speechnotes si basa su motori di riconoscimento vocale di fascia alta di Google. Di fatto, tutte le parole pronunciate vengono inviate a Google, dove sono interpretate utilizzando potenti server e algoritmi paralleli, e vengono quindi inviate nuovamente a Speechnotes sotto forma di un flusso di possibili risultati di trascrizione. Grazie a una corretta gestione di questi risultati e al corretto insieme di comandi inviati ai motori Speech-to-Text, è possibile ottenere risultati che non peccano di imprecisione anche rispetto al software più professionale e costoso disponibile sul mercato. Se a tutto ciò si aggiunge la possibilità di inserire la punteggiatura con un clic o con comandi vocali, nonché la funzionalità di inserimento intelligente delle maiuscole, si ottiene una delle applicazioni più avanzate attualmente disponibili. 
+		<p>Speechnotes si basa su motori di riconoscimento vocale di fascia alta di Google. Di fatto, tutte le parole pronunciate vengono inviate a Google, dove sono interpretate utilizzando potenti server e algoritmi paralleli, e vengono quindi inviate nuovamente a Speechnotes sotto forma di un flusso di possibili risultati di trascrizione. Grazie a una corretta gestione di questi risultati e al corretto insieme di comandi inviati ai motori Speech-to-Text, è possibile ottenere risultati che non peccano di imprecisione anche rispetto al software più professionale e costoso disponibile sul mercato. Se a tutto ciò si aggiunge la possibilità di inserire la punteggiatura con un clic o con comandi vocali, nonché la funzionalità di inserimento intelligente delle maiuscole, si ottiene una delle applicazioni più avanzate attualmente disponibili.
 			<br>Quantitativamente, si dovrebbero attendere livelli di precisione superiori al 90%.
 		</p>
 		<br>
-		
+
 		<h3>Vantaggi per la salute derivanti dalla digitazione vocale
 		</h3>
 		<p>In generale, stare seduti davanti a un computer può comportare diversi tipi di disturbi degli arti superiori da lavoro (Repetitive Strain Injuries, RSI) correlati al computer. Per evitarli, il modo migliore è non sedersi davanti al computer per lunghi periodi di tempo. Ma, se proprio bisogna farlo, è necessario prestare molta attenzione alla postura. Maggiori informazioni sull'argomento possono essere reperite <a href="http://rsi.unl.edu/" target="_blank">qui (http://rsi.unl.edu/).</a> La digitazione vocale è uno dei principali modi consigliati per ridurre al minimo questi rischi, in quanto consente di sedersi comodamente, rilassando completamente le braccia, le mani, le spalle e la schiena. Al termine della dettatura, potrai tornare a digitare con la tastiera per effettuare correzioni e modifiche del testo.
 		</p>
 		<br>
-		
-		<h3>Istruzioni e suggerimenti 
+
+		<h3>Istruzioni e suggerimenti
 		</h3>
 		<div class="ad_336x280">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -393,52 +393,52 @@ Enjoy dictating :)"></textarea>
 			</script>
 		</div>
 		<p><i>Operazioni preliminari:</i>
-			<br>Collegare un microfono di alta qualità al PC (se si dispone di un microfono incorporato, quest'ultimo potrebbe essere adeguato). 
+			<br>Collegare un microfono di alta qualità al PC (se si dispone di un microfono incorporato, quest'ultimo potrebbe essere adeguato).
 			<br><br>
 			<i>Funzionamento:</i>
-			<br>1) Fare clic sul microfono 
-			<br>2) Per la prima volta soltanto: sul browser comparirà un messaggio che richiede all'utente di consentire al sito di ascoltare il microfono. Fare clic su "Consenti". 
-			<br>3) Iniziare a dettare. Parlare piano e chiaramente. Distanziare le parole e pronunciare la dizione corretta per ottenere risultati migliori. 
+			<br>1) Fare clic sul microfono
+			<br>2) Per la prima volta soltanto: sul browser comparirà un messaggio che richiede all'utente di consentire al sito di ascoltare il microfono. Fare clic su "Consenti".
+			<br>3) Iniziare a dettare. Parlare piano e chiaramente. Distanziare le parole e pronunciare la dizione corretta per ottenere risultati migliori.
 			<br>4) I risultati intermedi verranno visualizzati nel buffer. Sono disponibili 3 modi per finalizzare e spostare i risultati di trascrizione dal buffer all'editor di testo:
-			<br>   (a) Premere il tasto "Invio" sulla tastiera 
-			<br>   (b) Pronunciare o fare clic su un segno di punteggiatura 
+			<br>   (a) Premere il tasto "Invio" sulla tastiera
+			<br>   (b) Pronunciare o fare clic su un segno di punteggiatura
 			<br>   (c) Attendere
 			<br><br>
 			<i>Risoluzione dei problemi:</i>
-			<br>Le cause più comuni di mancato funzionamento comprendono: 
+			<br>Le cause più comuni di mancato funzionamento comprendono:
 			<br>1) Problema hardware con il microfono
 			<br>2) Browser utilizzato diverso da Chrome
-			<br>3) Mancata concessione del permesso di ascoltare 
-			<br>4) Ascolto del microfono sbagliato da parte di Chrome 
+			<br>3) Mancata concessione del permesso di ascoltare
+			<br>4) Ascolto del microfono sbagliato da parte di Chrome
 			<br>Per risolvere gli ultimi 2 problemi, fare clic sulla piccola icona della fotocamera presente nella barra degli indirizzi del browser (tale icona apparirà dopo aver fatto clic sul microfono) e impostare il permesso "Consenti" per Speechnotes, quindi scegliere il microfono corretto dal menu a discesa.
 		</p>
 		<br>
-		
+
 		<h3>Chi può trarre vantaggio dall'uso di Speechnotes?
 		</h3>
-		<p>Chiunque sia stufo dell'ordinaria digitazione tramite tastiera potrebbe trovare Speechnotes utile. L'applicazione potrebbe anche essere utile, in modo particolare, per le persone con difficoltà di digitazione. Tali difficoltà possono derivare da un deficit fisico o semplicemente dalla mancata padronanza della tecnica di digitazione con tastiera in un'età relativamente precoce.  
-			<br>Inoltre, le persone che usano molto la tastiera per motivi di lavoro o per hobby potrebbero trovare Speechnotes molto vantaggioso, poiché la digitazione con la tastiera potrebbe risultare molto affaticante e persino avere implicazioni mediche quali effetti collaterali. Inutile dire che chi fa lavori di trascrizione (dagli studenti ai professionisti) troverà Speechnotes estremamente utile, in quanto l'applicazione consente all'utente di ascoltare una registrazione e ripetere il discorso nel microfono, facendo il lavoro di trascrizione al suo posto. 
+		<p>Chiunque sia stufo dell'ordinaria digitazione tramite tastiera potrebbe trovare Speechnotes utile. L'applicazione potrebbe anche essere utile, in modo particolare, per le persone con difficoltà di digitazione. Tali difficoltà possono derivare da un deficit fisico o semplicemente dalla mancata padronanza della tecnica di digitazione con tastiera in un'età relativamente precoce.
+			<br>Inoltre, le persone che usano molto la tastiera per motivi di lavoro o per hobby potrebbero trovare Speechnotes molto vantaggioso, poiché la digitazione con la tastiera potrebbe risultare molto affaticante e persino avere implicazioni mediche quali effetti collaterali. Inutile dire che chi fa lavori di trascrizione (dagli studenti ai professionisti) troverà Speechnotes estremamente utile, in quanto l'applicazione consente all'utente di ascoltare una registrazione e ripetere il discorso nel microfono, facendo il lavoro di trascrizione al suo posto.
 		</p>
 		<br>
-		
+
 		<h3>Compatibilità e requisiti di sistema
 		</h3>
 		<p>Speechnotes è davvero un'applicazione ad ampia piattaforma. Funziona sempre, a patto che venga utilizzata con il browser Chrome. Nessuna necessità di installazione, spazio su disco o apparecchiature di fascia alta. Funziona senza problemi su PC, computer fisso, portatile e Chromebook. Potresti provare a utilizzarlo sul tablet o sul cellulare, sebbene possano esserci delle incompatibilità con alcuni dispositivi.
 		</p>
 		<br>
-		
+
 		<h3>Privacy
 		</h3>
-		<p>Noi di Speechnotes teniamo alla tua privacy ed è per questo che non conserviamo nulla di ciò che dici o digiti con la tastiera, né qualsiasi altro dato che ti riguardi. Il tuo discorso viene inviato a motori speech-to-text di Google per la trascrizione. 
+		<p>Noi di Speechnotes teniamo alla tua privacy ed è per questo che non conserviamo nulla di ciò che dici o digiti con la tastiera, né qualsiasi altro dato che ti riguardi. Il tuo discorso viene inviato a motori speech-to-text di Google per la trascrizione.
 		</p>
 		<br>
-		
+
 		<h3>Esclusione di responsabilità
 		</h3>
-		<p>Nonostante i nostri tentativi, i risultati relativi alla trascrizione della dettatura potrebbero non essere accurati. Inoltre, Speechnotes è un servizio fornito "nello stato in cui si trova" e non possiamo garantirne il funzionamento futuro. Per questo motivo, e per la remota possibilità che possano verificarsi errori del software, ti consigliamo di esportare i testi importanti su Google Drive o sul tuo computer, al fine di proteggerli da eventuali perdite di dati. Non saremo responsabili di eventuali perdite di dati o di imprecisioni. 
+		<p>Nonostante i nostri tentativi, i risultati relativi alla trascrizione della dettatura potrebbero non essere accurati. Inoltre, Speechnotes è un servizio fornito "nello stato in cui si trova" e non possiamo garantirne il funzionamento futuro. Per questo motivo, e per la remota possibilità che possano verificarsi errori del software, ti consigliamo di esportare i testi importanti su Google Drive o sul tuo computer, al fine di proteggerli da eventuali perdite di dati. Non saremo responsabili di eventuali perdite di dati o di imprecisioni.
 		</p>
 		<br>
-		
+
 		<h3>Apprezziamo la tua opinione e il tuo supporto
 		</h3>
 		<p>Speechnotes è stato sviluppato nel 2015 dai team di <a rel="nofollow" href="https://speechlogger.appspot.com/en/" target="_blank">Speechlogger</a> &amp; <a href="http://ttsreader.com" target="_blank">TTSReader</a> al fine di aiutare le persone in tutto il mondo a digitare i loro pensieri, le loro storie e le loro note in un modo più facile e più comodo.
@@ -447,19 +447,19 @@ Enjoy dictating :)"></textarea>
 		</p>
 
 	</div>
-	
+
 	<div class="ad_728x90 ad">
 		<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async=""></script>
 		<!-- ad_728x90 -->
 		<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5030295218223297" data-ad-slot="9173644800"></ins>
 		<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-	</div> 
-	
+	</div>
+
 	<div class="invisible">
 		<p>Speechnotes - Dettatura Notepad</p>
 		<p>Discorso professionale riconoscendo editor di testo. Preciso, gratuito, facile da usare e senza limiti.</p>
 	</div>
-	
+
 	<div id="footer">
 		<div id="footer_menu">
 			<a id="contact_us" href="mailto:admin@speechlogger.com" target="_blank">Contattaci</a>
@@ -481,11 +481,11 @@ Enjoy dictating :)"></textarea>
 			  <a href="https://speechnotes.co/ar/">العربية</a>
 			</div>
 		</div>
-		<p>Tutti i diritti riservati in tutto il mondo al proprietario. Nessun permesso di copiare o utilizzare il codice, lo stile, i nomi e qualsiasi contenuto, senza la preventiva autorizzazione scritta del proprietario (admin@speechlogger.com). Puoi dimostrare l'uso di Speechnotes, scrivere recensioni, ecc. Grazie. 
+		<p>Tutti i diritti riservati in tutto il mondo al proprietario. Nessun permesso di copiare o utilizzare il codice, lo stile, i nomi e qualsiasi contenuto, senza la preventiva autorizzazione scritta del proprietario (admin@speechlogger.com). Puoi dimostrare l'uso di Speechnotes, scrivere recensioni, ecc. Grazie.
 		</p>
-		
+
 		<div class="addthis_sharing_toolbox"></div> <!-- Go to www.addthis.com/dashboard to customize your tools -->
-		
+
 	</div>
 </div>
 
@@ -506,7 +506,7 @@ Enjoy dictating :)"></textarea>
 
   ga('create', 'UA-47292499-1', 'speechlogger.appspot.com'); //TODO: do I need to change the address here?
   ga('send', 'pageview');
-  
+
 </script>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
