@@ -13,8 +13,5 @@ weight: 210
 toc: false
 ---
 
-** This page is not complete **
+### Visit our complete [FAQ](/faq/) page for more answers to frequently asked questions.
 
-{{< details "How can I contact you?" >}}
-Here is a link to our contact page with all the details: [contact](/contact/)
-{{< /details >}}

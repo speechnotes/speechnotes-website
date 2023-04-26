@@ -11,9 +11,9 @@
 {{ end -}}
 
 {{ if .IsHome -}}
-  <title>{{ .Site.Params.title }} {{ .Site.Params.titleSeparator }} {{ .Site.Params.titleAddition }}</title>
+  <title>{{ .Site.Params.title }}</title>
 {{ else -}}
-  <title>{{ .Title }} {{ .Site.Params.titleSeparator }} {{ .Site.Params.title }}</title>
+  <title>{{ .Title }} {{ .Site.Params.titleSeparator }} {{ .Site.Params.name }}</title>
 {{ end -}}
 
 {{ with .Description -}}

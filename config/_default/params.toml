@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "🎤 Speechnotes"
+name = "🎤 Speechnotes"
+title = "Free Speech to Text Online, Voice Typing & Transcription"
 titleSeparator = "-"
-titleAddition = "#1 Speech to Text - Dictation & Transcription"
-description = "Speechnotes - #1 speech to text online for dictation & transcription. Dictate your notes in real time, or upload recordings and get them transcribed automatically."
+description = "Speechnotes is the go-to solution for speech to text online, voice typing & transcription. Dictate your notes in real time, or upload recordings and get them transcribed automatically."
 
 ## Documentation
 # docsVersion = "0.3"
@@ -13,7 +13,7 @@ description = "Speechnotes - #1 speech to text online for dictation & transcript
 images = ["tile_1024x512.png"]
 ogLocale = "en_US"
 domainTLD = "speechnotes.co"
-titleHome = "Speechnotes - #1 Speech to Text - Dictation & Transcription"
+titleHome = "Free Speech to Text Online - Voice Typing & Transcription"
 
 ## Twitter Cards
 twitterSite = "@speechlogger"
@@ -97,7 +97,7 @@ lastMod = false
   searchSectionsIndex = "ALL" # used in assets/js/index.js, "All" or an array that includes the Types to include in search. Defaults to the docs folder in content.
   darkMode = true
   bootStrapJs = true
-  breadCrumb = false
+  breadCrumb = true
   highLight = true
   kaTex = false
   multilingualMode = false

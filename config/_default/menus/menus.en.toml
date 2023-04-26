@@ -79,3 +79,9 @@
     identifier = "pricing"
     url = "/#pricing"
     parent = "tools"
+  [[main]]
+    name = "FAQ"
+    weight = 50
+    identifier = "faq"
+    url = "/faq/"
+    parent = "tools"
