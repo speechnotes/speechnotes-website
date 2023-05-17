@@ -1,0 +1,27 @@
+<!doctype html>
+<html style="height: 100%;" lang="{{ .Site.Params.languageTag | default "en" }}" >
+{{ partial "head/head-zapier-page.html" . }}
+{{ if eq .Kind "home" -}}
+{{ .Scratch.Set "class" "home" -}}
+{{ else if eq .Kind "404" -}}
+{{ .Scratch.Set "class" "error404" -}}
+{{ else if eq .Kind "page" -}}
+{{ .Scratch.Set "class" .Type -}}
+{{ .Scratch.Add "class" " single" -}}
+{{ else -}}
+{{ .Scratch.Set "class" .Type -}}
+{{ .Scratch.Add "class" " list" -}}
+{{ end -}}
+<body style="display: flex;flex-direction: column;height: 100%;width: 100%;">
+{{ partial "header/header.html" . }}
+
+<div style="width: 900px; max-width: 90%; margin: 40px auto">
+  <zapier-full-experience
+    client-id="19g5GYgK6xlQceRaKAew33mNSESiGT94zKskatez"
+    theme="auto"
+    app-search-bar-display="show">
+  </zapier-full-experience>
+</div>
+{{ partial "footer/script-footer.html" . }}
+</body>
+</html>

@@ -62,6 +62,12 @@
     url = "/files/affiliates/"
     parent = "tools"
   [[main]]
+    name = "Human transcription"
+    weight = 46
+    identifier = "tools-human"
+    url = "/blog/human-transcription-discount-coupon/"
+    parent = "tools"
+  [[main]]
     name = "Speechnotes Android App"
     weight = 47
     identifier = "tools-android"
