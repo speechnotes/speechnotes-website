@@ -52,3 +52,21 @@
     }
   });
 </script>
+
+<style>
+  .Show-when-signed-out {
+    display: block;
+  }
+
+  [data-ws-signed-in] .Show-when-signed-out {
+    display: none;
+  }
+
+  .Show-when-signed-in {
+    display: none;
+  }
+
+  [data-ws-signed-in] .Show-when-signed-in {
+    display: block;
+  }
+</style>

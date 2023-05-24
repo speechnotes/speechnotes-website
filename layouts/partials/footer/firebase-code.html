@@ -1,0 +1,147 @@
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+<script>
+  runDependentScript();
+
+  function runDependentScript() {
+    let firebaseConfig = {
+      apiKey: "AIzaSyDS4OUr6QMADFbbFbXpfYnsDkpk-jHOuO0",
+      authDomain: "speechnotes.co",
+      databaseURL: "https://speechnotes-bba59.firebaseio.com",
+      storageBucket: "speechnotes-bba59.appspot.com",
+      projectId: "speechnotes-bba59",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      console.log('user signed ' + (user ? "IN" : "OUT"));
+
+      if (user) {
+        // User is signed in.
+        document.documentElement.setAttribute('data-ws-signed-in','true');
+      } else {
+        document.documentElement.removeAttribute('data-ws-signed-in');
+      }
+    });
+  }
+
+  function toggleSignIn() {
+    let user = firebase.auth().currentUser;
+    //console.log("user " , user);
+
+    if (user) {
+      // User is signed in.
+      signOut();
+    } else {
+      // No user is signed in.
+      signIn();
+    }
+  }
+
+  function signOut() {
+    firebase.auth().signOut();
+  }
+
+  function signIn() {
+    let provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      let token = result.credential.accessToken;
+      // The signed-in user info.
+      let user = result.user;
+      let isNewUser = result.additionalUserInfo.isNewUser;
+      if (isNewUser) {
+        sendWelcomeEmail();
+      }
+    }).catch(function(error) {
+      // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      // The email of the user's account used.
+      let email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      let credential = error.credential;
+      // ...
+    });
+  }
+
+  function sendWelcomeEmail() {
+    let data = new FormData();
+    let WELCOME_TYPE = "WELCOME_TYPE";
+    sendDataToServer(data, WELCOME_TYPE);
+  }
+
+  function sendDataToServer(data, type, onSuccess, onFail, onProgress) {
+    onSuccess = onSuccess || function() {};
+    onFail = onFail || function() {};
+    onProgress = onProgress || function() {};
+
+    const API_URL = "https://itranscribe.app:8443/api5";
+
+    data.append('type', type);
+
+    let token = null;
+    // TODO: save time when forced refreshed. If less than ±30 minutes passed, no need to force refresh again...
+    try {
+      firebase.auth().currentUser.getIdToken(true).then(function(token) {
+        console.log('token: ' + token);
+        let o = {};
+        data.forEach((value, key) => o[key] = value);
+        o.uidColonTok = firebase.auth().currentUser.uid + ":" + token;
+        postDataObject(API_URL, o, onSuccess, onFail);
+      })
+    } catch(error) {
+      console.error(error);
+    }
+  }
+
+  function postDataObject(url, data, onSuccess, onFail) {
+    if (!url || !data) {
+      console.error('url or data is null');
+      return;
+    }
+
+    let jsonBody = JSON.stringify(data);
+    //console.log('sending the following post body: ', JSON.stringify(data));
+
+    // Default options are marked with *
+    fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      //mode: 'no-cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'omit', // include, *same-origin, omit // Used whether to include sending & receiving cookies or not
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8'
+        //'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: jsonBody // body data type must match "Content-Type" header
+      //body: data
+    }).then(async function(response) {
+      console.log('response:', response);
+      if (response.status==200) {
+        console.log("success on sending ", data.type);
+        if (onSuccess) {
+          let data = "";
+          try {data = await response.text();} catch (e){};
+          console.log('received data message: ' + data);
+          onSuccess(data);
+        }
+      } else if (response.status!=0) {
+        console.log("error? on sending " + data.type + ", response status: " + response.status);
+        if (onFail) {
+          onFail();
+        }
+      }
+    }).catch((error) => {
+      console.error('Error on fetch:', error);
+      if (onFail) {
+        onFail();
+      }
+    });
+  }
+</script>
