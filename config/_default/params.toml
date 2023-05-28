@@ -114,11 +114,12 @@ lastMod = false
 
 [links]
   dictation = "/dictate/"
-  transcription = "/files/"
+  transcription = "/transcribe/"
   shop = "/shop/"
   premium = "/upgrade/"
   api = "/files/guides/api/"
   zapier = "https://zapier.com/apps/speechnotes/integrations"
+  zapier_old = "https://zapier.com/developer/public-invite/162507/635ab95f24068b6b47b46e28d07d1dd4/"
   converters = "/converters/"
   affiliates = "/files/affiliates/"
   chromeExtension = "https://chrome.google.com/webstore/detail/speechnotes-speech-to-tex/nncconplehmbkbhkgkodmnkfaflopkji"

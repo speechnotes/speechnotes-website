@@ -30,7 +30,7 @@ Use human transcription when:
 
 ### When NOT to use human transcription?
 
-NEVER use human transcription when privacy is important!! If you do not care about the audio being leaked - go ahead. But - if you are NOT willing to have the recording leaked - never use human transcription online. In that case - we recommend using [Speechnotes' Automatic Transcription Service](/files/).
+NEVER use human transcription when privacy is important!! If you do not care about the audio being leaked - go ahead. But - if you are NOT willing to have the recording leaked - never use human transcription online. In that case - we recommend using [Speechnotes' Automatic Transcription Service](/transcribe/).
 
 The reason is that online transcription services are usually done by freelancers, and you have no control over who they are, and what they do with your audio. Your audio passes a few hands, a few devices, and there are many opportunities to leak it. So - if you care about privacy - never use human transcription online.
 

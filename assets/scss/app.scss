@@ -82,3 +82,30 @@ svg {
 .card > h3 {
   color: $primary;
 }
+
+.Feature-card-container {
+  padding: 5px;
+  text-align: center;
+}
+
+.Feature-card-container > .card {
+  //border-width: 2px;
+  padding: 10px 5px 20px;
+}
+
+button.Google-signin-btn {
+  margin: auto;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #3b3b3b;
+  font-weight: bold;
+  background-color: white;
+  border: 3px red solid;
+  border-radius: 30px;
+  padding: 10px 40px;
+}
+
+.Google-signin-btn:hover {
+  color: white;
+  background-color: orangered;
+}

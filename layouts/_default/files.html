@@ -20,23 +20,15 @@
       <section class="section container-fluid mt-n3 pb-3">
         <div class="row justify-content-center">
           <div class="col-lg-12 text-center">
-            <h1 class="mt-0">Accurate Automatic Transcriptions Powered by AI</h1>
+            <h1 class="mt-0">AI Powered Automatic Transcriptions. Accurate. Private. Fast.</h1>
           </div>
           <div class="col-lg-9 col-xl-8 text-center">
             <h2 class="lead" style="font-size: 1.3em;">{{ .Params.lead | safeHTML }}</h2>
             <br/>
-            <p class="caption-top"><i>~ Successfully transcribed MILLIONS of minutes since 2019 ~</i></p>
+            <p class="caption-top"><i>~ Successfully transcribed millions of minutes since 2019 ~</i></p>
             <br/>
             <div>
-              <button class="btn btn-primary" onclick="signIn();" style="margin: auto;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #3b3b3b;
-    font-weight: bold;
-    background-color: white;
-    border: 3px red solid;
-    border-radius: 30px;
-    padding: 10px 40px;">
+              <button class="btn btn-primary Google-signin-btn" onclick="signIn();">
                 <span class="firebaseui-idp-icon-wrapper" style="position: relative;top: -3px;"><img style="height: 20px" class="firebaseui-idp-icon" alt="" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"></span>
                 &nbsp;&nbsp;
                 <span class="firebaseui-idp-text firebaseui-idp-text-long" style="">Sign in to Start</span>
@@ -45,43 +37,100 @@
               <p style="text-align: center;opacity: 0.7;margin-top: 10px;">Secure sign in with Google</p>
             </div>
 
-            <br/><br/><br/>
+            <br/>
           </div>
-        </div>
+
+              <div class="row">
+                <p class="text-center" style="font-size: larger">
+                  Pay-as-you-go (only $0.1/minute!) no subscription, no commitment.<br/>Whether it's a single one-time recording, or a need for an ongoing speech to text service - we've got you covered.
+                </p>
+                <br/>
+                <br/>
+                <h2 class="text-center" style="margin: 70px 0 50px;">Supports local & online files & <a href="https://zapier.com/apps/speechnotes/integrations" target="_blank">automatic workflows</a></h2>
+                <div class="col-sm-6 Feature-card-container">
+                  <dic class="card">
+                    <h4>Local Files on Device</h4>
+                    <p>Simply upload any audio or video file directly from your device, with just a few clicks. We'll do all the rest.</p>
+                  </dic>
+                </div>
+
+                <div class="col-sm-10 Feature-card-container">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-5 Feature-card-container">
+                </div>
+                <div class="col-sm-6 Feature-card-container">
+                  <dic class="card">
+                    <h4>Online Files & YouTubes</h4>
+                    <p>Send us the link to any online recording. Whether on a site, shared Drive (Dropbox / Google Drive / etc.), or a YouTube video.</p>
+                  </dic>
+                </div>
+                <div class="col-sm-5 Feature-card-container">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 Feature-card-container">
+                </div>
+                <div class="col-sm-6 Feature-card-container">
+                  <dic class="card">
+                    <h4>Automatic Workflows!</h4>
+                    <p>Use our API for server-to-server communication or, the <a href="https://zapier.com/apps/speechnotes/integrations" target="_blank">Speechnotes-Zapier integration</a> for an all automatic hands free workflow.</p>
+                  </dic>
+                </div>
+              </div>
+
+            <br/><br/>
+          </div>
       </section>
-      <section id="advantages" class="section section-sm bg-light">
+      <section id="features" class="section section-sm bg-light">
         <br/><br/>
         <div class="container">
           <div class="row justify-content-center text-center">
-            <h2>🗝️ Key Advantages</h2>
+            <h2>🗝️ Key Features</h2>
             <br/>
             <div class="col-lg-5">
-              <p class="h4">Accurate 🎯</p>
-              <p>Speechnotes is powered by the leading most accurate speech recognition AI engines by Google & Microsoft. We always check - and make sure we still use the best. Accuracy in English is very good and can easily reach 95% accuracy for good quality dictation or recording.</p>
+              <h4>Accuracy 🎯</h4>
+              <p>Powered by the leading most accurate speech recognition AI engines by Google & Microsoft. Accuracy in English can easily reach 95% accuracy for high quality recordings. Accuracy depends greatly on audio quality - so we can't guarantee accuracy levels - but we can guarantee you'll get the best technology can achieve today.</p>
             </div>
             <div class="col-lg-5">
-              <p class="h4">Super fast ⚡</p>
-              <p>Both Speechnotes dictation & transcription are lightweight-online no install, work out of the box anywhere you are. Dictation works in real time. Transcription will get you results in a matter of minutes.</p>
+              <h4>Speed ⚡</h4>
+              <p>Transcription results are ready within circa a third the duration of the recording. For example, transcribing an hour long recording will take just about 20 minutes. But your part is done with just a few clicks. No need to wait, as all the work is done immediately on our servers and you will be notified when ready.</p>
             </div>
             <div class="col-lg-5">
-              <p class="h4">Super Private & Secure! 🔒</p>
-              <p>Super private - no human handles, sees or listens to your recordings! In addition, we take great measures to protect your privacy. For example, for transcribing your recordings - we pay Google's speech to text engines extra - just so they do not keep your audio for their own research purposes.</p>
+              <h4 class="h4">Super Private & Secure! 🔒</h4>
+              <p>Super private - no human handles, sees or listens to your recordings! Recordings are permanently removed as soon as the job is done. We pay Google extra - just so they do not keep your audio for their own research purposes. All communication is encrypted. Databases are secured.</p>
             </div>
           </div>
           <br/>
           <div class="row justify-content-center text-center">
             <br/>
             <div class="col-lg-5">
-              <p class="h4">Health advantages 🏃</p>
-              <p>Typing may result in different types of Computer Related Repetitive Strain Injuries (RSI). Voice typing is one of the main recommended ways to minimize these risks, as it enables you to sit back comfortably, freeing your arms, hands, shoulders and back altogether.</p>
+              <h4 class="h4">Speaker Diarization 👩🏽🧑</h4>
+              <p>Speechnotes incorporates advanced speaker diarization technology to automatically distinguish and label different speakers within recorded audio. This feature enhances transcription accuracy and organization, making it ideal for interviews, meetings, podcasts, and recordings with multiple participants.</p>
             </div>
             <div class="col-lg-5">
-              <p class="h4">Saves you time 🕒</p>
-              <p>Need to transcribe a recording? If it's an hour long, transcribing it yourself will take you about 6! hours of work. If you send it to a transcriber - you will get it back in days! Upload it to Speechnotes - it will take you less than a minute, and you will get the results in about 20 minutes to your email.</p>
+              <h4 class="h4">Timestamps ⏱️</h4>
+              <p>This feature automatically inserts reference markers at specific intervals or points in the transcribed text, corresponding to the original audio recording. With timestamps, users can easily navigate, synchronize, and analyze the transcribed content with the audio source.</p>
             </div>
             <div class="col-lg-5">
-              <p class="h4">Saves you money 💰</p>
-              <p>Speechnotes dictation notepad is completely free - with ads - or a small fee to get it ad-free. Speechnotes transcription is only $0.1/minute, which is X10 times cheaper than a human transcriber! We offer the best deal on the market - whether it's the free dictation notepad ot the pay-as-you-go transcription service.</p>
+              <h4 class="h4">Sync Play & Edit ✏️</h4>
+              <p>Speechnotes allows playing the audio in sync with the transcription results, and editing on the spot. This way you can easily correct results, but also quickly jump to the right place in the recording by clicking somewhere on the text. So, you can listen to the source for exact quotes, etc.</p>
+            </div>
+          </div>
+          <div class="row justify-content-center text-center">
+            <br/>
+            <div class="col-lg-5">
+              <h4 class="h4">Export & Email Results 📄</h4>
+              <p>Speechnotes supports different export options, as well as an option to send results directly to your email, or another webhook. Export types include txt & pdf files, as well as srt files for generating caption files for videos.</p>
+            </div>
+            <div class="col-lg-5">
+              <h4 class="h4">Local Files, Online & YouTubes</h4>
+              <p>Speechnotes can basically transcribe any audio or video file. You can upload files from your device, as well as sending Speechnotes just a link to an online file or YouTube video. File types include mp3, ogg, wav, mov, mp4, mpeg, and more.</p>
+            </div>
+            <div class="col-lg-5">
+              <h4 class="h4">Automatic Workflows ⚙️</h4>
+              <p>Join the automation revolution! With Speechnotes' API, webhooks & <a href="https://zapier.com/apps/speechnotes/integrations" target="_blank">Zapier integration</a> you can get Speechnotes to do much more. For instance - you can <a href="https://zapier.com/apps/google-docs/integrations/speechnotes/1314754/create-documents-from-text-in-google-docs-with-chatgpt-generated-summaries-of-new-transcription-results-in-speechnotes" target="_blank">get ChatGPT to automatically summarize Speechnotes' transcriptions and save it as a Google Doc.</a></p>
             </div>
           </div>
         </div>
@@ -91,23 +140,98 @@
         <p class="h3">Ready to transcribe? Your automatic transcription is just a few clicks a way.</p>
         <p class="h4">Secure, Accurate & Super Fast.</p>
         <br/>
-        <button class="btn btn-primary" onclick="signIn();" style="margin: auto;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #3b3b3b;
-    font-weight: bold;
-    background-color: white;
-    border: 3px red solid;
-    border-radius: 30px;
-    padding: 10px 40px;">
+        <button class="btn btn-primary Google-signin-btn" onclick="signIn();">
           <span class="firebaseui-idp-icon-wrapper" style="position: relative;top: -3px;"><img style="height: 20px" class="firebaseui-idp-icon" alt="" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"></span>
           &nbsp;&nbsp;
           <span class="firebaseui-idp-text firebaseui-idp-text-long" style="">Sign in to Start</span>
         </button>
         <br/>
-        <p style="text-align: center;opacity: 0.7;margin-top: 10px;">Secure sign in with Google</p>
+        <p style="text-align: center;opacity: 0.7;margin-top: 10px;">Secure sign in with Google.</p>
         <br/>
       </div>
+
+      <section class="section container-fluid mt-n3 pb-3 bg-light">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h2 class="h2">How Does Speechnotes Compare with Other Transcription Solutions?</h2>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-headingOne">
+                  <div class="accordion-button collapsed" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Speechnotes VS. Human Transcription Services
+                  </div>
+                </h3>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body" style="text-align: start">
+                    <p>Main Speechnotes' advantages over human transcription service:</p>
+                    <ul>
+                      <li><b>Price</b> - Speechnotes is about 90% cheaper than the cheapest human transcription.</li>
+                      <li><b>Privacy</b> - Speechnotes is totally private, whereas human transcription service is quite the opposite, as your recording is being transferred between multiple computers and being sent to freelance transcribers all over the world. Speechnotes is all automatic & safe. No human ever touches the recording or results.</li>
+                      <li><b>Speed</b> - Speechnotes will get your results ready within minutes. Human transcriber will probably take a few days.</li>
+                      <li><b>Automatic workflows</b> - are supported by Speechnotes, and impossible with humans.</li>
+                      <li><b>Timestamps</b> - automatically generated by Speechnotes.</li>
+                      <li><b>Export to captions</b> - automatically enabled by Speechnotes.</li>
+                    </ul>
+                    <br/>
+                    <p>Main Speechnotes' disadvantages over human transcription service:</p>
+                    <ul>
+                      <li><b>Accuracy for lower quality recordings</b> - if your recording quality is not the best, a human transcriber will likely understand it better than AI.</li>
+                      <li><b>Better speaker diarization</b> - if you have multiple speakers, a human transcriber will likely know to differentiate and tag speakers better than AI.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-headingTwo">
+                  <div class="accordion-button collapsed" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Speechnotes VS. Other Automatic Transcription Services
+                  </div>
+                </h3>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body" style="text-align: start">
+                    <p>Main Speechnotes' advantages over other automatic transcription service:</p>
+                    <ul>
+                      <li><b>Price</b> - Speechnotes is only $0.1 per minute, without subscription, and without commitment. Most other services are either more expensive or include subscription or both.</li>
+                      <li><b>Privacy</b> - Speechnotes is totally private, we do not store your recording and we do not allow Google or Microsoft (our speech to text engine suppliers) to do so.</li>
+                      <li><b>Accuracy</b> - Speechnotes relies on tech giants' shoulders to provide the best transcription results possible.</li>
+                      <li><b>Automatic workflows</b> - are supported by Speechnotes, including API, webhooks & Zapier integration.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-headingThree">
+                  <div class="accordion-button collapsed" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Speechnotes VS. Transcribing Yourself
+                  </div>
+                </h3>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body" style="text-align: start">
+                    <p>Main Speechnotes' advantages over transcribing yourself:</p>
+                    <ul>
+                      <li><b>Time</b> - transcribing an hour long recording by yourself will take you approximately 6 hours of work! This literally a whole day of work you can save by letting Speechnotes do the job.</li>
+                      <li><b>Health</b> - there are many health disadvantages to sitting in front of a screen and typing.</li>
+                      <li><b>Automatic workflows</b> - are supported by Speechnotes, including API, webhooks & Zapier integration.</li>
+                      <li><b>Timestamps</b> - automatically generated by Speechnotes.</li>
+                      <li><b>Export to captions</b> - automatically enabled by Speechnotes.</li>
+                    </ul>
+                    <br/>
+                    <p>Main Speechnotes' disadvantages over transcribing yourself:</p>
+                    <ul>
+                      <li><b>Accuracy for lower quality recordings</b> - if your recording quality is not the best, you will likely understand it better than AI.</li>
+                      <li><b>Better speaker diarization</b> - if you have multiple speakers, you will likely know to differentiate and tag speakers better than AI.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br/><br/><br/><br/>
+
 
     </div>
   </div>

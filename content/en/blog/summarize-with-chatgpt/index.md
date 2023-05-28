@@ -4,7 +4,7 @@ description: "For those who need a human touch, we offer a discount for human tr
 excerpt: "For those who need a human touch, we offer a discount for human transcription services."
 date: 2023-04-17T09:19:42+01:00
 lastmod: 2023-04-17T09:19:42+01:00
-draft: false
+draft: true
 weight: 50
 images: []
 categories: ["Info"]
