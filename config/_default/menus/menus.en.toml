@@ -26,7 +26,7 @@
     url = "https://chrome.google.com/webstore/detail/speechnotes-speech-to-tex/nncconplehmbkbhkgkodmnkfaflopkji"
     parent = "tools"
   [[main]]
-    name = "TTSReader - reads out loud texts, files & websites"
+    name = "TTSReader - Text to Speech Read Aloud"
     weight = 42
     identifier = "tools-ttsreader"
     url = "https://ttsreader.com/"
