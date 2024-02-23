@@ -17,17 +17,24 @@
 {{ partial "header/header.html" . }}
   <div class="wrap container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}" role="document">
     <div class="content">
-      <section class="section container-fluid mt-n3 pb-3">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h1 class="mt-0">AI Powered Automatic Transcriptions. Accurate. Private. Fast.</h1>
-          </div>
-          <div class="col-lg-9 col-xl-8 text-center">
-            <h2 class="lead" style="font-size: 1.3em;">{{ .Params.lead | safeHTML }}</h2>
+      <section class="section container-fluid mt-n3 pb-3" id="hero" style="display: flex; flex-direction: column">
+        <div class="row text-center">
+            <h1 class="mt-0">Automatic Transcriptions. Accurate. Secure. Fast.</h1>
+            <p class="caption-top" style="text-align: center"><i>~ Proudly serving millions of users since 2015 ~</i></p>
+            <!--<h2 class="lead" style="font-size: 1.3em;display: inline-block">{{ .Params.lead | safeHTML }}</h2>-->
+        </div>
+        <div class="row" style="flex: 1">
+          <div class="col-md-8" style="display: flex; flex: 1;flex-direction: column">
+            <div style="flex: 0.3"></div>
+            <h2 style="font-weight: normal">Accurately transcribe any file format, in any language, at any length, from your device or anywhere online, in minutes.</h2>
             <br/>
-            <p class="caption-top"><i>~ Successfully transcribed millions of minutes since 2019 ~</i></p>
-            <br/>
-            <div>
+            <div style="flex: 1"></div>
+            <!--<p class="text-center" style="font-size: larger">
+              Pay-as-you-go (only $0.1/minute!) no subscription, no commitment.<br/>Whether it's a single one-time recording, or a need for an ongoing speech to text service - we've got you covered.
+            </p>
+            <h2 class="text-center" style="margin: 70px 0 50px;">Supports local & online files & <a href="https://zapier.com/apps/speechnotes/integrations" target="_blank">automatic workflows</a></h2>
+            -->
+            <div style="text-align: center">
               <button class="btn btn-primary Google-signin-btn" onclick="signIn();">
                 <span class="firebaseui-idp-icon-wrapper" style="position: relative;top: -3px;"><img style="height: 20px" class="firebaseui-idp-icon" alt="" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"></span>
                 &nbsp;&nbsp;
@@ -36,17 +43,17 @@
               <br/>
               <p style="text-align: center;opacity: 0.7;margin-top: 10px;">Secure sign in with Google</p>
             </div>
-
+              <div style="flex: 2"></div>
             <br/>
           </div>
+          <div class="col-md-8 text-center" style="display: flex;">
+            <video style="" src="/videos/intro_transcribe.mp4" controls poster="/videos/transcribe_poster.jpg" preload="metadata"></video>
+          </div>
+        </div>
+      </section>
 
+      <!--<section class="section container-fluid mt-n3 pb-3">
               <div class="row">
-                <p class="text-center" style="font-size: larger">
-                  Pay-as-you-go (only $0.1/minute!) no subscription, no commitment.<br/>Whether it's a single one-time recording, or a need for an ongoing speech to text service - we've got you covered.
-                </p>
-                <br/>
-                <br/>
-                <h2 class="text-center" style="margin: 70px 0 50px;">Supports local & online files & <a href="https://zapier.com/apps/speechnotes/integrations" target="_blank">automatic workflows</a></h2>
                 <div class="col-sm-6 Feature-card-container">
                   <dic class="card">
                     <h4>Local Files on Device</h4>
@@ -81,8 +88,7 @@
               </div>
 
             <br/><br/>
-          </div>
-      </section>
+      </section>-->
       <section id="features" class="section section-sm bg-light">
         <br/><br/>
         <div class="container">

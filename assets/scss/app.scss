@@ -109,3 +109,18 @@ button.Google-signin-btn {
   color: white;
   background-color: orangered;
 }
+
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+  display: block;
+}
+
+#hero {
+    width: 100%;
+    min-height: 100vh;
+    /*background: url(https://speechlogger.com/assets/img/hero-bg.png) top center no-repeat;*/
+    background-size: cover;
+}
