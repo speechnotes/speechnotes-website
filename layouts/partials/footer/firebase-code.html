@@ -1,3 +1,24 @@
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const referredBy = urlParams.get('ref');
+
+  if (referredBy && referredBy!=null && referredBy!=undefined && referredBy.length>0) {
+    //console.log('referred by ' + referredBy);
+    window.localStorage.setItem('referredBy', referredBy);
+  }
+
+  if (localStorage.getItem("wasLastSignedIn")) {
+    loadSignedIframeContent();
+  }
+
+  function loadSignedIframeContent() {
+    let el = document.querySelector("#embeddedIframe");
+    if (el && el instanceof Element && !el.getAttribute("src")) {
+      el.setAttribute("src", el.getAttribute("data-src"));
+    }
+  }
+</script>
+
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
 
@@ -22,8 +43,11 @@
       if (user) {
         // User is signed in.
         document.documentElement.setAttribute('data-ws-signed-in','true');
+        loadSignedIframeContent();
+        localStorage.setItem("wasLastSignedIn", "true");
       } else {
         document.documentElement.removeAttribute('data-ws-signed-in');
+        localStorage.removeItem("wasLastSignedIn");
       }
     });
   }
@@ -79,7 +103,7 @@
     onFail = onFail || function() {};
     onProgress = onProgress || function() {};
 
-    const API_URL = "https://itranscribe.app:8443/api5";
+    const API_URL = "https://speechlogger.com/api/transcribe2";
 
     data.append('type', type);
 

@@ -19,23 +19,23 @@
     <div class="content">
       <section class="section container-fluid mt-n3 pb-3" id="hero" style="display: flex; flex-direction: column">
         <div class="row text-center">
-            <h1 class="mt-0">Automatic Transcriptions. Accurate. Secure. Fast.</h1>
-            <p class="caption-top" style="text-align: center"><i>~ Proudly serving millions of users since 2015 ~</i></p>
+            <h1 class="mt-0">Automatic AI Transcriptions & Translations</h1>
+          <p style="margin-bottom: 1em; font-size: 1.1em;">- Private & Secure - Speaker Diarization - Timestamps - Video Captioning - Subtitles Generation - <a href="#comparison_rev">Half the Price</a> -</p>
+            <p class="caption-top" style="text-align: center"><i>A transcription powerhouse - transcribing thousands of recordings per day, for private users, schools & businesses. Proudly partnering with Microsoft for Startups</i></p>
             <!--<h2 class="lead" style="font-size: 1.3em;display: inline-block">{{ .Params.lead | safeHTML }}</h2>-->
         </div>
         <div class="row" style="flex: 1">
           <div class="col-md-8" style="display: flex; flex: 1;flex-direction: column">
             <div style="flex: 0.3"></div>
-            <h2 style="font-weight: normal">Accurately transcribe any file format, in any language, at any length, from your device or anywhere online, in minutes.</h2>
+            <h2 style="margin-bottom: 1em; font-weight: normal">Accurately transcribe & translate any audio & video file, from your device or anywhere online. Start for free.</h2>
             <br/>
-            <div style="flex: 1"></div>
             <!--<p class="text-center" style="font-size: larger">
               Pay-as-you-go (only $0.1/minute!) no subscription, no commitment.<br/>Whether it's a single one-time recording, or a need for an ongoing speech to text service - we've got you covered.
             </p>
             <h2 class="text-center" style="margin: 70px 0 50px;">Supports local & online files & <a href="https://zapier.com/apps/speechnotes/integrations" target="_blank">automatic workflows</a></h2>
             -->
             <div style="text-align: center">
-              <button class="btn btn-primary Google-signin-btn" onclick="signIn();">
+              <button class="btn btn-primary Google-signin-btn" onclick='signIn();try{gtag("event","transcribe_click_signin",{value:"1"})}catch(err){}'>
                 <span class="firebaseui-idp-icon-wrapper" style="position: relative;top: -3px;"><img style="height: 20px" class="firebaseui-idp-icon" alt="" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"></span>
                 &nbsp;&nbsp;
                 <span class="firebaseui-idp-text firebaseui-idp-text-long" style="">Sign in to Start</span>
@@ -43,11 +43,17 @@
               <br/>
               <p style="text-align: center;opacity: 0.7;margin-top: 10px;">Secure sign in with Google</p>
             </div>
+            <br/>
+            <div style="flex: 1"></div>
+            <p>Exciting news * AI summaries for free! * <b>Instant</b> translations into multiple languages at once * <a href="/play/" target="_blank">Captions & translations video player</a> *</p>
+            <br/>
               <div style="flex: 2"></div>
             <br/>
           </div>
-          <div class="col-md-8 text-center" style="display: flex;">
-            <video style="" src="/videos/intro_transcribe.mp4" controls poster="/videos/transcribe_poster.jpg" preload="metadata"></video>
+          <div class="col-md-8 text-center" style="display: flex;flex-direction: column">
+            <div style="flex: 1"></div>
+            <video onclick='try{gtag("event","transcribe_click_video",{value:"1"})}catch(err){}' style="" src="/videos/intro_transcribe.mp4" controls poster="/videos/transcribe_poster3.jpg" preload="metadata"></video>
+            <div style="flex: 2"></div>
           </div>
         </div>
       </section>
@@ -97,15 +103,15 @@
             <br/>
             <div class="col-lg-5">
               <h4>Accuracy 🎯</h4>
-              <p>Powered by the leading most accurate speech recognition AI engines by Google & Microsoft. Accuracy in English can easily reach 95% accuracy for high quality recordings. Accuracy depends greatly on audio quality - so we can't guarantee accuracy levels - but we can guarantee you'll get the best technology can achieve today.</p>
+              <p style="text-align: justify">Powered by the leading most accurate speech recognition AI engines by Google & Microsoft. Accuracy in English can easily reach 95% accuracy for high quality recordings. Accuracy depends greatly on audio quality - so we can't guarantee accuracy levels - but we can guarantee you'll get the best technology can achieve today.</p>
             </div>
             <div class="col-lg-5">
               <h4>Speed ⚡</h4>
-              <p>Transcription results are ready within circa a third the duration of the recording. For example, transcribing an hour long recording will take just about 20 minutes. But your part is done with just a few clicks. No need to wait, as all the work is done immediately on our servers and you will be notified when ready.</p>
+              <p style="text-align: justify">Transcription results are ready within circa a third the duration of the recording. For example, transcribing an hour long recording will take just about 20 minutes. But your part is done with just a few clicks. No need to wait, as all the work is done immediately on our servers and you will be notified when ready. Translations are instantly ready - within seconds!</p>
             </div>
             <div class="col-lg-5">
               <h4 class="h4">Super Private & Secure! 🔒</h4>
-              <p>Super private - no human handles, sees or listens to your recordings! Recordings are permanently removed as soon as the job is done. We pay Google extra - just so they do not keep your audio for their own research purposes. All communication is encrypted. Databases are secured.</p>
+              <p style="text-align: justify">Super private - no human handles, sees or listens to your recordings! Recordings are permanently removed as soon as the job is done. We pay Google extra - just so they do not keep your audio for their own research purposes. All communication is encrypted. Databases are secured.</p>
             </div>
           </div>
           <br/>
@@ -113,30 +119,30 @@
             <br/>
             <div class="col-lg-5">
               <h4 class="h4">Speaker Diarization 👩🏽🧑</h4>
-              <p>Speechnotes incorporates advanced speaker diarization technology to automatically distinguish and label different speakers within recorded audio. This feature enhances transcription accuracy and organization, making it ideal for interviews, meetings, podcasts, and recordings with multiple participants.</p>
+              <p style="text-align: justify">Speechnotes incorporates advanced speaker diarization technology to automatically distinguish and label different speakers within recorded audio. This feature enhances transcription accuracy and organization, making it ideal for interviews, meetings, podcasts, and recordings with multiple participants.</p>
             </div>
             <div class="col-lg-5">
               <h4 class="h4">Timestamps ⏱️</h4>
-              <p>This feature automatically inserts reference markers at specific intervals or points in the transcribed text, corresponding to the original audio recording. With timestamps, users can easily navigate, synchronize, and analyze the transcribed content with the audio source.</p>
+              <p style="text-align: justify">This feature automatically inserts reference markers at specific intervals or points in the transcribed text, corresponding to the original audio recording. With timestamps, users can easily navigate, synchronize, and analyze the transcribed content with the audio source.</p>
             </div>
             <div class="col-lg-5">
               <h4 class="h4">Sync Play & Edit ✏️</h4>
-              <p>Speechnotes allows playing the audio in sync with the transcription results, and editing on the spot. This way you can easily correct results, but also quickly jump to the right place in the recording by clicking somewhere on the text. So, you can listen to the source for exact quotes, etc.</p>
+              <p style="text-align: justify">Speechnotes allows playing the audio in sync with the transcription results, and editing on the spot. This way you can easily correct results, but also quickly jump to the right place in the recording by clicking somewhere on the text. So, you can listen to the source for exact quotes, etc.</p>
             </div>
           </div>
           <div class="row justify-content-center text-center">
             <br/>
             <div class="col-lg-5">
               <h4 class="h4">Export & Email Results 📄</h4>
-              <p>Speechnotes supports different export options, as well as an option to send results directly to your email, or another webhook. Export types include txt & pdf files, as well as srt files for generating caption files for videos.</p>
+              <p style="text-align: justify">Speechnotes supports different export options, as well as an option to send results directly to your email, or another webhook. Export types include docx, txt & pdf files, as well as srt & vtt files for generating captions & subtitles for videos.</p>
             </div>
             <div class="col-lg-5">
               <h4 class="h4">Local Files, Online & YouTubes</h4>
-              <p>Speechnotes can basically transcribe any audio or video file. You can upload files from your device, as well as sending Speechnotes just a link to an online file or YouTube video. File types include mp3, ogg, wav, mov, mp4, mpeg, and more.</p>
+              <p style="text-align: justify">Speechnotes can basically transcribe any audio or video file. You can upload files from your device, as well as sending Speechnotes just a link to an online file or YouTube video. File types include mp3, ogg, wav, mov, mp4, mpeg, and more.</p>
             </div>
             <div class="col-lg-5">
               <h4 class="h4">Automatic Workflows ⚙️</h4>
-              <p>Join the automation revolution! With Speechnotes' API, webhooks & <a href="https://zapier.com/apps/speechnotes/integrations" target="_blank">Zapier integration</a> you can get Speechnotes to do much more. For instance - you can <a href="https://zapier.com/apps/google-docs/integrations/speechnotes/1314754/create-documents-from-text-in-google-docs-with-chatgpt-generated-summaries-of-new-transcription-results-in-speechnotes" target="_blank">get ChatGPT to automatically summarize Speechnotes' transcriptions and save it as a Google Doc.</a></p>
+              <p style="text-align: justify">Join the automation revolution! With Speechnotes' API, webhooks & <a href="https://zapier.com/apps/speechnotes/integrations" target="_blank">Zapier integration</a> you can get Speechnotes to do much more. For instance - you can <a href="https://zapier.com/apps/google-docs/integrations/speechnotes/1314754/create-documents-from-text-in-google-docs-with-chatgpt-generated-summaries-of-new-transcription-results-in-speechnotes" target="_blank">get ChatGPT to automatically summarize Speechnotes' transcriptions and save it as a Google Doc.</a></p>
             </div>
           </div>
         </div>
@@ -163,12 +169,38 @@
 
             <div class="accordion accordion-flush" id="accordionFlushExample">
               <div class="accordion-item">
+                <a id="comparison_rev"></a>
+              <h3 class="accordion-header" id="flush-headingTwo">
+                <div class="accordion-button" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Speechnotes VS. Other Automatic Transcription Services
+                </div>
+              </h3>
+              <div id="flush-collapseTwo" class="accordion-collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" style="text-align: start">
+                  <p>Main Speechnotes' advantages over other automatic transcription service:</p>
+                  <ul>
+                    <li><b>Price</b> - Speechnotes is only $0.1 per minute, without subscription, and without commitment. Most other services are either more expensive or include subscription or both.</li>
+                    <li><b>Privacy</b> - Speechnotes is totally private, we do not store your recording and we do not allow Google or Microsoft (our speech to text engine suppliers) to do so.</li>
+                    <li><b>Translations</b> - Instant translations & to multiple languages at once.</li>
+                    <li><b>Accuracy</b> - Speechnotes relies on tech giants' shoulders to provide the best transcription results possible.</li>
+                    <li><b>Automatic workflows</b> - are supported by Speechnotes, including API, webhooks & Zapier integration.</li>
+                  </ul>
+
+                  <h4>Watch this video - Speechnotes VS Rev - real life comparison:</h4>
+                  <div style="text-align: center">
+                    <iframe style="margin: auto" width="560" height="315" src="https://www.youtube.com/embed/bfXnO2kGh4Y?si=ofaakbGcWR-IeWSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="accordion-item">
                 <h3 class="accordion-header" id="flush-headingOne">
-                  <div class="accordion-button collapsed" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <div class="accordion-button" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Speechnotes VS. Human Transcription Services
                   </div>
                 </h3>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseOne" class="accordion-collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body" style="text-align: start">
                     <p>Main Speechnotes' advantages over human transcription service:</p>
                     <ul>
@@ -188,31 +220,14 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="flush-headingTwo">
-                  <div class="accordion-button collapsed" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Speechnotes VS. Other Automatic Transcription Services
-                  </div>
-                </h3>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body" style="text-align: start">
-                    <p>Main Speechnotes' advantages over other automatic transcription service:</p>
-                    <ul>
-                      <li><b>Price</b> - Speechnotes is only $0.1 per minute, without subscription, and without commitment. Most other services are either more expensive or include subscription or both.</li>
-                      <li><b>Privacy</b> - Speechnotes is totally private, we do not store your recording and we do not allow Google or Microsoft (our speech to text engine suppliers) to do so.</li>
-                      <li><b>Accuracy</b> - Speechnotes relies on tech giants' shoulders to provide the best transcription results possible.</li>
-                      <li><b>Automatic workflows</b> - are supported by Speechnotes, including API, webhooks & Zapier integration.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+
               <div class="accordion-item">
                 <h3 class="accordion-header" id="flush-headingThree">
-                  <div class="accordion-button collapsed" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <div class="accordion-button" style="font-size: 0.8em; text-align: center;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Speechnotes VS. Transcribing Yourself
                   </div>
                 </h3>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseThree" class="accordion-collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body" style="text-align: start">
                     <p>Main Speechnotes' advantages over transcribing yourself:</p>
                     <ul>
@@ -236,6 +251,22 @@
         </div>
       </section>
 
+
+      <div style="margin: 100px auto;text-align: center;width: 700px;max-width: 90%;">
+        <p class="h4">Start now for free</p>
+        <br/>
+        <button class="btn btn-primary Google-signin-btn" onclick="signIn();">
+          <span class="firebaseui-idp-icon-wrapper" style="position: relative;top: -3px;"><img style="height: 20px" class="firebaseui-idp-icon" alt="" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"></span>
+          &nbsp;&nbsp;
+          <span class="firebaseui-idp-text firebaseui-idp-text-long" style="">Sign in to Start</span>
+        </button>
+        <br/>
+        <p style="text-align: center;opacity: 0.7;margin-top: 10px;">Secure sign in with Google.</p>
+        <br/>
+        <p style="margin-bottom: 1em; font-size: 1.1em;">- Private & Secure - Speaker Diarization - Timestamps - Video Captioning - Subtitles Generation - Half the Price - Instant Translations -</p>
+      </div>
+
+
       <br/><br/><br/><br/>
 
 
@@ -245,7 +276,7 @@
 </div>
 
 <div class="Show-when-signed-in" style="flex: 1">
-  <iframe id="embeddedIframe" src="/embeds/{{ .Params.embedded }}/?lng={{ .Site.Params.languageTag | default "en" }}" style="height: 100%;width: 100%;"></iframe>
+  <iframe id="embeddedIframe" data-src="/embeds/{{ .Params.embedded }}/?lng={{ .Site.Params.languageTag | default "en" }}" style="height: 100%;width: 100%;"></iframe>
 </div>
 {{ partial "footer/script-footer.html" . }}
 {{ partial "footer/firebase-code.html" . }}
