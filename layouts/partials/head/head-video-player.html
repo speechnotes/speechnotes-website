@@ -1,0 +1,79 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{ partial "head/analytics.html" . }}
+  {{ block "head/resource-hints" . }}{{ partial "head/resource-hints.html" . }}{{ end }}
+  {{ block "head/script-header" . }}{{ partial "head/script-header.html" . }}{{ end }}
+  {{ block "head/stylesheet" . }}{{ partial "head/stylesheet.html" . }}{{ end }}
+  {{ block "head/seo" . }}{{ partial "head/seo.html" . }}{{ end }}
+  {{ block "head/favicons" . }}{{ partial "head/favicons.html" . }}{{ end }}
+  {{ block "head/custom-head" . }}{{ partial "head/custom-head.html" . }}{{ end }}
+  <script>
+    console.log('got logs here')
+    function ttspluginOnReadyListener() {
+      console.log('ttsplugin is ready');
+    }
+  </script>
+  <style>
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 28px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: orangered;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px orangered;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(22px);
+      -ms-transform: translateX(22px);
+      transform: translateX(22px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 28px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
+</head>

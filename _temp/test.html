@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player Controls</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    video {
+      width: 80%;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<video id="video" controls>
+  <source src="video.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<div class="controls">
+  <button id="togglePlay">Play</button>
+  <button id="speedUp">Speed Up</button>
+  <button id="speedDown">Speed Down</button>
+</div>
+
+<script>
+  const video = document.getElementById('video');
+  const togglePlayButton = document.getElementById('togglePlay');
+  const speedUpButton = document.getElementById('speedUp');
+  const speedDownButton = document.getElementById('speedDown');
+
+  togglePlayButton.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      togglePlayButton.textContent = 'Stop';
+    } else {
+      video.pause();
+      togglePlayButton.textContent = 'Play';
+    }
+  });
+
+  speedUpButton.addEventListener('click', () => {
+    video.playbackRate += 0.25;
+  });
+
+  speedDownButton.addEventListener('click', () => {
+    video.playbackRate -= 0.25;
+    if (video.playbackRate < 0.25) {
+      video.playbackRate = 0.25;
+    }
+  });
+</script>
+
+</body>
+</html>

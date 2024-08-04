@@ -6,6 +6,7 @@ lastmod: 2024-05-16T19:25:12+02:00
 draft: false
 images: []
 type: play
+layout: video_player
 
 ---
 
