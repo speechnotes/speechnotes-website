@@ -12,9 +12,15 @@
   }
 
   function loadSignedIframeContent() {
-    let el = document.querySelector("#embeddedIframe");
-    if (el && el instanceof Element && !el.getAttribute("src")) {
-      el.setAttribute("src", el.getAttribute("data-src"));
+    let iframe = document.querySelector("#embeddedIframe");
+    if (iframe && iframe instanceof Element && !iframe.getAttribute("src")) {
+      const parentQueries = window.location.href.split("?")[1];
+      const iframeInitialSrc = iframe.getAttribute('data-src');
+      if (parentQueries) {
+        iframe.setAttribute('src', iframeInitialSrc + (iframeInitialSrc.includes("?") ? '&' : '?') + parentQueries);
+      } else {
+        iframe.setAttribute('src', iframeInitialSrc);
+      }
     }
   }
 </script>
