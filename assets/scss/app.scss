@@ -124,3 +124,46 @@ video {
     /*background: url(https://speechlogger.com/assets/img/hero-bg.png) top center no-repeat;*/
     background-size: cover;
 }
+
+/* Container for the news ticker */
+.news-ticker {
+  width: 100%; /* Full width */
+  overflow: hidden; /* Hide the overflowed content */
+  white-space: nowrap; /* Prevent line breaks */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* The content that will scroll */
+.news-content {
+  display: inline-block;
+  animation: scroll-left 30s linear infinite; /* Scroll animation */
+}
+
+/* Animation keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(20%); /* Start off the screen from the right */
+  }
+  100% {
+    transform: translateX(-80%); /* Move off the screen to the left */
+  }
+}
+
+/* Styling for each headline */
+.news-content a {
+  display: inline-block;
+  margin-right: 50px; /* Space between the links */
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.news-content a:hover {
+  box-shadow: orangered 0 2px 0; /* Add a hover effect */
+}
+
+.news-content a::before {
+  content: "| "; /* Add a pipe symbol after each link */
+}

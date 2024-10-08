@@ -1,16 +1,22 @@
 [[main]]
-  name = "Dictation"
+  name = "Dictate"
   url = "/dictate/"
   weight = 10
 
 [[main]]
-  name = "Transcription"
+  name = "Transcribe"
   url = "/transcribe/"
   weight = 10
 
 [[main]]
-  name = "Docs & Help"
+  name = "News"
   weight = 20
+  url = "/blog/"
+  identifier = "blog"
+
+[[main]]
+  name = "Docs"
+  weight = 30
   url = "/docs/"
   identifier = "docs"
 
