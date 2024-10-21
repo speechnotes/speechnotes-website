@@ -17,8 +17,13 @@ toc: true
 ## Short Demo
 
 <div style="margin: 30px auto; text-align: center; overflow-x: scroll">
-  <iframe style="display: inline-block" width="560" height="315" src="https://www.youtube.com/embed/UIVHQpfnzkU" title="YouTube video player - Speechnotes with Zapier" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe style="display: inline-block" width="560" height="315" src="https://www.youtube.com/embed/UIVHQpfnzkU" title="Speechnotes Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+## See Real Life Examples
+
+<p>For a quick overview of how Speechnotes Transcribe works, you can see some real life examples of transcriptions done by Speechnotes. <a href="/samples" target="_blank">Here are some samples</a></p>
+
 
 
 ## Start & Sign In

@@ -1,0 +1,25 @@
+<!doctype html>
+<html style="height: 100%;" lang="{{ .Site.Params.languageTag | default "en" }}" >
+{{ partial "head/head.html" . }}
+{{ if eq .Kind "home" -}}
+{{ .Scratch.Set "class" "home" -}}
+{{ else if eq .Kind "404" -}}
+{{ .Scratch.Set "class" "error404" -}}
+{{ else if eq .Kind "page" -}}
+{{ .Scratch.Set "class" .Type -}}
+{{ .Scratch.Add "class" " single" -}}
+{{ else -}}
+{{ .Scratch.Set "class" .Type -}}
+{{ .Scratch.Add "class" " list" -}}
+{{ end -}}
+<body style="display: flex;flex-direction: column;height: 100%;width: 100%;">
+{{ partial "header/header.html" . }}
+<div style="flex: 1">
+  <a style="z-index: 1000; background-color: orangered; color: white;text-transform: uppercase;display: block;padding: 5px;text-align: center;position: sticky; top: 63px;" href="/transcribe/">Click here to get your own recordings automatically & instantly transcribed</a>
+  <div id="root" style="position: relative;top:-30px"></div>
+</div>
+{{ partial "footer/script-footer.html" . }}
+{{ partial "scripts/script-samples.html" . }}
+
+</body>
+</html>
